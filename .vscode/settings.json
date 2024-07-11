@@ -1,7 +1,7 @@
 {
 	"editor.formatOnSave": true,
 	//  "prettier.prettierPath": "./packages/compiler/node_modules/prettier/index.cjs",
-	"prettier.prettierPath": "C:/Users/u732906/DEMO-16/primeng/ThinClient/node_modules/prettier/index.cjs",
+	"prettier.prettierPath": "C:/Users/u732906/DEMO-16/ThinClient/node_modules/prettier/index.cjs",
 
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"[javascript]": {
