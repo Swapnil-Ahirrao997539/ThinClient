@@ -1,0 +1,32 @@
+<div class="layout-wrapper" [ngClass]="containerClass">
+    <app-topbar *ngIf="layoutService.isDisplay"></app-topbar>
+    <div class="layout-sidebar" *ngIf="layoutService.isDisplay">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="layout-main-container" *ngIf="layoutService.isDisplay">
+        <div class="layout-main">
+            <!-- <app-chips  [data]="dt" (click)="chipClicked($event)" ></app-chips><br> -->
+            <!-- Parent Clicked Buttons -->
+            <div class="card flex align-items-center gap-2 flex-wrap " *ngIf="dt.length > 0" style="margin-bottom: 0;">
+                <span *ngFor="let item of dt;let i = index">            
+                    <p-button label="{{item}}" [rounded]="false" [ngClass]="item == selectedChip ? 'tabButton' : 'tabButtonUnselected'"   severity="secondary"  (click)="chipClicked(item)"></p-button>
+                      <!-- <p-chip [removable]="true" >
+                       <div class="p-2" (click)="onChipClick(item,i)">{{item}} </div>
+                     </p-chip> -->
+
+                </span>
+            </div>
+            <span style="float: right;position: relative;top:-43px;right: 5px;" *ngIf="dt.length > 0">
+                <p-button icon="pi pi-times" severity="danger"   [rounded]="true" [text]="true"  [outlined]="true" (click)="popChip()"></p-button>
+            </span> <br>
+
+
+            <router-outlet></router-outlet>
+        </div>
+        <app-footer></app-footer>
+    </div>
+    <router-outlet *ngIf="!layoutService.isDisplay"></router-outlet>
+
+    <app-config></app-config>
+    <div class="layout-mask"></div>
+</div>

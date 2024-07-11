@@ -1,0 +1,35 @@
+{
+	"data": [
+		{
+			"legalentitynm": "abc",
+			"lastchange": "CREATE",
+			"status": "PENDING",
+			"lastupdated": "April 26, 2024 6:22:06 PM"
+		},
+		{
+			"legalentitynm": "xyz",
+			"lastchange": "CREATE",
+			"status": "PENDING",
+			"lastupdated": "April 26, 2024 6:22:06 PM"
+		},
+		{
+			"legalentitynm": "pqr",
+			"lastchange": "CREATE",
+			"status": "PENDING",
+			"lastupdated": "April 26, 2024 6:22:06 PM"
+		},
+		{
+			"legalentitynm": "ZKB",
+			"lastchange": "CREATE",
+			"status": "PENDING",
+			"lastupdated": "April 26, 2024 6:22:06 PM"
+		},
+		{
+			"legalentitynm": "NYMB",
+			"lastchange": "EDIT",
+			"status": "ACTIVE",
+			"lastupdated": "April 26, 2024 6:22:06 PM"
+		}
+		
+	]
+}

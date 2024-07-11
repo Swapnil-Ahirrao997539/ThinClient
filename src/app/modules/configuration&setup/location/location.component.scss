@@ -1,0 +1,109 @@
+.location {
+    .p-fieldset .p-fieldset-content {
+        padding :0;
+    }
+
+    .p-fieldset .p-fieldset-legend {
+        padding: 0.5rem;
+        border: 1px solid #e5e7eb;
+        color: #374151;
+        background: #f9fafb;
+        font-weight: 700;
+        border-radius: 6px;
+    }
+    .p-fluid .p-inputtext {
+        height: 28px;
+        padding: 0.3rem 1rem;
+    }
+
+    .p-accordion .p-accordion-header .p-accordion-header-link {
+        padding: 1rem;;
+    }
+    p-toolbar .p-toolbar {
+        background: #6366f1;
+        border: 1px solid #e5e7eb;
+        padding: 0.3rem !important;
+        border-radius: 6px;
+        gap: 0.5rem;
+    }
+
+    .card1 {
+        background: var(--surface-card);
+        border: 1px solid var(--surface-border);
+        padding: 0rem 0.7rem;
+        margin-bottom: 1rem;
+        box-shadow: var(--card-shadow);
+        border-radius: 12px;
+    }
+
+    .p-datatable .p-datatable-tbody > tr > td {
+        text-align: left;
+        border: 1px solid #e5e7eb;
+        border-width: 0 0 1px 0;
+        padding: 0.5rem 1rem;
+    }
+
+    .p-datatable .p-datatable-thead > tr > th {
+        text-align: left;
+        padding: 0.2rem 1rem;
+        border: 1px solid #e5e7eb;
+        border-width: 0 0 1px 0;
+        font-weight: 700;
+        color: #374151;
+        background: #f9fafb;
+        transition: box-shadow 0.2s;
+    }
+
+   .Timezone .field {
+    margin-bottom: 0;
+    border: 1px solid #e5e7eb;
+    width: 100%;
+    margin-left: 1px;
+    height: 38px;        
+    }
+
+    .p-autocomplete-dd .p-autocomplete-input, .p-autocomplete-dd .p-autocomplete-multiple-container {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        height: 26px;
+        margin-top: 5px;
+    }
+    .p-button {
+        padding: 0.4rem 0.6rem;
+        height: 26px;
+        margin-top: 5px;
+    }
+
+    #dropdownPanel {
+        display: none;
+      }
+      
+      #dropdownPanel:hover #dropdownPanel {
+        display: block;
+      }
+
+      .p-toolbar-group-right {
+        .p-dropdown-label {
+            padding: 4px;
+            margin-left: 12px;
+            color:#6366f1;
+            font-weight: 600;
+        }
+      }
+
+      .p-accordion .p-accordion-content {
+        padding: 0;
+        border: 1px solid #e5e7eb;
+        background: #ffffff;
+        color: #4b5563;
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+    }
+
+}
+
+
+

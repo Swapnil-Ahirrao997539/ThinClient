@@ -1,0 +1,239 @@
+.layout-sidebar {
+    position: fixed;
+    width: 280px;
+    height: calc(110vh - 9rem);
+    z-index: 999;
+    overflow-y: auto;
+    user-select: none;
+    top: 3.1rem;
+    left: 0;
+    transition: transform $transitionDuration, left $transitionDuration;
+    // background-color: var(--surface-overlay);
+    background-color: #d9c0f5;
+
+    // border-radius: $borderRadius;
+    // padding: 0.5rem 1.5rem;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .02), 0px 0px 2px rgba(0, 0, 0, .05), 0px 1px 4px rgba(0, 0, 0, .08);
+}
+
+.p-accord {
+    .p-accordion {
+        .p-accordion-content {
+            padding: 0rem;
+            border: 1px solid #e5e7eb;
+            background: #ffffff;
+            color: #4b5563;
+            border-top: 0;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+            border-bottom-right-radius: 6px;
+            border-bottom-left-radius: 6px;
+        }
+    }
+    }
+
+.layout-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .layout-root-menuitem {
+        >.layout-menuitem-root-text {
+            font-size: .857rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--surface-900);
+            margin: .75rem 0;
+        }
+
+        >a {
+            display: none;
+        }
+    }
+
+    a {
+        user-select: none;
+
+        &.active-menuitem {
+            >.layout-submenu-toggler {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    li.active-menuitem {
+        >a {
+            .layout-submenu-toggler {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        a {
+            display: flex;
+            align-items: center;
+            position: relative;
+            outline: 0 none;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: .35rem 1rem;
+            border-radius: $borderRadius;
+            transition: background-color $transitionDuration, box-shadow $transitionDuration;
+
+            .layout-menuitem-icon {
+                margin-right: .5rem;
+            }
+
+            .layout-submenu-toggler {
+                font-size: 75%;
+                margin-left: auto;
+                transition: transform $transitionDuration;
+            }
+
+            &.active-route {
+                font-weight: 700;
+                color: #374151;
+            }
+
+            &:hover {
+                background-color: var(--surface-hover);
+            }
+
+            &:focus {
+                @include focused-inset();
+            }
+        }
+
+        .p-tree-container {
+            padding: 0;
+        }
+
+        ul {
+            overflow: hidden;
+            border-radius: $borderRadius;
+
+            li {
+                a {
+                    margin-left: 1rem;
+                }
+
+                li {
+                    a {
+                        margin-left: 2rem;
+                    }
+
+                    li {
+                        a {
+                            margin-left: 2.5rem;
+                        }
+
+                        li {
+                            a {
+                                margin-left: 3rem;
+                            }
+
+                            li {
+                                a {
+                                    margin-left: 3.5rem;
+                                }
+
+                                li {
+                                    a {
+                                        margin-left: 4rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .buTree {
+        .p-tree .p-treenode-children {
+            padding: 0 0 0 1rem;
+        }
+        .p-tree {
+            border: 1px solid #e5e7eb;
+            background: #dafde0;
+            color: #4b5563;
+            padding: 0.5rem 0rem;
+            border-radius: 6px;
+        }
+        .p-tree .p-tree-container .p-treenode .p-treenode-content {
+            border-radius: 6px;
+            transition: box-shadow 0.2s;
+            padding: 0;
+        }
+        .p-tree .p-tree-container .p-treenode {
+            padding: 0.143rem;
+            outline: 0 none;
+            cursor: pointer;
+        }
+    }
+
+    .p-inputtext {
+        font-family: var(--font-family);
+        font-feature-settings: var(--font-feature-settings, normal);
+        font-size: 0.9rem;
+        color: #4b5563;
+        background: #ffffff;
+        padding: 0.3rem 0.5rem;
+        border: 1px solid #b1b2b6;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        appearance: none;
+        border-radius: 6px;
+    }
+    .p-autocomplete {
+        display: grid;
+        position: relative;
+        margin: 5px;
+    }
+
+    .p-buttonset .p-button:first-of-type {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+    
+    }
+    .p-buttonset .p-button:last-of-type {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    
+    }
+
+    .p-tree .p-tree-container .p-treenode .p-treenode-content .p-treenode-icon:hover {
+        color: #374151;
+        border-color: transparent;
+        background: #f3f4f6;
+    }
+    .p-tree .p-tree-container .p-treenode .p-treenode-content :hover {
+        color: #374151;
+        border-color: transparent;
+        background: #f3f4f6;
+        
+    }
+
+    .layout-menu .buTree .p-tree .p-tree-container .p-treenode .p-treenode-content {
+        border-radius: 12px;
+        transition: box-shadow 0.2s;
+        padding: 0rem;
+        border: 1px solid #e5e7eb;
+        background: #ffffff;
+        color: #4b5563;
+        border-top: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 6px;
+    
+    }
+}

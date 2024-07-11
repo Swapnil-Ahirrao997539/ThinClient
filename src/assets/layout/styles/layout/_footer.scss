@@ -1,0 +1,19 @@
+.layout-footer {
+    transition: margin-left $transitionDuration;
+    //display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--surface-border);
+    .btns {
+        float: left;
+        .p-button {
+            padding: 0.4rem 0.6rem;
+            height: 19px;
+            font-size: small;
+            .p-button-label {
+                font-weight: 500;
+            }
+        }
+    }
+}

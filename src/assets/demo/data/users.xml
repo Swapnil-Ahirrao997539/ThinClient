@@ -1,0 +1,2663 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<USER_CONFIG>
+	<GetUseConRep id="GetUseConRep">
+		<FIELD_NM id="Password" IPM_ID="485"></FIELD_NM>
+		<FIELD_NM id="UserTS" IPM_ID="485"></FIELD_NM>
+		<FIELD_NM id="FailureCountNb" IPM_ID="485"></FIELD_NM>
+		<FIELD_NM id="ClientSessionID" IPM_ID="485"></FIELD_NM>
+		<FIELD_NM id="FPrint" IPM_ID="485"></FIELD_NM>
+		<FIELD_NM id="Result" IPM_ID="485">SUCCESS</FIELD_NM>
+		<FIELD_NM id="UserAb" IPM_ID="485">IR1</FIELD_NM>
+		<NettingGroupTree id="NettingGroupTree">
+			<GroupNettingGroupTree id="NettingGroupTree">
+				<NettingGroupList id="NettingGroupList">
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5A73305209</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">VENDFIN0</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5A73305352</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">VENDGB20</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5A73305379</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">VENDUSA1</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5A73305406</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">VENDGB32</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5A73305431</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">VENDUS20</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5A73305457</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">VENDUS32</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5A73305484</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">REFLEXNEWDELHI</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5AK3159789</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">QTSTGB30X</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5AK3227042</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">FLTBUS30X</FIELD_NM>
+					</GroupNettingGroupList>
+					<GroupNettingGroupList id="NettingGroupList">
+						<FIELD_NM id="NettingGroupId" IPM_ID="1464">BY5F25750654</FIELD_NM>
+						<FIELD_NM id="NettingGroupNm" IPM_ID="1464">CLSNET01</FIELD_NM>
+					</GroupNettingGroupList>
+				</NettingGroupList>
+				<FIELD_NM id="ParticipantName" IPM_ID="1464">VEND FIN</FIELD_NM>
+			</GroupNettingGroupTree>
+		</NettingGroupTree>
+		<BuTree id="BuTree">
+			<GroupBuTree id="BuTree">
+				<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+				<BuNode id="BuNode">
+					<GroupBuNode id="BuNode">
+						<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+						<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+						<FIELD_NM id="BusinessUnitTp" IPM_ID="700">SYSTEM</FIELD_NM>
+						<FIELD_NM id="BusinessUnitId" IPM_ID="700">T_SECURITY</FIELD_NM>
+						<FIELD_NM id="BusinessUnitNm" IPM_ID="700">TREASURY SECURITY</FIELD_NM>
+					</GroupBuNode>
+					<GroupBuNode id="BuNode">
+						<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+						<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+						<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+						<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+						<FIELD_NM id="BankIdentifierCd" IPM_ID="700">BOFAGB20CLS</FIELD_NM>
+						<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+						<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+						<BuNode id="BuNode">
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDADGBXXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">FLTBUS30XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Atlanta TP</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGAF82629079</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">PERUMP30XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">PERU TP</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGB6J4156408</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">BANCPEP0XYZ</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Peru-2</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGBLH2059322</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TOTOUS60XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<BuNode id="BuNode">
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">HONGUS60XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<BuNode id="BuNode">
+													<GroupBuNode id="BuNode">
+														<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+														<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+														<FIELD_NM id="BankIdentifierCd" IPM_ID="700">FORMJP30XXX</FIELD_NM>
+														<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+														<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Formosa</FIELD_NM>
+														<FIELD_NM id="BusinessUnitId" IPM_ID="700">BHCHG4319523</FIELD_NM>
+														<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+													</GroupBuNode>
+												</BuNode>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Hong Kong and Shanghai&apos; Banking Corporation</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BH9XF1032172</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+										</BuNode>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">TOTO Branch</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BH99H3335006</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ORGAUS60XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ORGANSUB Branch</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BH9XE5242019</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CHASBEBXKEY</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Woburn TP</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BHEAF2744333</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">BAARIT21XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Sovereign Bank</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BHEAG0029762</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">JPMSGB2LETP</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">DCU Bank</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BHEAG2316832</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CLSOBO22XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CLSNETTP1</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BY1C75834797</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">THDDTHBKXXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SACLSNETTP</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BY4575545028</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">FBOCTWTP035</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">L?nsf?rs?kringar</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">CD0DC5200270</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">QMAGQAQAXXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">L?nsf?rs?kringarTP</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">CD0X95426422</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SF Branch</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGAED4229411</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDACGBXXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">XYZ BRANCH</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGAEE0425528</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDGB32XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">FLTBUS20XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Atlanta-2</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGB6C0728778</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">UOSSSGS0XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SINGAPORE TP</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGBEG2014312</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CLSUGB50XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">USM</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">UM LDN</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BK6JJ1830647</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">BBBAUS30XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Bahamas Beach Bank</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BM93B5850501</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SEBDQW29XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SEB TP</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BWA245033078</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">XIANNOKKBRA</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Toronto Branch</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA41H1016889</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDGB20XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">NEW BRANCH SC</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA4XG5005011</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">London Branch</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGAHD1156172</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">BNMXMXM0XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">MEXICO TP</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGD5A0432238</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDUS32XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">NEW DELHI BRN</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGD7D5226004</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">XONEUS30XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TESTCAMMXXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">QONE</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGEED2519754</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">XONE</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGEDJ4222851</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">XTWOGB20XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">FDCOBEB1XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">QTWO</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGEEE0619661</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RAJAGB21XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CLSNETTP2</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BY1C81611269</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RAHULZ33XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CLSNETTP3</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BY1D10729567</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">XTWO</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGEEC2528331</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">JPMSZAJJXXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Citizens Bank</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BHEAG2919432</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CITIGB20CLS</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTUS30XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<BuNode id="BuNode">
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ALPHUS30XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<BuNode id="BuNode">
+													<GroupBuNode id="BuNode">
+														<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+														<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+														<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+														<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="BankIdentifierCd" IPM_ID="700">FIFTUS30XXX</FIELD_NM>
+														<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+														<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="BusinessUnitNm" IPM_ID="700">FIFTH BANK</FIELD_NM>
+														<FIELD_NM id="BusinessUnitId" IPM_ID="700">BJ3MK1840556</FIELD_NM>
+														<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+													</GroupBuNode>
+													<GroupBuNode id="BuNode">
+														<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+														<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+														<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TESTGB33XXX</FIELD_NM>
+														<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="BusinessUnitTp" IPM_ID="700">USM</FIELD_NM>
+														<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+														<FIELD_NM id="BusinessUnitNm" IPM_ID="700">FIFTH USM BR</FIELD_NM>
+														<FIELD_NM id="BusinessUnitId" IPM_ID="700">BU0DG2853709</FIELD_NM>
+														<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+													</GroupBuNode>
+												</BuNode>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ALPHA BANK</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BJ3MK0716094</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CLSUUS60XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">USM</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">UM NY</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BK70H2603853</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+										</BuNode>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">WESTLB</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BJ3MJ5714997</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CLSUAU20XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">USM</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">UM SYD</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BK70H0619713</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">EASTBK30XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CUSTTPO</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BU3JG3820788</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">TPO</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BJ3MJ4741208</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDUSA1XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">New York Branch</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO38A0823031</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SBOSUS30AGG</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SBOSUS30SCO</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<BuNode id="BuNode">
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SBOSUS303CP</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Boston C3P</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3JX4746742</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TESTUS60CLS</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Boston Global Markets</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3JX5147399</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SBOSUS30CTP</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Boston CTP</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP2HE3008741</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+										</BuNode>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SSB Boston</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3FD4753424</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SBOSCAT0SCO</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<BuNode id="BuNode">
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SBOSCAT03CP</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Toronto C3P</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3JX5530255</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TESTTEST123</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Toronto Global Markets</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3JX5840309</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SBOSCAT0CTP</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Toronto CTP</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP2HE3452792</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+										</BuNode>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SSB Toronto</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3FD5209684</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SSB Aggregate</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3EX3327046</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WLBLUS60XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CSTAGB20SCO</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<BuNode id="BuNode">
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CSTAGB203CP</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Customer A C3P</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3KC4431944</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CSTAGB20XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Customer A Global Markets</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO52C4049184</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+										</BuNode>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Customer A</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3JX4008007</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CSTBDE20SCO</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<BuNode id="BuNode">
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CSTBDE203CP</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Customer B C3P</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3K93212378</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CSTBDE20XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Customer B Global Markets</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO43B5530044</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+										</BuNode>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Customer B</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3JX4408077</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">White Label Aggregate</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3EX3650495</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">IDBIDL30XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Custodian 01</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3JX3320294</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ALANBEC1XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">KilimanjaroBank</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BO3MC2350180</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTUN10XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTBK20XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+										<BuNode id="BuNode">
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTBK30XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union A CB NEW</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP2XE1204541</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTBK40XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union A Br</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP2XE2708131</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTBK70XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union A CTP</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP3F73001814</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SVTEST02XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">TESTSV080401</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP90B4527928</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CABVATWWZEL</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CITI_CBU</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BX0C32812915</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">STATIC31XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union Z</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BXBX82125534</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZYADGB40XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CLSNETCBU1</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BY1C81302929</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+										</BuNode>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union A</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP2X83029965</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTBK50XXX</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<BuNode id="BuNode">
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TESTBK60XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union B CB NEW</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP31E3442487</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TESTBIC2XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union B Br</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP3F93836586</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">BOSTUS4XXXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union B CTP</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP3F94717839</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+											<GroupBuNode id="BuNode">
+												<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+												<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RAHUTE07XXX</FIELD_NM>
+												<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+												<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+												<FIELD_NM id="CustodianIn" IPM_ID="700">Y</FIELD_NM>
+												<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union CB New</FIELD_NM>
+												<FIELD_NM id="BusinessUnitId" IPM_ID="700">BW5A64826769</FIELD_NM>
+												<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+											</GroupBuNode>
+										</BuNode>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Western Union B</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP2XD2253464</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">WESTERN UNION BANK</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BP2X73631115</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTBK80XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SDS BRANCH</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BT72B5148163</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">REPTZAJ1XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Boston Branch</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BTA6B3033654</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">WESTBK90XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Boston Bank</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BTA6B3503383</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CABVATWWLEI</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Bank Of Chicago</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BU1DE2539918</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TESTUS33ABC</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">USM</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">USMMEMBER</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BU1XB1635542</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ABCOMCMXXXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ABCDEF</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BU5593354059</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SETTLEMENT1</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<BuNode id="BuNode">
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TPNEWBU1234</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">NEW SETTLEMNT TP1</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">BU5895418920</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+									<GroupBuNode id="BuNode">
+										<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+										<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BankIdentifierCd" IPM_ID="700">KLHBAT2KHER</FIELD_NM>
+										<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+										<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+										<FIELD_NM id="BusinessUnitNm" IPM_ID="700">TESTPERFBU</FIELD_NM>
+										<FIELD_NM id="BusinessUnitId" IPM_ID="700">CE6592851587</FIELD_NM>
+										<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+									</GroupBuNode>
+								</BuNode>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">NEW SETTLEMENT BANK123</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BU5893903660</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700"></FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">QTSTUS60XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">GREATCLS</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BV8JB3452422</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDGB32CCP</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">LONDON BRANCH CCS</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BW3NA3840543</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CLBUGB12XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">LONDON Branch create like</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BW5D64139491</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDXZ45XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">London CNET Branch1</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BY2G73515769</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">UETITRIS905</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">UPADTE_BU001</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BY3E51037445</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">AXISBK20XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">BHF Bank T &amp; T</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BY86F5955971</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CHROME73XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Chrome@BU12</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BYA3F2718838</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">REDAQQ10XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">DELETE BU4</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BYDXX2117957</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">YUGTUA2NXXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SDBA NEW BU</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BYEAX0532619</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RAHULP01XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SDBA01</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BYEBE4723776</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZYGHUS30SV2</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CITIBU01</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BYF2G4158464</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">XKIEUAU1XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CITIBU02</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BYF2X4931019</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZYGRGB40162</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CLSNOW BU01</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZ3KX4751592</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDABGBXXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Regression 4.4</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZ7LG1704265</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDUSA1CCS</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">New York Branch CCS</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZ80G4424195</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDAGGBXXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Regression BU</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZ80X5527150</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDGB39XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Regression Test BU</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZ80X5618031</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDGB20CCS</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">P2 BU CCS</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZ84E2936730</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZNGTST11XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Regression4.4</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZ9AF3613243</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZNGTST12XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Regression Testing 4.4</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZ9AG0157879</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">TUVTAT21XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Oracle 12C BU</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZD0E5336281</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">XCUEUZ21XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Oracle 12C BU1</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZD3E0639077</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">XCSCUS31XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">TP BU create</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZD4E2511534</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RMCLGB21XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ENDGAMEBU</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZDAE3738531</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">INGHMN10XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ING BU</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZDJH3449682</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">REGCHR27XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">REGTSTCHR</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">BZEAE5454452</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">PUNEIN12XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">BALEWADI BRANCH</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA1BF4700337</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">SIDDIN12XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">pIMPLE SAUDAGAR</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA1DG5044462</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZXPTAU10XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CITI BUYTT</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA27B4856091</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZXPTAU20XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CITI BYTTTF1ddd</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA27H2947048</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">QTSTGB20XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CBR THP</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA3KB2033506</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CVCEIT21G36</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ING BOT</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA4NH4139109</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZYGPGB40632</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">BAML IAAS BU 1</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA9HA4447378</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZYGPGB40163</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">BAML BU 2</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CA9MH2247976</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZYGPGB40605</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">regression 4.6 BU1</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CACLD2408107</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CDACPTP10PP</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">BU TYI</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CAD2F5520044</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CDCCUS33XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">BU TRY</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CAD2F5723647</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CLSOBO42XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">DORMANT BU 01</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CB1NC2823139</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CABVATWWHAR</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CBR THP2</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CB63E3830472</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CABVATWWBDV</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">THP</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CBR THP3</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CB63E4016372</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">BQUEGTG1XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">CRF DEMO</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CB6HE1440218</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">ZYGPGB40622</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">MICROEDGE BU04</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CB71C4951424</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RWBANK88XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">DECEMBER BU</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CBE4F0909574</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CISVGB21XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">AXIS BANK</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CBE4X0516038</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">HSBCRW20XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">HSBC SM TEST</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CC01B3659001</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RWBANK51XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">RW REG BANK 5.0</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CC0F60952839</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">VENDUS20XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">RW BANK 6.0</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CC0F81122193</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CITIEGCXALE</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">RWDBU1</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CC0L95527403</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RWBANK20XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">RW BANK 5.0</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CC0M54941939</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">RWBANK40XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">RW LIKE NYK</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CC1482743418</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">CAMTGB21XXX</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ROUGHWAVE 5.0</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CC1774143261</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">KTEFTRISBUR</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ZMTMXREJECT</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CDDFD5848145</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">OTBATRIS133</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ZTEST</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CE65A2318863</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+							<GroupBuNode id="BuNode">
+								<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">Y</FIELD_NM>
+								<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BankIdentifierCd" IPM_ID="700">LOYDGB21547</FIELD_NM>
+								<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="SdsIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitTp" IPM_ID="700">BRN</FIELD_NM>
+								<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+								<FIELD_NM id="BusinessUnitNm" IPM_ID="700">ZTEST2</FIELD_NM>
+								<FIELD_NM id="BusinessUnitId" IPM_ID="700">CE65A4343576</FIELD_NM>
+								<FIELD_NM id="ClsnowIn" IPM_ID="700">N</FIELD_NM>
+							</GroupBuNode>
+						</BuNode>
+						<FIELD_NM id="BusinessUnitTp" IPM_ID="700">CBR</FIELD_NM>
+						<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+						<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Control Branch</FIELD_NM>
+						<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGAEC2450810</FIELD_NM>
+						<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+					</GroupBuNode>
+				</BuNode>
+				<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="BusinessUnitTp" IPM_ID="700">SYSTEM</FIELD_NM>
+				<FIELD_NM id="BusinessUnitId" IPM_ID="700">SYSTEM</FIELD_NM>
+				<FIELD_NM id="BusinessUnitNm" IPM_ID="700">SYSTEM</FIELD_NM>
+			</GroupBuTree>
+		</BuTree>
+		<FIELD_NM id="EventText" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="QueueSpaceNm" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="LogonID" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="Source" IPM_ID="700">SYSTEM</FIELD_NM>
+		<FIELD_NM id="BusinessUnitId" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="RoutingData" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="ExternalUserIn" IPM_ID="700">N</FIELD_NM>
+		<FIELD_NM id="Permission" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="FgRoleIn" IPM_ID="700">N</FIELD_NM>
+		<FIELD_NM id="CacheDataTm" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="ServerSessionID" IPM_ID="700">1j181eh11u1s1eou1ksr1k151pcw1iuv1kjm1irv1mym1m011ly51myo1iur1kn01irr1pb21jyt1ks31en41u3i1egp1izm</FIELD_NM>
+		<FIELD_NM id="LastRefreshTm" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="IpmSpawnedIn" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="MachineID" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="XmlIn" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="OrganizationID" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="LocationId" IPM_ID="700">BK9FC3947581</FIELD_NM>
+		<CbrNode id="CbrNode">
+			<GroupCbrNode id="CbrNode">
+				<FIELD_NM id="NetPropAllowIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="ProcCfxCustodianIn" IPM_ID="700">Y</FIELD_NM>
+				<FIELD_NM id="SdsIn" IPM_ID="700">Y</FIELD_NM>
+				<FIELD_NM id="LastChangeTp" IPM_ID="700">EDIT</FIELD_NM>
+				<FIELD_NM id="NetNonPropSpfcTpAllowIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="LocationId" IPM_ID="700">BGAEB4312209</FIELD_NM>
+				<FIELD_NM id="BuDeleteIn" IPM_ID="700"></FIELD_NM>
+				<FIELD_NM id="BuValidationRule" IPM_ID="700">ALLOW</FIELD_NM>
+				<FIELD_NM id="OprIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="BusinessUnitStatus" IPM_ID="700">ACTIVE</FIELD_NM>
+				<FIELD_NM id="PreAdvicePurgeDays" IPM_ID="700">0</FIELD_NM>
+				<FIELD_NM id="DepartmentNm" IPM_ID="700">DEC2002 CBR DEPT</FIELD_NM>
+				<FIELD_NM id="SenderBicBuId" IPM_ID="700"></FIELD_NM>
+				<FIELD_NM id="NetNonPropAllowIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="ApprovalStatus" IPM_ID="700">APPROVED</FIELD_NM>
+				<FIELD_NM id="ClsnetEligibleIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="DefMappingTrig" IPM_ID="700">O</FIELD_NM>
+				<FIELD_NM id="ClsnetSuspendIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="TradeSubmissionIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="BankIdentifierCd" IPM_ID="700">BOFAGB20CLS</FIELD_NM>
+				<FIELD_NM id="LocationNm" IPM_ID="700">CENTRO DE LIMA</FIELD_NM>
+				<FIELD_NM id="MatchTemplateId" IPM_ID="700"></FIELD_NM>
+				<FIELD_NM id="PostingIn" IPM_ID="700">Y</FIELD_NM>
+				<FIELD_NM id="SwiftId" IPM_ID="700">BGAE91414915</FIELD_NM>
+				<FIELD_NM id="CreateTm" IPM_ID="700">20010911 162450811</FIELD_NM>
+				<FIELD_NM id="ProductNm" IPM_ID="700">Futures</FIELD_NM>
+				<FIELD_NM id="SettlementConcentratorIn" IPM_ID="700">Y</FIELD_NM>
+				<FIELD_NM id="BuDormantIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="ProcCfxBrokerIn" IPM_ID="700">Y</FIELD_NM>
+				<FIELD_NM id="PoolOwnerIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="LockTm" IPM_ID="700"></FIELD_NM>
+				<FIELD_NM id="ClsnowIn" IPM_ID="700">Y</FIELD_NM>
+				<FIELD_NM id="PostingLedgerId" IPM_ID="700">BGAE91415015</FIELD_NM>
+				<FIELD_NM id="NonbusinessDay" IPM_ID="700">1000001</FIELD_NM>
+				<FIELD_NM id="SenderBicIn" IPM_ID="700">Y</FIELD_NM>
+				<FIELD_NM id="ExpenseCd" IPM_ID="700">Exp007</FIELD_NM>
+				<FIELD_NM id="LockUserLogonId" IPM_ID="700"></FIELD_NM>
+				<FIELD_NM id="LastUpdateUserLogonId" IPM_ID="700">IRIS03</FIELD_NM>
+				<FIELD_NM id="BusinessUnitId" IPM_ID="700">BGAEC2450810</FIELD_NM>
+				<FIELD_NM id="DefSubmittingBic" IPM_ID="700">BOFAGB20CLS</FIELD_NM>
+				<FIELD_NM id="MatchTemplateNm" IPM_ID="700"></FIELD_NM>
+				<FIELD_NM id="PreAdviceSpawnIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="GenericInterfaceId" IPM_ID="700">BGAE91415324</FIELD_NM>
+				<FIELD_NM id="CreateUserLogonId" IPM_ID="700">JANE01</FIELD_NM>
+				<FIELD_NM id="PostingLedgerNm" IPM_ID="700">BURLINGTONPOST</FIELD_NM>
+				<FIELD_NM id="CustodianIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="NdfIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="ClsbAccountNb" IPM_ID="700"></FIELD_NM>
+				<FIELD_NM id="AccountIdVerifyTp" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="BusinessUnitNm" IPM_ID="700">Control Branch</FIELD_NM>
+				<FIELD_NM id="LastUpdateTm" IPM_ID="700">20230327 114643764</FIELD_NM>
+				<FIELD_NM id="PrinterNm" IPM_ID="700">LIMA PR01</FIELD_NM>
+				<FIELD_NM id="BusinessUnitTp" IPM_ID="700">CBR</FIELD_NM>
+				<FIELD_NM id="AuditId" IPM_ID="700">CD3EB4643773</FIELD_NM>
+				<FIELD_NM id="AccountIdReqdIn" IPM_ID="700">N</FIELD_NM>
+				<FIELD_NM id="DepartmentId" IPM_ID="700">BHE4F2858837</FIELD_NM>
+			</GroupCbrNode>
+		</CbrNode>
+		<FIELD_NM id="MessageIdentification" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="EventCode" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="ThirdPartyIn" IPM_ID="700">N</FIELD_NM>
+		<FIELD_NM id="IsTc" IPM_ID="700"></FIELD_NM>
+		<FIELD_NM id="QueueNm" IPM_ID="700"></FIELD_NM>
+	</GetUseConRep>
+	<module-to-pageno-mapping>
+		<module id ="CSAuditError">
+			<field name="CSAuditHistoryTab"> 17 </field>
+			<field name="CSErrorTab"> 19 </field>
+			<field name="CSAuditErrorDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="Location">
+			<field name="LocationCreate"> 20 </field>
+			<field name="LocationMainTab"> 21 </field>
+			<field name="LocationDeptTab"> 23 </field>
+			<field name="LocationContTab"> 24 </field>
+			<field name="LocationFirstPage"> 20 </field>
+			<field name="LocationDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="LegalEntity">
+			<field name="LECreate"> 28 </field>
+			<field name="LEMainTab"> 28 </field>
+			<field name="LegalEntityFirstPage"> 28 </field>
+			<field name="LegalEntityDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="BankRelationship">
+			<field name="BRCreate"> 29 </field>
+			<field name="BRMainTab"> 30 </field>
+			<field name="BankRelationshipFirstPage"> 29 </field>
+			<field name="BankRelationshipDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="BankLocation">
+			<field name="BLCreate"> 32 </field>
+			<field name="BLMainTab"> 32 </field>
+			<field name="BLCuttOffTab"> 35 </field>
+			<field name="BLOffsetTab"> 37 </field>
+			<field name="BLCalenderTab"> 39 </field>
+			<field name="BankLocationFirstPage"> 32 </field>
+			<field name="BankLocationDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="FundGroup">
+			<field name="FGCreate"> 132 </field>
+			<field name="FGMainTab"> 132 </field>
+			<field name="FGfundLookup"> 133 </field>
+			<field name="FundGroupFirstPage"> 132 </field>
+			<field name="FundGroupDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="BusinessUnit">
+			<field name="BUCreate"> 42 </field>
+			<field name="BUMainTab"> 42 </field>
+			<field name="BUAccountsTab"> 49 </field>
+			<field name="BUCashAccAccountsTab"> 51 </field>
+			<field name="BUCutoffTab"> 52 </field>
+			<field name="BUCalenderTab"> 54 </field>
+			<field name="BUTemplateTab"> 55 </field>
+			<field name="BUEntryTempGrid"> 55 </field>
+			<field name="BUAppWrkFlowTempGrid"> 56 </field>
+			<field name="BUCcyPairTab"> 60 </field>
+			<field name="BUCcyAssocTab"> 62 </field>
+			<field name="BUAgreementsTab"> 66 </field>
+			<field name="BULimitsTab"> 75 </field>
+			<field name="BUPinSchTab"> 78 </field>
+			<field name="BUPotSchTab"> 80 </field>
+			<field name="BUCustodyFxTab"> 8 </field>
+			<field name="BUFundGridCustodyFxTab"> 83 </field>
+			<field name="BUDTCCTab"> 84 </field>
+			<field name="BUTpNettingTab"> 85 </field>
+			<field name="BusinessUnitFirstPage"> 42 </field>
+			<field name="BusinessUnitDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="CLBusinessUnit">
+			<field name="CLBUCreate"> 86 </field>
+			<field name="CLBUCreateLike"> 87 </field>
+			<field name="CLBUMainTab"> 88 </field>
+			<field name="CLBUAccountsTab"> 89 </field>
+			<field name="CLBUCashAccAccountsTab"> 89 </field>
+			<field name="CLBUCutoffTab"> 90 </field>
+			<field name="CLBUCalenderTab"> 91 </field>
+			<field name="CLBUTemplateTab"> 92 </field>
+			<field name="CLBUEntryTempGrid"> 92 </field>
+			<field name="CLBUAppWrkFlowTempGrid"> 92 </field>
+			<field name="CLBUCcyPairTab"> 93 </field>
+			<field name="CLBUCcyAssocTab"> 94 </field>
+			<field name="CLBUAgreementsTab"> 95 </field>
+			<field name="CLBULimitsTab"> 96 </field>
+			<field name="CLBUPinSchTab"> 97 </field>
+			<field name="CLBUPotSchTab"> 98 </field>
+			<field name="CLBUCustodyFxTab"> 99 </field>
+			<field name="CLBUFundGridCustodyFxTab"> 99 </field>
+			<field name="CLBUDTCCTab"> 100 </field>
+			<field name="CLBUTpNettingTab"> 101 </field>
+			<field name="CLBusinessUnitFirstPage"> 86 </field>
+			<field name="CLBusinessUnitDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="FinancialPool">
+			<field name="FPCreate"> 134 </field>
+			<field name="FPMainTab"> 134 </field>
+			<field name="FinancialPoolFirstPage"> 134 </field>
+			<field name="FinancialPoolDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="Department">
+			<field name="DeptCreate"> 25 </field>
+			<field name="DeptMainTab"> 26 </field>
+			<field name="DeptContactsTab"> 27 </field>
+			<field name="DepartmentFirstPage"> 25 </field>
+			<field name="DepartmentDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="CashAccount">
+			<field name="CACreate"> 116 </field>
+			<field name="CAMainTab"> 118 </field>
+			<field name="CASettlingFundTab"> 117 </field>
+			<field name="CashAccountFirstPage"> 116 </field>
+			<field name="CashAccountDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="OrgSubscription">
+			<field name="OSCreate"> 122 </field>
+			<field name="OSSettlingFundTab"> 123 </field>
+			<field name="OSMainTab"> 124 </field>
+			<field name="OSGrid"> 124 </field>
+			<field name="OrgSubscriptionFirstPage"> 122 </field>
+			<field name="OrgSubscriptionDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="Fund">
+			<field name="FAccountsTab"> 49 </field>
+			<field name="FCashAccAccountsTab"> 51 </field>
+			<field name="FTemplatesTab"> 55 </field>
+			<field name="FEntryTempGrid"> 55 </field>
+			<field name="FAppWrkFlowTempGrid"> 56 </field>
+			<field name="FCcyPairTab"> 59 </field>
+			<field name="FCcyAssocTab"> 62 </field>
+			<field name="FAgreementTab"> 66 </field>
+			<field name="FLimitsTab"> 75 </field>
+			<field name="FPinScheduleTab"> 78 </field>
+			<field name="FPotScheduleTab"> 80 </field>
+			<field name="FCreate"> 126 </field>
+			<field name="FMainTab"> 126 </field>
+			<field name="FRepAcctTab"> 128 </field>
+			<field name="FDTCCTab"> 129 </field>
+			<field name="FundFirstPage"> 126 </field>
+			<field name="FundDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="CLFund">
+			<field name="CLFAccountsTab"> 104 </field>
+			<field name="CLFTemplatesTab"> 106 </field>
+			<field name="CLFEntryTempGrid"> 106 </field>
+			<field name="CLFAppWrkFlowTempGrid"> 106 </field>
+			<field name="CLFCcyPairTab"> 107 </field>
+			<field name="CLFCcyAssocTab"> 108 </field>
+			<field name="CLFAgreementTab"> 109 </field>
+			<field name="CLFLimitsTab"> 110 </field>
+			<field name="CLFPinScheduleTab"> 111 </field>
+			<field name="CLFPotScheduleTab"> 112 </field>
+			<field name="CLFMainTab"> 103 </field>
+			<field name="CLFRepAcctTab"> 105 </field>
+			<field name="CLFDTCCTab"> 113 </field>
+			<field name="CLFundFirstPage"> 102 </field>
+			<field name="CLFundDocumentName">Thin Client User Guide - Chapter 10 Configuration &amp; Setup.pdf</field>
+		</module>
+		<module id ="Roleclass">
+			<field name="RCAuditHistoryTab"> 14 </field>
+			<field name="RCErrorTab"> 15 </field>
+			<field name="RCCreate"> 23 </field>
+			<field name="RCPermissionGrid"> 27 </field>
+			<field name="RoleclassFirstPage"> 23 </field>
+			<field name="RoleclassDocumentName">Thin Client User Guide - Chapter 9 User Administration.pdf</field>
+		</module>
+		<module id ="Role">
+			<field name="RAuditHistoryTab"> 14 </field>
+			<field name="RErrorTab"> 15 </field>
+			<field name="RCreate"> 29 </field>
+			<field name="RPermissionGrid"> 27 </field>
+			<field name="RoleFirstPage"> 29 </field>
+			<field name="RoleDocumentName">Thin Client User Guide - Chapter 9 User Administration.pdf</field>
+		</module>
+		<module id ="User">
+			<field name="UserAuditHistoryTab"> 14 </field>
+			<field name="UserErrorTab"> 15 </field>
+			<field name="UCreate"> 31 </field>
+			<field name="UProfileTab"> 32 </field>
+			<field name="UEmpRoleGrid"> 33 </field>
+			<field name="UAppLimitGrid"> 34 </field>
+			<field name="UPswdTab"> 35 </field>
+			<field name="URoleAssiTab"> 36 </field>
+			<field name="URoleAssiTree"> 37 </field>
+			<field name="UCreateLikeUser"> 39 </field>
+			<field name="USuspendTab"> 43 </field>
+			<field name="UserFirstPage"> 31 </field>
+			<field name="UserDocumentName">Thin Client User Guide - Chapter 9 User Administration.pdf</field>
+		</module>
+		<module id ="UserReports">
+			<field name="URMainTab"> 50 </field>
+			<field name="URGeneratedReportsTab"> 51 </field>
+			<field name="UserReportsFirstPage"> 49 </field>
+			<field name="UserReportsDocumentName">Thin Client User Guide - Chapter 9 User Administration.pdf</field>
+		</module>
+		<module id ="UserReportsSch">
+			<field name="URScheduleReportTab"> 26 </field>
+			<field name="URAppScheduleReportTab"> 35 </field>
+			<field name="UserReportsSchFirstPage"> 26 </field>
+			<field name="UserReportsSchDocumentName">Thin Client User Guide - Chapter 11 Reports (incl_Scheduler).pdf</field>
+		</module>
+		<module id ="Trades">
+			<field name="TRDMainTab">22</field>
+			<field name="TRDStopNames"> 23 </field>
+			<field name="TRDInclusionNames"> 23 </field>
+			<field name="TRDReceivingAgent"> 29 </field>
+			<field name="TRDAdditionalInfo"> 30 </field>
+			<field name="TRDAllegedTradesMainTab"> 40 </field>
+			<field name="TRDAllegedListTab"> 40 </field>
+			<field name="TRDRepInstructionTab"> 44 </field>
+			<field name="TRDCreateMessage"> 46 </field>
+			<field name="TRDBicLookup"> 50 </field>
+			<field name="TRDCreateRepIns"> 54 </field>
+			<field name="TRDCreateRepMsg"> N </field>
+			<field name="TRDMessageInquiry"> 58 </field>
+			<field name="TRDAllegedTrdFxDetailsTab"> 70 </field>
+			<field name="TRDFinMain"> 76 </field>
+			<field name="TRDReports"> 84 </field>
+			<field name="TRDCreateTemplateTab"> N </field>
+			<field name="TradesFirstPage"> 46 </field>
+			<field name="TradesDocumentName">Thin Client User Guide - Chapter 3 Trades.pdf</field>
+		</module>
+		<module id ="TradesTwo">
+			<field name="TRDCommentsTab"> 18 </field>
+			<field name="TRDInterdictionDetTab"> 22 </field>
+			<field name="TRDAuditHistoryTab"> 24 </field>
+			<field name="TRDTransmissionText"> 27 </field>
+			<field name="TRDErrorTab"> 29 </field>
+			<field name="TradesTwoFirstPage"> 17 </field>
+			<field name="TradesTwoDocumentName">Thin Client User Guide - Chapter 2 Pre-CLS Queues and Common Views.pdf</field>
+		</module>
+		<module id ="TradesThree">
+			<field name="TRDAllegedUnmatched"> 85 </field>
+			<field name="TradesThreeFirstPage"> 85 </field>
+			<field name="TradesThreeDocumentName">Thin Client User Guide - Chapter 3 Trades.pdf</field>
+		</module>
+		<module id ="TradesFour">
+			<field name="TRDNPLGrid"> 23 </field>
+			<field name="TradesFourFirstPage"> 23 </field>
+			<field name="TradesFourDocumentName">Thin Client User Guide - SD 01 Payments Processing.pdf</field>
+		</module>
+		<module id ="TradesReport">
+			<field name="TRDReportMain"> 84 </field>
+			<field name="TRDReportPreview"> N </field>
+			<field name="TradesReportFirstPage"> 84 </field>
+			<field name="TradesReportDocumentName">Thin Client User Guide - Chapter 3 Trades.pdf</field>
+		</module>
+		<module id ="Payin">
+			<field name="PINSchd"> 22 </field>
+			<field name="PINOptionsTab"> 29 </field>
+			<field name="PINCommentsTab"> 30 </field>
+			<field name="PINCommentsGrid"> 30 </field>
+			<field name="PINAuditHistoryTab"> 32 </field>
+			<field name="PINInterdictionDetTab"> 34 </field>
+			<field name="PINErrorTab"> 36 </field>
+			<field name="PINIncomingViewDetailsTab"> 39 </field>
+			<field name="PINIncomingSwtMsgTab"> 42 </field>
+			<field name="PINCreatePaymentIns"> 45 </field>
+			<field name="PINMainInsTab"> 45 </field>
+			<field name="PINOptionsInsTab"> 49 </field>
+			<field name="PINRepInstructionTab"> 54 </field>
+			<field name="PINCreatePayments"> 56 </field>
+			<field name="PINMainTab"> 58 </field>
+			<field name="PINCreateIncoming"> 60 </field>
+			<field name="PINMessageInquiry"> 67 </field>
+			<field name="PayinFirstPage"> 4 </field>
+			<field name="PayinDocumentName">Thin Client User Guide - Chapter 4 Pay-In and Pay-Out.pdf</field>
+		</module>
+		<module id ="Payout">
+			<field name="POTOptionsTab"> 29 </field>
+			<field name="POTCommentsTab"> 30 </field>
+			<field name="POTAuditHistoryTab"> 32 </field>
+			<field name="POTInterdictionDetTab"> 34 </field>
+			<field name="POTErrorTab"> 36 </field>
+			<field name="POTIncomingTab"> 39 </field>
+			<field name="POTIncomingSwtMsgTab"> 42 </field>
+			<field name="POTOptionsInsTab"> 49 </field>
+			<field name="POTRepInstructionTab"> 54 </field>
+			<field name="POTMainTab"> 82 </field>
+			<field name="POTCreatePaymentIns"> 89 </field>
+			<field name="POTMainInsTab"> 89 </field>
+			<field name="POTCustTransfer"> 94 </field>
+			<field name="POTCreatePayments"> 95 </field>
+			<field name="POTMessageInquiry"> 103 </field>
+			<field name="PayoutFirstPage"> 5 </field>
+			<field name="PayoutDocumentName">Thin Client User Guide - Chapter 4 Pay-In and Pay-Out.pdf</field>
+		</module>
+		<module id ="GuiAlertNotifications">
+			<field name="GANButtons"> 56 </field>
+			<field name="GANEodSod"> 56 </field>
+			<field name="GANPayplusClsException"> 56 </field>
+			<field name="GANPayinCall"> 56 </field>
+			<field name="GANSystemException"> 56 </field>
+			<field name="GANPaymentsException"> 56 </field>
+			<field name="GuiAlertNotificationsFirstPage"> 56 </field>
+			<field name="GuiAlertNotificationsDocumentName">Thin Client User Guide - Chapter 1 Introduction &amp; Navigation.pdf</field>
+		</module>
+		<module id ="NotificationDetail">
+			<field name="NDMainTab"> 14 </field>
+			<field name="NDOptionsTab"> 18 </field>
+			<field name="NotificationDetailFirstPage"> 14 </field>
+			<field name="NotificationDetailDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="BulkRoleAssignment">
+			<field name="BulkApproveTab"> 48 </field>
+			<field name="BulkApproveGrid"> 48 </field>
+			<field name="BulkRoleAssignmentFirstPage"> 48 </field>
+			<field name="BulkRoleAssignmentDocumentName">Thin Client User Guide - Chapter 9 User Administration.pdf</field>
+		</module>
+		<module id ="UserDefinedQueues">
+			<field name="UDQTrades"> 54 </field>
+			<field name="UDQNDF"> N </field>
+			<field name="UDQOPR"> N </field>
+			<field name="UDQPayin"> 54 </field>
+			<field name="UDQPayout"> 54 </field>
+			<field name="UserDefinedQueuesFirstPage"> 54 </field>
+			<field name="UserDefinedQueuesDocumentName">Thin Client User Guide - Chapter 1 Introduction &amp; Navigation.pdf</field>
+		</module>
+		<module id ="MainMonitoring">
+			<field name="MMMainTab"> 19 </field>
+			<field name="MainMonitoringFirstPage"> 19 </field>
+			<field name="MainMonitoringDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="Notifications">
+			<field name="SMCNotifications"> 15 </field>
+			<field name="SMCNotificationsOptions"> 19 </field>
+			<field name="NotificationsFirstPage"> 15 </field>
+			<field name="NotificationsDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="Settlement">
+			<field name="SetMainTab"> 49 </field>
+			<field name="SetCcyDet"> 51 </field>
+			<field name="SettlementFirstPage"> 49 </field>
+			<field name="SettlementDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="LockManager">
+			<field name="LMMainTab"> 71 </field>
+			<field name="LockManagerFirstPage"> 71 </field>
+			<field name="LockManagerDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="TuxedoMonitor">
+			<field name="TMMainTab"> 104 </field>
+			<field name="TuxedoMonitorFirstPage"> 104 </field>
+			<field name="TuxedoMonitorDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="SWIFTLineControl">
+			<field name="SLCSessionControlTab"> 100 </field>
+			<field name="SLCClsioDetailTab"> N </field>
+			<field name="SLCApiPswdMonitoringTab"> N </field>
+			<field name="SLCReconciliationTab"> N </field>
+			<field name="SLCGdiBatchWatermarksTab"> N </field>
+			<field name="SLCGatewayTab"> N </field>
+			<field name="SWIFTLineControlFirstPage"> 100 </field>
+			<field name="SWIFTLineControlDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="SWIFTLineControlTwo">
+			<field name="SWIFTLineControlTwoFirstPage"> N </field>
+			<field name="SWIFTLineControlTwoDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="CBRPaymentCycle">
+			<field name="CPCMainTab"> 79 </field>
+			<field name="CPCPayinScheduleTab"> 83 </field>
+			<field name="CPCLogHistoryTab"> 85 </field>
+			<field name="CPCPayoutRecoveryTab"> 86 </field>
+			<field name="CPCAdditionalTempNplTab"> 87 </field>
+			<field name="CBRPaymentCycleFirstPage"> 79 </field>
+			<field name="CBRPaymentCycleDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="ControlBranchEodSod">
+			<field name="CESMainTab"> 73 </field>
+			<field name="CESLogHistoryTab"> 77 </field>
+			<field name="ControlBranchEodSodFirstPage"> 73 </field>
+			<field name="ControlBranchEodSodDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="BalanceUpdate">
+			<field name="BALUMainTab"> 68 </field>
+			<field name="BalanceUpdateFirstPage"> 68 </field>
+			<field name="BalanceUpdateDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="AccountingEntries">
+			<field name="AEAcctEntriesTab"> 55 </field>
+			<field name="AEManualPostingTab"> 62 </field>
+			<field name="AEMPApprovedRejectedTab"> 67 </field>
+			<field name="AccountingEntriesFirstPage"> 55 </field>
+			<field name="AccountingEntriesDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="BulkResubmission">
+			<field name="BulkRMainTab"> 93 </field>
+			<field name="BulkRMainGrid"> 93 </field>
+			<field name="BulkResubmissionFirstPage"> 93 </field>
+			<field name="BulkResubmissionDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="ExceptionMonitoring">
+			<field name="EMMainTab"> 47 </field>
+			<field name="ExceptionMonitoringFirstPage"> 47 </field>
+			<field name="ExceptionMonitoringDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="PaymentMonitoring">
+			<field name="PMPinMonitorTab"> 31 </field>
+			<field name="PMPinGrid"> 31 </field>
+			<field name="PMPotMonitorTab"> 33 </field>
+			<field name="PMPotGrid"> 33 </field>
+			<field name="PaymentMonitoringFirstPage"> 30 </field>
+			<field name="PaymentMonitoringDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="LiquidityMonitoring">
+			<field name="LQMMainTab"> 35 </field>
+			<field name="LiquidityMonitoringFirstPage"> 35 </field>
+			<field name="LiquidityMonitoringDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="ResendMessage">
+			<field name="RMMainTab"> 98 </field>
+			<field name="ResendMessageFirstPage"> 98 </field>
+			<field name="ResendMessageDocumentName">Thin Client User Guide - Chapter 5 SMC.pdf</field>
+		</module>
+		<module id ="Navigation">
+			<field name="NDashboard"> 19 </field>
+			<field name="NMenuBar"> 21 </field>
+			<field name="NBUtree"> 24 </field>
+			<field name="NUserAdmintree"> 29 </field>
+			<field name="NViewType"> 30 </field>
+			<field name="NQueueExplorer"> 32 </field>
+			<field name="NQueueGrid"> 45 </field>
+			<field name="NQueueToolbar"> 46 </field>
+			<field name="NRespPopUp"> 64 </field>
+			<field name="NavigationFirstPage"> 13 </field>
+			<field name="NavigationDocumentName">Thin Client User Guide - Chapter 1 Introduction &amp; Navigation.pdf</field>
+		</module>
+		<module id ="FundGroupViewUser">
+			<field name="FGtree"> 54 </field>
+			<field name="FGbasket"> 56 </field>
+			<field name="FGTrades"> 58 </field>
+			<field name="FGPayments"> 46 </field>
+			<field name="FGIncoming"> 48 </field>
+			<field name="FundGroupViewUserDocumentName">Thin Client User Guide - SD 02 Custody Processing.pdf</field>
+		</module>
+		<module id ="TMError">
+			<field name="TMErrorFirstPage"> 9 </field>
+			<field name="TMErrorDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="BankIdentifier">
+			<field name="BankIdentifierMain"> 10 </field>
+			<field name="BankIdentifierDetails"> 11 </field>
+			<field name="BankIdentifierSrchGrid"> 12 </field>
+			<field name="BankIdentifierFirstPage"> 10 </field>
+			<field name="BankIdentifierDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="CurrencyHoliday">
+			<field name="CurrencyHolidayMain"> 14 </field>
+			<field name="CurrencyHolidayFirstPage"> 14 </field>
+			<field name="CurrencyHolidayDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="PaymentMethodCutoff">
+			<field name="PaymentMethodCutoffMain"> 18 </field>
+			<field name="PaymentMethodCutoffFirstPage"> 18 </field>
+			<field name="PaymentMethodCutoffDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="ExternalInterface">
+			<field name="ExternalInterfaceDetsSessionSumGrid"> 25 </field>
+			<field name="ExternalInterfacePostingLedSumGrid"> 25 </field>
+			<field name="ExternalInterfaceSwiftGrid"> 24 </field>
+			<field name="ExternalInterfacePostingLedSys"> 25 </field>
+			<field name="ExternalInterfaceGenericInter"> 30 </field>
+			<field name="ExternalInterfaceSessionDets"> 31 </field>
+			<field name="ExternalInterfaceSessDetsGrid"> 31 </field>
+			<field name="ExternalInterfaceSessReqGrid"> 44 </field>
+			<field name="ExternalInterfaceMain"> 64 </field>
+			<field name="ExternalInterfaceDetails"> 66 </field>
+			<field name="ExternalInterfaceFirstPage"> 20 </field>
+			<field name="ExternalInterfaceDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="CurrencyMaintainance">
+			<field name="CurrencyMaintainanceMain"> 70 </field>
+			<field name="CurrencyMaintainanceFirstPage"> 70 </field>
+			<field name="CurrencyMaintainanceDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="Interdiction">
+			<field name="InterdictionMainInc"> 77 </field>
+			<field name="InterdictionSelectView"> 77 </field>
+			<field name="InterdictionIncDets"> 78 </field>
+			<field name="InterdictionMainExc"> 79 </field>
+			<field name="InterdictionExcDets"> 80 </field>
+			<field name="InterdictionTest"> 81 </field>
+			<field name="InterdictionFirstPage"> 74 </field>
+			<field name="InterdictionDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="ExchangeRate">
+			<field name="ExchangeRateMain"> 83 </field>
+			<field name="ExchangeRateFirstPage"> 83 </field>
+			<field name="ExchangeRateDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="ProcessingICARules">
+			<field name="ProcessingICARulesMain"> 85 </field>
+			<field name="ProcessingICARulesFirstPage"> 85 </field>
+			<field name="ProcessingICARulesDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="FundManager">
+			<field name="FundManagerMain"> 89 </field>
+			<field name="FundManagerFirstPage"> 89 </field>
+			<field name="FundManagerDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="CounterprtyALGDList">
+			<field name="CounterprtyALGDListMain"> 93 </field>
+			<field name="CounterprtyALGDListFirstPage"> 93 </field>
+			<field name="CounterprtyALGDListDocumentName">Thin Client User Guide - Chapter 8 Table Maintenance.pdf</field>
+		</module>
+		<module id ="ProcessUploadedFunds">
+			<field name="ProcessUploadedFundsMain"> 12 </field>
+			<field name="ProcessUploadedFundsFirstPage"> 12 </field>
+			<field name="ProcessUploadedFundsDocumentName">Thin Client User Guide - SD 09 File Upload.pdf</field>
+		</module>
+		<module id ="StaticDataRequest">
+			<field name="StaticDataRequestMain"> N </field>
+			<field name="StaticDataRequestFirstPage"> N </field>
+			<field name="StaticDataRequestDocumentName">NoFile</field>
+		</module>
+		<module id ="NDF">
+			<field name="NDFNoData"> N </field>
+			<field name="NDFFirstPage"> N </field>
+			<field name="NDFDocumentName">NoFile</field>
+		</module>
+		<module id ="FxOptions">
+			<field name="FxOptionsFirstPage"> N </field>
+			<field name="FxOptionsDocumentName">NoFile</field>
+		</module>
+		<module id ="MakerChecker">
+			<field name="MakerCheckerWindow"> 35 </field>
+			<field name="MakerCheckerTRTCCY"> 36 </field>
+			<field name="MakerCheckerGrid"> 37 </field>
+			<field name="MakerCheckerDocumentName">Thin Client User Guide - Chapter 1 Introduction &amp; Navigation.pdf</field>
+		</module>
+	</module-to-pageno-mapping>
+	<FEEDBACK>
+		<COMP_CODE>0</COMP_CODE>
+		<INFO></INFO>
+		<FPRINT>1abg1bb1194w1abi1a4f1abk194u1bb51abm</FPRINT>
+	</FEEDBACK>
+</USER_CONFIG>

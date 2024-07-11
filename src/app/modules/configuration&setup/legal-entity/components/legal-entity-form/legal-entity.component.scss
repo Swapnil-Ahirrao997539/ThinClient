@@ -1,0 +1,43 @@
+p-autocomplete {
+
+ position: relative;
+ display: grid;
+}
+
+.legal-entity {
+    .card {
+                border-radius: 0;
+         }
+
+    p-toolbar {
+        .p-toolbar {
+            background: #6366f1;
+            height: 44px;
+            border-radius: 0;
+        }
+    }
+    .p-accordion .p-accordion-header .p-accordion-header-link {
+        padding: 1rem;
+    }
+}
+
+
+
+ h5 {
+    margin: 0.2rem 0 0.5rem 0;
+
+}
+
+
+
+
+.p-tabview {
+}.p-tabview-panels {
+    background: #ffffff;
+    padding: 0.55rem;
+    border: 0 none;
+    color: #4b5563;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+    

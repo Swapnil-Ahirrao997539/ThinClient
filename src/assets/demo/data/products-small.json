@@ -1,0 +1,124 @@
+{
+	"data": [
+		{
+			"id": "1000",
+			"code": "f230fh0g3",
+			"name": "AUD",
+			"description": "Product Description",
+			"image": "bamboo-watch.jpg",
+			"price": 0.00,
+			"category": "Accessories",
+			"quantity": 0.00,
+			"inventoryStatus": "INSTOCK",
+			"rating": 0.00
+		},
+		{
+			"id": "1001",
+			"code": "nvklal433",
+			"name": "CAD",
+			"description": "Product Description",
+			"image": "black-watch.jpg",
+			"price": 0.00,
+			"category": "Accessories",
+			"quantity": 0.00,
+			"inventoryStatus": "INSTOCK",
+			"rating": 0.00
+		},
+		{
+			"id": "1002",
+			"code": "zz21cz3c1",
+			"name": "CHF",
+			"description": "Product Description",
+			"image": "blue-band.jpg",
+			"price": 0.00,
+			"category": "Fitness",
+			"quantity": 0.00,
+			"inventoryStatus": "LOWSTOCK",
+			"rating": 0.00
+		},
+		{
+			"id": "1003",
+			"code": "244wgerg2",
+			"name": "EUR",
+			"description": "Product Description",
+			"image": "blue-t-shirt.jpg",
+			"price": 0.00,
+			"category": "Clothing",
+			"quantity": 0.00,
+			"inventoryStatus": "INSTOCK",
+			"rating": 0.00
+		},
+		{
+			"id": "1004",
+			"code": "h456wer53",
+			"name": "MXN",
+			"description": "Product Description",
+			"image": "bracelet.jpg",
+			"price": 0.00,
+			"category": "Accessories",
+			"quantity": 0.00,
+			"inventoryStatus": "INSTOCK",
+			"rating": 0.00
+		},
+		{
+			"id": "1005",
+			"code": "av2231fwg",
+			"name": "JPY",
+			"description": "Product Description",
+			"image": "brown-purse.jpg",
+			"price": 0.00,
+			"category": "Accessories",
+			"quantity": 0.00,
+			"inventoryStatus": "OUTOFSTOCK",
+			"rating": 0.00
+		},
+		{
+			"id": "1006",
+			"code": "bib36pfvm",
+			"name": "NOK",
+			"description": "Product Description",
+			"image": "chakra-bracelet.jpg",
+			"price": 0.00,
+			"category": "Accessories",
+			"quantity": 0.00,
+			"inventoryStatus": "LOWSTOCK",
+			"rating": 0.00
+		},
+		{
+			"id": "1007",
+			"code": "mbvjkgip5",
+			"name": "Galaxy Earrings",
+			"description": "Product Description",
+			"image": "galaxy-earrings.jpg",
+			"price": 0.00,
+			"category": "Accessories",
+			"quantity": 0.00,
+			"inventoryStatus": "INSTOCK",
+			"rating": 0.00
+		},
+		{
+			"id": "1008",
+			"code": "vbb124btr",
+			"name": "Game Controller",
+			"description": "Product Description",
+			"image": "game-controller.jpg",
+			"price": 99,
+			"category": "Electronics",
+			"quantity": 2,
+			"inventoryStatus": "LOWSTOCK",
+			"rating": 4
+		},
+		{
+			"id": "1009",
+			"code": "cm230f032",
+			"name": "Gaming Set",
+			"description": "Product Description",
+			"image": "gaming-set.jpg",
+			"price": 299,
+			"category": "Electronics",
+			"quantity": 63,
+			"inventoryStatus": "INSTOCK",
+			"rating": 3
+		}
+	]
+}

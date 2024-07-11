@@ -1,0 +1,16 @@
+@import './_variables';
+@import './_mixins';
+@import './_preloading';
+@import './_main';
+@import './_topbar';
+@import './_menu';
+@import './_config';
+@import './_content';
+@import './_footer';
+@import './_responsive';
+@import './_utils';
+@import './_typography';
+@import './../../../../app/modules/shared/components/payplus-grid/payplus-grid.component.scss';
+@import './../../../../app/modules/shared/components/chips/chips.component.scss';
+@import './../../../../app/modules/configuration&setup/legal-entity/components/legal-entity-form/legal-entity.component.scss';
+@import './../../../../app/modules/Configuration&Setup/location/location.component.scss';

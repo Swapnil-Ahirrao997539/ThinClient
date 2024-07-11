@@ -1,0 +1,72 @@
+.pd{
+     margin-top: 0;
+     padding: 0 21px;
+    .p-dropdown {
+        height: 25px !important;
+        width: 100%;
+        // margin-bottom: 12px !important;
+        // margin-top: 3px;
+    }
+
+    .p-inputtext {
+        font-family: var(--font-family);
+        font-feature-settings: var(--font-feature-settings, normal);
+        font-size: 0.9rem;
+        color: #6366f1;        ;
+        background: #ffffff;
+        padding: 0.4rem 0.75rem;
+        border: 1px solid #d1d5db;
+        transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+        appearance: none;
+        border-radius: 6px;
+    }
+}
+
+.tabButton {
+        .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+            color: #ffffff;
+            background: #6366f1;
+            border: 1px solid #64748b;
+        }   
+}
+
+.tabButtonUnselected {
+    .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+        color: #ffffff;
+        background: #6b7280;
+        border: 1px solid #64748b;
+    }   
+}
+
+.selections{
+    .card {
+        background: var(--surface-card);
+        border: 0;
+        padding: 0;
+        margin-bottom: 1rem;
+        box-shadow: var(--card-shadow);
+        border-radius: 12px;
+    }
+    .card1 {
+        background: var(--surface-card);
+        border: 1px solid gainsboro;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: var(--card-shadow);
+        border-radius: 12px;
+    }
+}
+
+@mixin focused() {
+    outline: 0 none;
+    outline-offset: 0;
+    transition: box-shadow .2s;
+    box-shadow: var(--focus-ring);
+}
+
+@mixin focused-inset() {
+    outline: 0 none;
+    outline-offset: 0;
+    transition: box-shadow .2s;
+    box-shadow: inset var(--focus-ring);
+}
