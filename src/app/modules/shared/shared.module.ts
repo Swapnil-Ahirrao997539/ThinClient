@@ -42,7 +42,7 @@ import { PayplusTranslateFrLoaderService } from './services/payplus-translate-fr
 		DropdownModule,
 		RadioButtonModule,
 		InputNumberModule,
-		DialogModule,
+		DialogModule, 
 		ChipModule,
 		MultiSelectModule,
 		ToolbarModule,
