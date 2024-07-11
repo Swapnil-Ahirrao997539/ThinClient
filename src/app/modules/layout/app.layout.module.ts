@@ -26,8 +26,6 @@ import { DialogModule } from 'primeng/dialog';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { MissingTranslationHandler, TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { LayoutService } from './services/app.layout.service';
-import { PayplusMissingTranslationHandlerService } from '../shared/services/payplus-missing-translation-handler.service';
-import { PayplusTranslateFrLoaderService } from '../shared/services/payplus-translate-fr-loader.service';
 import { PayplusTranslateLoaderService } from '../shared/services/payplus-translate-loader.service';
 import { AppTopBarComponent } from './components/topbar/app.topbar.component';
 import { AppFooterComponent } from './components/footer/app.footer.component';

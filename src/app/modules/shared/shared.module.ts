@@ -22,8 +22,6 @@ import { MultiSelectModule } from 'primeng/multiselect';
 import { MissingTranslationHandler, TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RestApiService } from './services/rest-api.service';
 import { PayplusTranslateLoaderService } from './services/payplus-translate-loader.service';
-import { PayplusMissingTranslationHandlerService } from './services/payplus-missing-translation-handler.service';
-import { PayplusTranslateFrLoaderService } from './services/payplus-translate-fr-loader.service';
 import { LayoutService } from '../layout/services/app.layout.service';
 import { CommonService } from './services/common.service';
 @NgModule({
@@ -46,13 +44,7 @@ import { CommonService } from './services/common.service';
 		ChipModule,
 		MultiSelectModule,
 		ToolbarModule,
-		TranslateModule.forRoot({
-			loader: { provide: TranslateLoader, useClass: false ? PayplusTranslateFrLoaderService : PayplusTranslateLoaderService },
-			missingTranslationHandler: {
-				provide: MissingTranslationHandler,
-				useClass: PayplusMissingTranslationHandlerService
-			}
-		})
+	
 	],
 	exports: [PayplusGridComponent, ChipsComponent, TranslateModule]
 })

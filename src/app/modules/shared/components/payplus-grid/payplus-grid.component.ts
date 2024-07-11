@@ -1,11 +1,11 @@
 import { ChangeDetectorRef, Component, Input, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
-import { Product } from 'src/app/modules/api/product';
 import { MessageService, SortEvent } from 'primeng/api';
 import { Table, TableModule } from 'primeng/table';
 import { ProductService } from 'src/app/modules/service/product.service';
 import { LayoutService } from 'src/app/modules/layout/services/app.layout.service';
 import { Router } from '@angular/router';
 import { Paginator } from 'primeng/paginator';
+import { Product } from '../../models/product';
 
 interface Column {
 	field: string;

@@ -4,7 +4,6 @@ import { MenuItem } from 'primeng/api';
 import { Router } from '@angular/router';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonService } from 'src/app/modules/shared/services/common.service';
-import { PayplusTranslateFrLoaderService } from 'src/app/modules/shared/services/payplus-translate-fr-loader.service';
 import { LayoutService } from '../../services/app.layout.service';
 import { MenuService } from '../../services/app.menu.service';
 
@@ -69,7 +68,7 @@ export class AppTopBarComponent implements OnInit {
 	) {}
 	onLangChange(currentLang: string) {
 		if (currentLang == 'fr') {
-			this.setTranslateLoader(PayplusTranslateFrLoaderService);
+			// this.setTranslateLoader(PayplusTranslateFrLoaderService);
 			this.translate.getTranslation('fr');
 		}
 		if (currentLang == 'en') {

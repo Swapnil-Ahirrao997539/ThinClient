@@ -3,11 +3,11 @@ import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MenuItem, OverlayService } from 'primeng/api';
 import { Dropdown } from 'primeng/dropdown';
-import { Representative } from 'src/app/modules/api/customer';
-import { Product } from 'src/app/modules/api/product';
+import { Representative } from 'src/app/modules/shared/models/customer';
 import { CountryService } from 'src/app/modules/service/country.service';
 import { ProductService } from 'src/app/modules/service/product.service';
 import { LayoutService } from 'src/app/modules/layout/services/app.layout.service';
+import { Product } from '../../shared/models/product';
 interface City {
 	label: string;
 	icon: string;
