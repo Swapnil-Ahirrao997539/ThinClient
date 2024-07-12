@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Product } from '../shared/models/product';
-import { LegalEntity } from '../configuration&setup/legal-entity/models/legal-entiry-model';
+import { LegalEntity } from '../configuration-and-setup/legal-entity/models/legal-entiry-model';
 
 @Injectable()
 export class ProductService {
