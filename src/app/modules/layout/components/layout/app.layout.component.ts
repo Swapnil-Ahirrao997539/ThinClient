@@ -92,39 +92,46 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
 				this.dt = [];
 				this.router.navigate(['/uikit/blank']);
 			}
-			if (this.gridHeader) {
-				let g = this.gridHeader.split('(');
 
-				// Write logic for overite Tab array
-
-				if (this.gridHeader.includes('(')) {
-					if (this.dt.includes(g[0] + 'Grid')) {
-						return;
-					} else {
-						if (this.dt.length) {
-							for (let k = 0; k < this.dt.length; k++) {
-								if (this.dt[k].includes('Grid')) {
-									this.dt[k] = g[0] + 'Grid';
-									this.selectedChip = g[0] + 'Grid';
-
-									return;
-								}
-							}
-							// }
-						}
-						this.dt.push(g[0] + 'Grid');
-						this.selectedChip = g[0] + 'Grid';
-					}
-				} else {
-					if (this.dt.includes(g[0]) || g[0] == 'Configuration & Setup' || g[0] == 'Systems' || g[0] == 'SMC' || g[0] == 'Table Maintenance' || g[0] == 'Dashboard View' || g[0] == 'Create' || g[0] == 'Pending' || g[0] == 'Active' || g[0] == 'Rejected' || g[0] == 'Treasury Security') {
-						return;
-					}
-					this.dt.push(g[0]);
-					this.selectedChip = g[0];
-				}
-			}
+			this.overriteTabArray();
 		});
 	}
+	/** Function for logic overrite tab array */
+	overriteTabArray() {
+		if (this.gridHeader) {
+			let g = this.gridHeader.split('(');
+
+			// Write logic for overite Tab array
+
+			if (this.gridHeader.includes('(')) {
+				if (this.dt.includes(g[0] + 'Grid')) {
+					return;
+				} else {
+					if (this.dt.length) {
+						for (let k = 0; k < this.dt.length; k++) {
+							if (this.dt[k].includes('Grid')) {
+								this.dt[k] = g[0] + 'Grid';
+								this.selectedChip = g[0] + 'Grid';
+
+								return;
+							}
+						}
+						// }
+					}
+					this.dt.push(g[0] + 'Grid');
+					this.selectedChip = g[0] + 'Grid';
+				}
+			} else {
+				if (this.dt.includes(g[0]) || g[0] == 'Configuration & Setup' || g[0] == 'Systems' || g[0] == 'SMC' || g[0] == 'Table Maintenance' || g[0] == 'Dashboard View' || g[0] == 'Create' || g[0] == 'Pending' || g[0] == 'Active' || g[0] == 'Rejected' || g[0] == 'Treasury Security') {
+					return;
+				}
+				this.dt.push(g[0]);
+				this.selectedChip = g[0];
+			}
+		}
+	}
+
+	/* Load Parent XML Data */
 
 	loadParentXML() {
 		let url = '/assets/demo/data/users.xml';

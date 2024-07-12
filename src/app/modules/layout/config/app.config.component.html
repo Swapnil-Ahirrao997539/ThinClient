@@ -1,100 +1,96 @@
 <button class="layout-config-button p-link" type="button" (click)="onConfigButtonClick()">
-    <i class="pi pi-cog"></i>
+	<i class="pi pi-cog"></i>
 </button>
 
 <p-sidebar [(visible)]="visible" position="right" [transitionOptions]="'.3s cubic-bezier(0, 0, 0.2, 1)'" styleClass="layout-config-sidebar w-20rem">
-    <h5>Scale</h5>
-    <div class="flex align-items-center">
-        <button icon="pi pi-minus" type="button" pButton (click)="decrementScale()" class="p-button-text p-button-rounded w-2rem h-2rem mr-2" [disabled]="scale === scales[0]"></button>
-        <div class="flex gap-2 align-items-center">
-            <i class="pi pi-circle-fill text-300" *ngFor="let s of scales" [ngClass]="{'text-primary-500': s === scale}"></i>
-        </div>
-        <button icon="pi pi-plus"  type="button" pButton (click)="incrementScale()" class="p-button-text p-button-rounded w-2rem h-2rem ml-2" [disabled]="scale === scales[scales.length - 1]"></button>
-    </div>
+	<h5>Scale</h5>
+	<div class="flex align-items-center">
+		<button icon="pi pi-minus" type="button" pButton (click)="decrementScale()" class="p-button-text p-button-rounded w-2rem h-2rem mr-2" [disabled]="scale === scales[0]"></button>
+		<div class="flex gap-2 align-items-center">
+			<i class="pi pi-circle-fill text-300" *ngFor="let s of scales" [ngClass]="{ 'text-primary-500': s === scale }"></i>
+		</div>
+		<button icon="pi pi-plus" type="button" pButton (click)="incrementScale()" class="p-button-text p-button-rounded w-2rem h-2rem ml-2" [disabled]="scale === scales[scales.length - 1]"></button>
+	</div>
 
+	<ng-container *ngIf="!minimal">
+		<h5>Menu Type</h5>
+		<div class="field-radiobutton">
+			<p-radioButton name="menuMode" value="static" [(ngModel)]="menuMode" inputId="mode1"></p-radioButton>
+			<label for="mode1">Static</label>
+		</div>
+		<div class="field-radiobutton">
+			<p-radioButton name="menuMode" value="overlay" [(ngModel)]="menuMode" inputId="mode2"></p-radioButton>
+			<label for="mode2">Overlay</label>
+		</div>
+	</ng-container>
 
-    <ng-container *ngIf="!minimal">
-        <h5>Menu Type</h5>
-        <div class="field-radiobutton">
-            <p-radioButton name="menuMode" value="static" [(ngModel)]="menuMode" inputId="mode1"></p-radioButton>
-            <label for="mode1">Static</label>
-        </div>
-        <div class="field-radiobutton">
-            <p-radioButton name="menuMode" value="overlay" [(ngModel)]="menuMode" inputId="mode2"></p-radioButton>
-            <label for="mode2">Overlay</label>
-        </div>
-    </ng-container>
+	<ng-container>
+		<h5>Font Size</h5>
+		<div class="field-radiobutton">
+			<p-radioButton value="mode1" [(ngModel)]="selectedFont" (click)="changeFont('9px')" inputId="mode1" [ngModelOptions]="{ standalone: true }"></p-radioButton>
+			<label for="mode1">Small</label>
+		</div>
+		<div class="field-radiobutton">
+			<p-radioButton value="mode2" [(ngModel)]="selectedFont" (click)="changeFont('14px')" inputId="mode2" [ngModelOptions]="{ standalone: true }"></p-radioButton>
+			<label for="mode2">Medium</label>
+		</div>
+		<div class="field-radiobutton">
+			<p-radioButton value="mode3" [(ngModel)]="selectedFont" (click)="changeFont('16px')" inputId="mode3" [ngModelOptions]="{ standalone: true }"></p-radioButton>
+			<label for="mode3">Large</label>
+		</div>
+	</ng-container>
+	<ng-container>
+		<h5>Themes</h5>
+		<div class="field-radiobutton">
+			<p-radioButton value="mode1" [(ngModel)]="selectedFont" (click)="changeTheme('lara-custom-indigo', 'light')" inputId="mode1" [ngModelOptions]="{ standalone: true }"></p-radioButton>
+			<label for="mode1">HSBC</label>
+		</div>
+		<div class="field-radiobutton">
+			<p-radioButton value="mode2" [(ngModel)]="selectedFont" (click)="changeTheme('thin-client-pro', 'light')" inputId="mode2" [ngModelOptions]="{ standalone: true }"></p-radioButton>
+			<label for="mode2">Payplus</label>
+		</div>
+		<div class="field-radiobutton">
+			<p-radioButton value="mode3" [(ngModel)]="selectedFont" (click)="changeTheme('lara-custome-floro', 'light')" inputId="mode3" [ngModelOptions]="{ standalone: true }"></p-radioButton>
+			<label for="mode3">Bank of china</label>
+		</div>
+	</ng-container>
 
-    <ng-container >
-        <h5>Font Size</h5>
-        <div class="field-radiobutton">
-            <p-radioButton value="mode1" [(ngModel)]="selectedFont" (click)="changeFont('9px')"  inputId="mode1" [ngModelOptions]="{standalone: true}"></p-radioButton>
-            <label for="mode1">Small</label>
-        </div>
-        <div class="field-radiobutton">
-            <p-radioButton value="mode2" [(ngModel)]="selectedFont" (click)="changeFont('14px')" inputId="mode2" [ngModelOptions]="{standalone: true}"></p-radioButton>
-            <label for="mode2">Medium</label>
-        </div>
-        <div class="field-radiobutton">
-            <p-radioButton value="mode3" [(ngModel)]="selectedFont" (click)="changeFont('16px')" inputId="mode3" [ngModelOptions]="{standalone: true}"></p-radioButton>
-            <label for="mode3">Large</label>
-        </div>
-    
-    </ng-container>
-    <ng-container >
-        <h5>Themes</h5>
-        <div class="field-radiobutton">
-            <p-radioButton value="mode1" [(ngModel)]="selectedFont" (click)="changeTheme('lara-custom-indigo', 'light')"  inputId="mode1" [ngModelOptions]="{standalone: true}"></p-radioButton>
-            <label for="mode1">Theme 1</label>
-        </div>
-        <div class="field-radiobutton">
-            <p-radioButton value="mode2" [(ngModel)]="selectedFont" (click)="changeTheme('lara-light-indigo', 'light')" inputId="mode2" [ngModelOptions]="{standalone: true}"></p-radioButton>
-            <label for="mode2">Theme 2</label>
-        </div>
-        <div class="field-radiobutton">
-            <p-radioButton value="mode3" [(ngModel)]="selectedFont" (click)="changeTheme('lara-custome-floro', 'light')" inputId="mode3" [ngModelOptions]="{standalone: true}"></p-radioButton>
-            <label for="mode3">Theme 3</label>
-        </div>
-    
-    </ng-container>
+	<ng-container *ngIf="!minimal">
+		<h5>Input Style</h5>
+		<div class="flex">
+			<div class="field-radiobutton flex-1">
+				<p-radioButton name="inputStyle" value="outlined" [(ngModel)]="inputStyle" inputId="outlined_input"></p-radioButton>
+				<label for="outlined_input">Outlined</label>
+			</div>
+			<div class="field-radiobutton flex-1">
+				<p-radioButton name="inputStyle" value="filled" [(ngModel)]="inputStyle" inputId="filled_input"></p-radioButton>
+				<label for="filled_input">Filled</label>
+			</div>
+		</div>
 
-    <ng-container *ngIf="!minimal">
-        <h5>Input Style</h5>
-        <div class="flex">
-            <div class="field-radiobutton flex-1">
-                <p-radioButton name="inputStyle" value="outlined" [(ngModel)]="inputStyle" inputId="outlined_input"></p-radioButton>
-                <label for="outlined_input">Outlined</label>
-            </div>
-            <div class="field-radiobutton flex-1">
-                <p-radioButton name="inputStyle" value="filled" [(ngModel)]="inputStyle" inputId="filled_input"></p-radioButton>
-                <label for="filled_input">Filled</label>
-            </div>
-        </div>
+		<h5>Ripple Effect</h5>
+		<p-inputSwitch [(ngModel)]="ripple"></p-inputSwitch>
+	</ng-container>
+	<h5>Change Color</h5>
+	<div class="grid">
+		<div class="col-3">
+			<button class="p-link w-2rem h-2rem t1" style="background-color: #7a0c99; text-align: center; color: white" (click)="changeTheme('lara-custom-indigo', 'light')">
+				<b>T1</b>
+			</button>
+		</div>
+		<div class="col-3">
+			<button class="p-link w-2rem h-2rem t2" style="background-color: #6366f1; text-align: center; color: white" (click)="changeTheme('lara-light-indigo', 'light')">
+				<b>T2</b>
+			</button>
+		</div>
+		<div class="col-3">
+			<button class="p-link w-2rem h-2rem t2" style="background-color: #82f163; text-align: center; color: white" (click)="changeTheme('lara-custome-floro', 'light')">
+				<b>T3</b>
+			</button>
+		</div>
+	</div>
 
-        <h5>Ripple Effect</h5>
-        <p-inputSwitch [(ngModel)]="ripple"></p-inputSwitch>
-    </ng-container>
-    <h5>Change Color</h5>
-    <div class="grid">
-        <div class="col-3">
-            <button class="p-link w-2rem h-2rem t1" style="background-color:  #7a0c99;text-align: center;color: white;" (click)="changeTheme('lara-custom-indigo', 'light')">
-               <b>T1</b> 
-            </button>
-        </div>
-        <div class="col-3">
-            <button class="p-link w-2rem h-2rem t2"  style="background-color:#6366F1 ;text-align: center;color: white;" (click)="changeTheme('lara-light-indigo', 'light')">
-                <b>T2</b> 
-            </button>
-        </div>
-        <div class="col-3">
-            <button class="p-link w-2rem h-2rem t2"  style="background-color:#82f163 ;text-align: center;color: white;" (click)="changeTheme('lara-custome-floro', 'light')">
-                <b>T3</b> 
-            </button>
-        </div>
-      
-    </div>
-
-    <!-- <h5>Bootstrap</h5>
+	<!-- <h5>Bootstrap</h5>
     <div class="grid">
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('bootstrap4-light-blue', 'light')">
@@ -118,7 +114,7 @@
         </div>
     </div> -->
 
-    <!-- <h5>Material Design</h5>
+	<!-- <h5>Material Design</h5>
     <div class="grid">
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('md-light-indigo', 'light')">
@@ -142,31 +138,31 @@
         </div>
     </div> -->
 
-    <h5>Material Design Compact</h5>
-    <div class="grid">
-        <div class="col-3">
-            <button class="p-link w-2rem h-2rem" (click)="changeTheme('mdc-light-indigo', 'light')">
-                <img src="assets/layout/images/themes/md-light-indigo.svg" class="w-2rem h-2rem" alt="Material Light Indigo">
-            </button>
-        </div>
-        <div class="col-3">
-            <button class="p-link w-2rem h-2rem" (click)="changeTheme('mdc-light-deeppurple', 'light')">
-                <img src="assets/layout/images/themes/md-light-deeppurple.svg" class="w-2rem h-2rem" alt="Material Light Deep Purple">
-            </button>
-        </div>
-        <div class="col-3">
-            <button class="p-link w-2rem h-2rem" (click)="changeTheme('mdc-dark-indigo', 'dark')">
-                <img src="assets/layout/images/themes/md-dark-indigo.svg" class="w-2rem h-2rem" alt="Material Dark Indigo">
-            </button>
-        </div>
-        <div class="col-3">
-            <button class="p-link w-2rem h-2rem" (click)="changeTheme('mdc-dark-deeppurple', 'dark')">
-                <img src="assets/layout/images/themes/md-dark-deeppurple.svg" class="w-2rem h-2rem" alt="Material Dark Deep Purple">
-            </button>
-        </div>
-    </div>
+	<h5>Material Design Compact</h5>
+	<div class="grid">
+		<div class="col-3">
+			<button class="p-link w-2rem h-2rem" (click)="changeTheme('mdc-light-indigo', 'light')">
+				<img src="assets/layout/images/themes/md-light-indigo.svg" class="w-2rem h-2rem" alt="Material Light Indigo" />
+			</button>
+		</div>
+		<div class="col-3">
+			<button class="p-link w-2rem h-2rem" (click)="changeTheme('mdc-light-deeppurple', 'light')">
+				<img src="assets/layout/images/themes/md-light-deeppurple.svg" class="w-2rem h-2rem" alt="Material Light Deep Purple" />
+			</button>
+		</div>
+		<div class="col-3">
+			<button class="p-link w-2rem h-2rem" (click)="changeTheme('mdc-dark-indigo', 'dark')">
+				<img src="assets/layout/images/themes/md-dark-indigo.svg" class="w-2rem h-2rem" alt="Material Dark Indigo" />
+			</button>
+		</div>
+		<div class="col-3">
+			<button class="p-link w-2rem h-2rem" (click)="changeTheme('mdc-dark-deeppurple', 'dark')">
+				<img src="assets/layout/images/themes/md-dark-deeppurple.svg" class="w-2rem h-2rem" alt="Material Dark Deep Purple" />
+			</button>
+		</div>
+	</div>
 
-    <!-- <h5>Tailwind</h5>
+	<!-- <h5>Tailwind</h5>
     <div class="grid">
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('tailwind-light', 'light')">
@@ -184,7 +180,7 @@
         </div>
     </div> -->
 
-    <!-- <h5>PrimeOne Design - 2022</h5>
+	<!-- <h5>PrimeOne Design - 2022</h5>
     <div class="grid">
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('lara-light-indigo', 'light')">
@@ -228,7 +224,7 @@
         </div>
     </div> -->
 
-    <!-- <h5>PrimeOne Design - 2021</h5>
+	<!-- <h5>PrimeOne Design - 2021</h5>
     <div class="grid">
         <div class="col-3">
             <button class="p-link w-2rem h-2rem" (click)="changeTheme('saga-blue', 'light')">

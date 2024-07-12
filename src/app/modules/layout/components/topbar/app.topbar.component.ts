@@ -26,11 +26,6 @@ export class AppTopBarComponent implements OnInit {
 	sessionType;
 	moduleValue;
 
-	languages = [
-		{ name: 'English', lang: 'en' },
-		{ name: 'French', lang: 'fr' }
-	];
-
 	currentLang = 'fr';
 	selectedLang: any;
 	visible: boolean = false;

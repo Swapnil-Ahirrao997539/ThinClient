@@ -25,21 +25,6 @@ export class AppMenuComponent implements OnInit {
 	suggestions: any[] | undefined;
 	files!: TreeNode[];
 
-	modules: any[] = [
-		{ name: 'Processign', code: 'processign' },
-		{ name: 'User Admin', code: 'Useradmin' }
-	];
-	viewType = [
-		{ name: 'Aggregate', code: 'aggregate' },
-		{ name: 'Individual', code: 'individual' }
-	];
-	sessionType: any[] = [
-		{ name: 'CLS1', value: 'cls1' },
-		{ name: 'SDS', value: 'sds' },
-		{ name: 'CLSNET', value: 'clsnet' },
-		{ name: 'LCH', value: 'lch' },
-		{ name: 'CLSNOW', value: 'clsnow' }
-	];
 	value10: any;
 	value11: any;
 	value12: any;
@@ -69,9 +54,6 @@ export class AppMenuComponent implements OnInit {
 			this.layoutService.isSelection = true;
 		}
 
-		// this.value10 = 'processign';
-		this.value11 = this.viewType[1];
-		this.value12 = this.sessionType[0];
 		this.nodeService.getFiles().then((files) => (this.files1 = files));
 		this.nodeService.getFiles().then((data) => (this.files = data));
 

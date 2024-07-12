@@ -36,7 +36,7 @@ export class LayoutService {
 		inputStyle: 'outlined',
 		menuMode: 'static',
 		colorScheme: 'light',
-		theme: 'lara-light-indigo',
+		theme: 'thin-client-pro',
 		scale: 14,
 		fontSize: '14px'
 	};
@@ -79,8 +79,9 @@ export class LayoutService {
 
 	fontSize$ = this.fontSize.asObservable();
 
-	constructor( public router: Router,	
-			     private restApiService: RestApiService
+	constructor(
+		public router: Router,
+		private restApiService: RestApiService
 	) {
 		if (this.router.url == '/') {
 			this.isDisplay = false;
@@ -104,12 +105,11 @@ export class LayoutService {
 			this.onConfigUpdate();
 		});
 	}
- 
+
 	/** GetUSeConData Capture to procress tree draw */
 	GetUseConRep(url?: any): Observable<any> {
 		return this.restApiService.get(url);
 	}
-
 
 	updateStyle(config: AppConfig) {
 		return config.theme !== this._config.theme || config.colorScheme !== this._config.colorScheme;
