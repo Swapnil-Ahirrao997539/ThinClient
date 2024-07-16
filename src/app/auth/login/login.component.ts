@@ -47,9 +47,7 @@ export class LoginComponent {
 		private messageService: MessageService,
 		private restApiService: RestApiService,
 		private commonService: CommonService
-	) {
-		this.getVersionDetailCall();
-	}
+	) {}
 
 	ngOnInit(): void {}
 	/***
@@ -121,58 +119,5 @@ export class LoginComponent {
 				//alert('Internal Server Error' + '' + JSON.parse(JSON.stringify(error.status)));
 			}
 		);
-	}
-
-	getVersionDetailCall() {
-		let AdditionalParameters = '@FORM_NAME@=frmVersion&@COMMAND_EVENT@=eventGetVersion';
-		let data1: any = `
-		   @FORM_NAME@: frmVersion
-		   @COMMAND_EVENT@: eventGetVersion
-		   paramNmSeq: 1egv1jld1k741j0s1ldi1lll1nce1fgc1jsu1fnn1h0y1d261dgc1b3c1egv1b4m1dia1d401h1o1fnf1jsw1fgi1ndc1lk51le01j021k721jm51egv
-		   FPRINT: 18qe19q1194s1abc19j21bpb19j41abq194y19qd18qw`;
-
-		this.authService.getVersionDetails(data1, AdditionalParameters).subscribe(
-			(response: any) => {
-				this.commonService.xmlToJson(response.body);
-				this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Successfull Response Received!!' });
-			},
-			(error) => {
-				this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Servlet Exception! Please contact PAYplus for CLS Administrator.' });
-			}
-		);
-
-		// this._http
-		// 	.post(
-		// 		'http://localhost:8080/thinClient/servlet/MainServlet?@FORM_NAME@=frmVersion&@COMMAND_EVENT@=eventGetVersion',
-		// 		data1,
-		// 		// this._http.post('http://localhost:8080/thinClient/servlet/MainServlet',data1,
-
-		// 		{
-		// 			observe: 'response',
-		// 			headers: new HttpHeaders(),
-
-		// 			responseType: 'text'
-		// 		}
-		// 	)
-		// 	.subscribe(
-		// 		(data: any) => {
-		// 			debugger;
-		// 			//   var parser = new DOMParser();
-		// 			//   let convertedData = JSON.parse(JSON.stringify(data.body));
-		// 			//   let xmlDoc = parser.parseFromString(convertedData, 'text/xml');
-		// 			//   let standardObj :any = this.ngxXml2jsonService.xmlToJson(xmlDoc); // Converted into JSON
-		// 			//   console.log(standardObj);
-		// 			//   this.version = standardObj.GPP_VERSION_INFO.PRODUCT;
-		// 			//   this.copyright = standardObj.GPP_VERSION_INFO.COPYRIGHT;
-		// 			//   if(standardObj.SecurityException) {                               //**Check whether throw exception */
-		// 			// 	this.route.navigate(['/servlet-exception'])   //** Redirect with error string to error page */
-		// 			//   } else {
-		// 			// 	this.route.navigateByUrl('/');
-		// 			//   }
-		// 		},
-		// 		(error) => {
-		// 			this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Invalid username or password.' });
-		// 		}
-		// 	);
 	}
 }

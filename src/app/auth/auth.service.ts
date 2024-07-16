@@ -92,7 +92,7 @@ export class AuthService {
 
 	/*** Logout with session flushed functionality */
 	logout() {
-		this.router.navigateByUrl('/');
+		// this.router.navigateByUrl('/');
 		window.location.reload();
 		this.session = undefined;
 		localStorage.removeItem('session');

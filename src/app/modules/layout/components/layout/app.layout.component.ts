@@ -138,7 +138,7 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
 		this.layoutService.GetUseConRep(url).subscribe(
 			(response: any) => {
 				this.commonService.xmlToJson(response.body);
-				this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Successfull Response Received!!' });
+				// this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Successfull Response Received!!' });
 			},
 			(error) => {
 				this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Servlet Exception! Please contact PAYplus for CLS Administrator.' });

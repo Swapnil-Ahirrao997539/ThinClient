@@ -6,6 +6,7 @@ import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-transla
 import { CommonService } from 'src/app/modules/shared/services/common.service';
 import { LayoutService } from '../../services/app.layout.service';
 import { MenuService } from '../../services/app.menu.service';
+import { AuthService } from 'src/app/auth/auth.service';
 
 interface selection {
 	name: string;
@@ -24,7 +25,7 @@ export class AppTopBarComponent implements OnInit {
 	items!: MenuItem[];
 	viewType: any;
 	sessionType;
-	moduleValue;
+	moduleValue = 'Processing';
 
 	currentLang = 'fr';
 	selectedLang: any;
@@ -39,6 +40,8 @@ export class AppTopBarComponent implements OnInit {
 	selections: selection[];
 	viewTypes: any[] = [];
 	sessionTypes: any[] = [];
+
+	profileItems: MenuItem[] | undefined;
 
 	selectedSelections: any = 'Processing';
 
@@ -59,7 +62,8 @@ export class AppTopBarComponent implements OnInit {
 		public menuService: MenuService,
 		public router: Router,
 		public translate: TranslateService,
-		public commonService: CommonService
+		public commonService: CommonService,
+		private authService: AuthService
 	) {}
 	onLangChange(currentLang: string) {
 		if (currentLang == 'fr') {
@@ -100,15 +104,41 @@ export class AppTopBarComponent implements OnInit {
 
 		//     }
 		//  })
-
+		this.profileItems = [
+			{
+				label: localStorage.getItem('username'),
+				items: [
+					{
+						label: 'Refresh',
+						icon: 'pi pi-refresh',
+						command: () => {
+							this.refresh();
+						}
+					},
+					{
+						label: 'Logout	',
+						icon: 'pi pi-power-off',
+						command: () => {
+							this.authService.logout();
+						}
+					}
+				]
+			}
+		];
 		this.menuService.selectedViewType.subscribe((data) => {
-			this.viewType = data.name;
+			if (data) {
+				this.viewType = data.name;
+			}
 		});
 		this.menuService.sessionType.subscribe((data) => {
-			this.sessionType = data.name;
+			if (data) {
+				this.sessionType = data.name;
+			}
 		});
 		this.menuService.moduleValue.subscribe((data) => {
-			this.moduleValue = data;
+			if (data) {
+				this.moduleValue = data;
+			}
 		});
 		this.selections = [
 			{ name: 'Processing', code: 'Processing' },
@@ -130,5 +160,9 @@ export class AppTopBarComponent implements OnInit {
 	showDialog(position: string) {
 		this.position = position;
 		this.visible = true;
+	}
+
+	refresh() {
+		window.location.reload();
 	}
 }

@@ -1,12 +1,14 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
-import { TreeNode } from 'primeng/api';
+import { MessageService, TreeNode } from 'primeng/api';
 import { AutoCompleteCompleteEvent } from 'primeng/autocomplete';
 import { Router } from '@angular/router';
 import { AppSettings } from 'src/app/modules/shared/services/app.settings';
 import { MenuService } from '../../services/app.menu.service';
 import { NodeService } from 'src/app/modules/service/node.service';
 import { LayoutService } from '../../services/app.layout.service';
+import { AuthService } from 'src/app/auth/auth.service';
+import { CommonService } from 'src/app/modules/shared/services/common.service';
 
 @Component({
 	selector: 'app-menu',
@@ -28,6 +30,7 @@ export class AppMenuComponent implements OnInit {
 	value10: any;
 	value11: any;
 	value12: any;
+	version: any;
 	matchString: any;
 	stateOptions: any[] = [
 		{ label: 'Processing', value: 'Processing' },
@@ -44,8 +47,13 @@ export class AppMenuComponent implements OnInit {
 		private nodeService: NodeService,
 		private MenuService: MenuService,
 		private APPCONSTANT: AppSettings,
-		public router: Router
-	) {}
+		public router: Router,
+		private authService: AuthService,
+		private commonService: CommonService,
+		private messageService: MessageService
+	) {
+		this.getVersionDetailCall();
+	}
 
 	ngOnInit() {
 		if (this.router.url == '/dashboard') {
@@ -673,7 +681,23 @@ export class AppMenuComponent implements OnInit {
 			}
 		});
 	}
+	getVersionDetailCall() {
+		let AdditionalParameters = '@FORM_NAME@=frmVersion&@COMMAND_EVENT@=eventGetVersion';
+		let data1: any = `
+		   @FORM_NAME@: frmVersion
+		   @COMMAND_EVENT@: eventGetVersion
+		   paramNmSeq: 1egv1jld1k741j0s1ldi1lll1nce1fgc1jsu1fnn1h0y1d261dgc1b3c1egv1b4m1dia1d401h1o1fnf1jsw1fgi1ndc1lk51le01j021k721jm51egv
+		   FPRINT: 18qe19q1194s1abc19j21bpb19j41abq194y19qd18qw`;
 
+		this.authService.getVersionDetails(data1, AdditionalParameters).subscribe(
+			(response: any) => {
+				this.version = this.commonService.xmlToJson(response.body);
+			},
+			(error) => {
+				this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Servlet Exception! Please contact PAYplus for CLS Administrator.' });
+			}
+		);
+	}
 	activeIndexChange(index: number) {
 		this.activeIndex = index;
 		this.isCollapse = false;

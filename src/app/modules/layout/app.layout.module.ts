@@ -32,6 +32,7 @@ import { AppFooterComponent } from './components/footer/app.footer.component';
 import { AppMenuComponent } from './components/menu/app.menu.component';
 import { AppMenuitemComponent } from './components/menu/app.menuitem.component';
 import { AppSidebarComponent } from './components/sidebar/app.sidebar.component';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
 	declarations: [AppMenuitemComponent, AppTopBarComponent, AppFooterComponent, AppMenuComponent, AppSidebarComponent, AppLayoutComponent],
@@ -43,6 +44,7 @@ import { AppSidebarComponent } from './components/sidebar/app.sidebar.component'
 		InputTextModule,
 		SidebarModule,
 		BadgeModule,
+		MenuModule,
 		RadioButtonModule,
 		InputSwitchModule,
 		RippleModule,
