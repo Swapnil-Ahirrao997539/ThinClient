@@ -4,6 +4,7 @@
 	height: calc(110vh - 9rem);
 	z-index: 999;
 	overflow-y: auto;
+	overflow-x: clip;
 	user-select: none;
 	top: 3.1rem;
 	left: 0;
@@ -19,6 +20,13 @@
 		0px 3px 5px rgba(0, 0, 0, 0.02),
 		0px 0px 2px rgba(0, 0, 0, 0.05),
 		0px 1px 4px rgba(0, 0, 0, 0.08);
+	.version {
+		position: fixed;
+		bottom: 0;
+		margin-bottom: 2px;
+		width: 280px;
+		background-color: #d9c0f5;
+	}
 }
 
 .p-accord {

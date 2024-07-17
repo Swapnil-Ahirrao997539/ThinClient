@@ -3,5 +3,5 @@ export interface BuTree {
 	label?: string;
 	data?: any;
 	icon: string;
-	children: any;
+	children?: [key?: string, label?: string, data?: any, icon?: string, ChildNode?: any[]];
 }

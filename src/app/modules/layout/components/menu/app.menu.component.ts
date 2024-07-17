@@ -23,11 +23,18 @@ export class AppMenuComponent implements OnInit {
 	selectedFiles1: TreeNode[] = [];
 	items: any[] | undefined;
 
+	//Global Variables
+	buId: any;
+	buName: any;
+	custIn: any;
+	scIn: any;
+	buTp: any;
+
 	selectedItem: any;
 	changeFont: boolean = false;
 	suggestions: any[] | undefined;
 	files!: TreeNode[];
-	treeObject: BuTree;
+	treeObject: BuTree[];
 
 	value10: any;
 	value11: any;
@@ -362,16 +369,15 @@ export class AppMenuComponent implements OnInit {
 				const data = this.commonService.xmlToJson(response.body); // Capture JSON data of xml response
 				/* Prepare Tree format object */
 				data.then((res) => {
-					const beforeTreeData: any = res.USER_CONFIG.GetUseConRep.BuTree.GroupBuTree.BuNode.GroupBuNode;
-					/* Map tree object with files */
-
-					// this.treeObject = [{
-					// 	key: '0',
-					// 	label: 'System',
-					// 	data: 'Events Folder',
-					// 	icon: 'pi pi-fw pi-calendar',
-					// 	children: []
-					// }];
+					const treeData: any = res.USER_CONFIG.GetUseConRep.BuTree.GroupBuTree.BuNode.GroupBuNode;
+					/** Prepare & Map tree object to Draw Tree */
+					this.drawTree(treeData);
+					/** Capure global variables*/
+					this.scIn = treeData[0].FIELD_NM[0].$.id;
+					this.custIn = treeData[0].FIELD_NM[1].$.id;
+					this.buTp = treeData[0].FIELD_NM[2].$.id;
+					this.buId = treeData[0].FIELD_NM[3].$.id;
+					this.buName = treeData[0].FIELD_NM[4].$.id;
 				});
 			},
 			(error) => {
@@ -379,6 +385,95 @@ export class AppMenuComponent implements OnInit {
 			}
 		);
 	}
+
+	/**
+	 * @function for draw tree with received object, make parent , child, subchild object to treeData
+	 * @param treeData
+	 */
+
+	drawTree(treeData) {
+		let parentChildren: any = [];
+		let nodeChildren: any = [{ buNode: '', feild_name: '' }]; // For 1st level Node
+
+		let childArray: any = [{ key: '', label: '', data: '', icon: '', children: [] }];
+		let subChildArray: any = [{ key: '', label: '', data: '', icon: '' }];
+
+		for (let i = 0; i < treeData[1].BuNode.GroupBuNode.length; i++) {
+			parentChildren.push(treeData[1].BuNode.GroupBuNode[i].FIELD_NM[9]._);
+			if (treeData[1].BuNode.GroupBuNode[i].BuNode) {
+				nodeChildren.push({
+					buNode: treeData[1].BuNode.GroupBuNode[i].BuNode,
+					feild_name: treeData[1].BuNode.GroupBuNode[i].FIELD_NM
+				});
+			} else {
+				nodeChildren.push({
+					buNode: '',
+					feild_name: treeData[1].BuNode.GroupBuNode[i].FIELD_NM
+				});
+			}
+		}
+		nodeChildren.splice(0, 1);
+		childArray.splice(0, 1);
+		subChildArray.splice(0, 1);
+
+		// Prepare Childrens object for Tree
+		for (let k = 0; k < parentChildren.length; k++) {
+			childArray.push({
+				key: '2-' + k,
+				data: parentChildren[k],
+				label: parentChildren[k],
+				icon: 'pi pi-fw pi-calendar',
+				children: subChildArray
+			});
+
+			// Prepare sub-children object with respective BuTree
+			for (let j = 0; j < nodeChildren.length; j++) {
+				if (parentChildren[k] == nodeChildren[j].feild_name[9]._) {
+					// Compare first level and their respective buNode
+					if (nodeChildren[j].buNode) {
+						for (let g = 0; g < nodeChildren[j].buNode.GroupBuNode.length; g++) {
+							subChildArray.push({
+								key: '2-' + k + '-' + g,
+								label: nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[9]._,
+								data: nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[9]._,
+								icon: 'pi pi-fw pi-calendar'
+							}); // Collect buNode groups for first level
+						}
+					} else {
+						subChildArray = []; // Collect buNode groups for first level
+					}
+
+					subChildArray = [];
+				}
+			}
+		}
+
+		/**Final Tree Draw */
+		this.treeObject = [
+			{
+				key: '0',
+				label: treeData[0].FIELD_NM[2]._,
+				data: 'Events Folder',
+				icon: 'pi pi-fw pi-calendar',
+				children: []
+			},
+			{
+				key: '1',
+				label: treeData[0].FIELD_NM[4]._,
+				data: 'Events Folder',
+				icon: 'pi pi-fw pi-calendar',
+				children: []
+			},
+			{
+				key: '2',
+				label: treeData[1].FIELD_NM[9]._,
+				data: 'Events Folder',
+				icon: 'pi pi-fw pi-calendar',
+				children: childArray
+			}
+		];
+	}
+	/** End of Tree Draw */
 
 	onTabOpen(e) {
 		this.activeIndx = e.index;
@@ -695,19 +790,24 @@ export class AppMenuComponent implements OnInit {
 			}
 		}
 		let found = false;
-		this.files.forEach((node) => {
+		this.treeObject.forEach((node) => {
 			if (node.label == g) {
 				this.changeFont = true;
 				this.matchString = node.label;
 			}
 		});
-
-		this.files[2].children[0].children.forEach((node) => {
-			// for(let j=0;j<this.files[2].children[0].children.length;j++) {
-			if (node.label.trim() == g) {
-				this.matchString = node.label;
-			}
-		});
+		for (let r = 0; r < this.treeObject[2].children.length; r++) {
+			this.treeObject[2].children.forEach((node) => {
+				if (node.label.trim() == g) {
+					this.matchString = node.label;
+				}
+			});
+			this.treeObject[2].children[r].children.forEach((node) => {
+				if (node.label.trim() == g) {
+					this.matchString = node.label;
+				}
+			});
+		}
 	}
 	getVersionDetailCall() {
 		let AdditionalParameters = '@FORM_NAME@=frmVersion&@COMMAND_EVENT@=eventGetVersion';
