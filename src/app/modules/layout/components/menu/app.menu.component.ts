@@ -9,6 +9,7 @@ import { NodeService } from 'src/app/modules/service/node.service';
 import { LayoutService } from '../../services/app.layout.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { CommonService } from 'src/app/modules/shared/services/common.service';
+import { BuTree } from '../../models/butree';
 
 @Component({
 	selector: 'app-menu',
@@ -26,6 +27,7 @@ export class AppMenuComponent implements OnInit {
 	changeFont: boolean = false;
 	suggestions: any[] | undefined;
 	files!: TreeNode[];
+	treeObject: BuTree;
 
 	value10: any;
 	value11: any;
@@ -62,8 +64,8 @@ export class AppMenuComponent implements OnInit {
 			this.layoutService.isSelection = true;
 		}
 
-		this.nodeService.getFiles().then((files) => (this.files1 = files));
 		this.nodeService.getFiles().then((data) => (this.files = data));
+		this.loadParentXML();
 
 		this.MenuService.selectedViewType.next(this.value11);
 		this.MenuService.sessionType.next(this.value12);
@@ -352,6 +354,32 @@ export class AppMenuComponent implements OnInit {
 			}
 		});
 	}
+
+	loadParentXML() {
+		let url = '/assets/demo/data/users.xml';
+		this.layoutService.GetUseConRep(url).subscribe(
+			(response: any) => {
+				const data = this.commonService.xmlToJson(response.body); // Capture JSON data of xml response
+				/* Prepare Tree format object */
+				data.then((res) => {
+					const beforeTreeData: any = res.USER_CONFIG.GetUseConRep.BuTree.GroupBuTree.BuNode.GroupBuNode;
+					/* Map tree object with files */
+
+					// this.treeObject = [{
+					// 	key: '0',
+					// 	label: 'System',
+					// 	data: 'Events Folder',
+					// 	icon: 'pi pi-fw pi-calendar',
+					// 	children: []
+					// }];
+				});
+			},
+			(error) => {
+				this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Servlet Exception! Please contact PAYplus for CLS Administrator.' });
+			}
+		);
+	}
+
 	onTabOpen(e) {
 		this.activeIndx = e.index;
 	}

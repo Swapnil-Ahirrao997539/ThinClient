@@ -5,7 +5,7 @@
 				<span class="selections" *ngIf="activeIndx == 0"> </span>
 				<div class="grid buTree" *ngIf="activeIndx == 1">
 					<div class="col-12">
-						<p-tree [value]="files" [filter]="true" [(selection)]="selectedFiles1" filterMode="strict" (click)="onButreeClick($event)" filterPlaceholder="Search BU Tree">
+						<p-tree [value]="treeObject" [filter]="true" [(selection)]="selectedFiles1" filterMode="strict" (click)="onButreeClick($event)" filterPlaceholder="Search BU Tree">
 							<ng-template let-node pTemplate="default">
 								<span [ngStyle]="matchString == node.label ? { 'font-weight': '700' } : { 'font-weight': '500' }">{{ node.label }}</span>
 							</ng-template>

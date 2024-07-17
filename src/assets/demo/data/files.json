@@ -1,42 +1,39 @@
 {
-    "data": [
-      
-        {
-            "key": "0",
-            "label": "System",
-            "data": "Events Folder",
-            "icon": "pi pi-fw pi-calendar",
-            "children": [
-         
-            ]
-        },
-        {
-            "key": "1",
-            "label": "Treasury Security",
-            "data": "Events Folder",
-            "icon": "pi pi-fw pi-calendar",
-            "children": [
-         
-            ]
-        },
-        {
-            "key": "2",
-            "label": "Control Branch",
-            "data": "Events Folder",
-            "icon": "pi pi-fw pi-calendar",
-            "children": [
-                {"key":"2-0" , "label":"London Branch ","data":"London","icon": "pi pi-fw pi-calendar-plus",
-                
-                "children" :[ {"key":"2-0-0" , "label":"Atlanta-2 ","icon": "pi pi-fw pi-calendar-plus","data":"Atlanta 2"},
-                              {"key":"2-0-1" , "label":"Bahamas Beach Bank ","icon": "pi pi-fw pi-calendar-plus","data":"Bahmas Bank"} ,
-                              {"key":"2-0-2" , "label":"New Branch SC ","icon": "pi pi-fw pi-calendar-plus","data":"New Branch Sc"},  
-                              {"key":"2-0-3" , "label":"SEB TP ","icon": "pi pi-fw pi-calendar-plus","data":"SEB TP"}
-                  ] 
-               }
-                
-            ]
-        }
-    
-   
-    ]
+	"data": [
+		{
+			"key": "0",
+			"label": "System",
+			"data": "Events Folder",
+			"icon": "pi pi-fw pi-calendar",
+			"children": []
+		},
+		{
+			"key": "1",
+			"label": "Treasury Security",
+			"data": "Events Folder",
+			"icon": "pi pi-fw pi-calendar",
+			"children": []
+		},
+		{
+			"key": "2",
+			"label": "Control Branch",
+			"data": "Events Folder",
+			"icon": "pi pi-fw pi-calendar",
+			"children": [
+				{
+					"key": "2-0",
+					"label": "London Branch ",
+					"data": "London",
+					"icon": "pi pi-fw pi-calendar-plus",
+
+					"children": [
+						{ "key": "2-0-0", "label": "Atlanta-2 ", "icon": "pi pi-fw pi-calendar-plus", "data": "Atlanta 2" },
+						{ "key": "2-0-1", "label": "Bahamas Beach Bank ", "icon": "pi pi-fw pi-calendar-plus", "data": "Bahmas Bank" },
+						{ "key": "2-0-2", "label": "New Branch SC ", "icon": "pi pi-fw pi-calendar-plus", "data": "New Branch Sc" },
+						{ "key": "2-0-3", "label": "SEB TP ", "icon": "pi pi-fw pi-calendar-plus", "data": "SEB TP" }
+					]
+				}
+			]
+		}
+	]
 }
