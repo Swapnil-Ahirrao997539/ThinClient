@@ -394,11 +394,14 @@ export class AppMenuComponent implements OnInit {
 	drawTree(treeData) {
 		let parentChildren: any = [];
 		let nodeChildren: any = [{ buNode: '', feild_name: '' }]; // For 1st level Node
+		let subNodeChildren: any = [{ buNode: '', feild_name: '' }]; // For 1st level Node
 
-		let childArray: any = [{ key: '', label: '', data: '', icon: '', children: [] }];
-		let subChildArray: any = [{ key: '', label: '', data: '', icon: '' }];
-
+		let childArray: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 2nd Level
+		let subChildArray: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 3rd Level
+		let subChildArrayFor4thLevel: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 4rd Level
+		let subChildArrayFor5thLevel: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 5th Level
 		for (let i = 0; i < treeData[1].BuNode.GroupBuNode.length; i++) {
+			// 1st Level
 			parentChildren.push(treeData[1].BuNode.GroupBuNode[i].FIELD_NM[9]._);
 			if (treeData[1].BuNode.GroupBuNode[i].BuNode) {
 				nodeChildren.push({
@@ -415,14 +418,17 @@ export class AppMenuComponent implements OnInit {
 		nodeChildren.splice(0, 1);
 		childArray.splice(0, 1);
 		subChildArray.splice(0, 1);
+		subChildArrayFor4thLevel.splice(0, 1);
+		subChildArrayFor5thLevel.splice(0, 1);
 
 		// Prepare Childrens object for Tree
 		for (let k = 0; k < parentChildren.length; k++) {
+			// 2nd Level
 			childArray.push({
 				key: '2-' + k,
 				data: parentChildren[k],
 				label: parentChildren[k],
-				icon: 'pi pi-fw pi-calendar',
+				imagePath: '',
 				children: subChildArray
 			});
 
@@ -431,13 +437,78 @@ export class AppMenuComponent implements OnInit {
 				if (parentChildren[k] == nodeChildren[j].feild_name[9]._) {
 					// Compare first level and their respective buNode
 					if (nodeChildren[j].buNode) {
-						for (let g = 0; g < nodeChildren[j].buNode.GroupBuNode.length; g++) {
+						if (nodeChildren[j].buNode.GroupBuNode.length) {
+							for (let g = 0; g < nodeChildren[j].buNode.GroupBuNode.length; g++) {
+								// 3rd level
+								subChildArray.push({
+									key: '2-' + k + '-' + g,
+									label: nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[9]._,
+									data: nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[9]._,
+									// icon: 'pi pi-fw pi-calendar',
+									imagePath: '',
+									children: subChildArrayFor4thLevel
+								}); // Collect buNode groups for first level
+								let u;
+								if (nodeChildren[j].buNode.GroupBuNode[g].BuNode) {
+									if (nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.length) {
+										for (let h = 0; h < nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.length; h++) {
+											u = h;
+											subChildArrayFor4thLevel.push({
+												key: '2-' + k + '-' + g + '-' + h,
+												label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode[h].FIELD_NM[9]._,
+												data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode[h].FIELD_NM[9]._,
+												imagePath: '',
+												children: subChildArrayFor5thLevel
+											});
+										}
+									} else {
+										subChildArrayFor4thLevel.push({
+											key: '2-' + k + '-' + g + '-0',
+											label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.FIELD_NM[9]._,
+											data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.FIELD_NM[9]._,
+											imagePath: '',
+											children: subChildArrayFor5thLevel
+										});
+
+										if (nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode) {
+											if (nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.length) {
+												for (let l = 0; l < nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.length; l++) {
+													subChildArrayFor5thLevel.push({
+														key: '2-' + k + '-' + g + '-' + u + '-' + l,
+														label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[9]._,
+														data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[9]._,
+														imagePath: '',
+														children: []
+													});
+												}
+											} else {
+												subChildArrayFor5thLevel.push({
+													key: '2-' + k + '-' + g + '-0' + '-0',
+													label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[9]._,
+													data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[9]._,
+													imagePath: '',
+													children: []
+												});
+											}
+										} else {
+											subChildArrayFor5thLevel = [];
+										}
+										subChildArrayFor5thLevel = [];
+									}
+								} else {
+									subChildArrayFor4thLevel = [];
+								}
+								subChildArrayFor4thLevel = [];
+							}
+						} else {
 							subChildArray.push({
-								key: '2-' + k + '-' + g,
-								label: nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[9]._,
-								data: nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[9]._,
-								icon: 'pi pi-fw pi-calendar'
-							}); // Collect buNode groups for first level
+								key: '2-' + k + '-0',
+								label: nodeChildren[j].buNode.GroupBuNode.FIELD_NM[9]._,
+								data: nodeChildren[j].buNode.GroupBuNode.FIELD_NM[9]._,
+								// icon: 'pi pi-fw pi-calendar',
+								imagePath: '',
+								children: subChildArrayFor4thLevel
+							});
 						}
 					} else {
 						subChildArray = []; // Collect buNode groups for first level
@@ -454,26 +525,34 @@ export class AppMenuComponent implements OnInit {
 				key: '0',
 				label: treeData[0].FIELD_NM[2]._,
 				data: 'Events Folder',
-				icon: 'pi pi-fw pi-calendar',
+				// icon: 'pi pi-fw pi-calendar',
+				// imagePath: 'assets/layout/images/tree/System_OPEN.gif',
+				imagePath: this.getImage(),
+
 				children: []
 			},
 			{
 				key: '1',
 				label: treeData[0].FIELD_NM[4]._,
 				data: 'Events Folder',
-				icon: 'pi pi-fw pi-calendar',
+				imagePath: this.getImage(),
+
 				children: []
 			},
 			{
 				key: '2',
 				label: treeData[1].FIELD_NM[9]._,
 				data: 'Events Folder',
-				icon: 'pi pi-fw pi-calendar',
+				imagePath: '',
 				children: childArray
 			}
 		];
 	}
 	/** End of Tree Draw */
+
+	getImage() {
+		return 'assets/layout/images/tree/System_OPEN.gif';
+	}
 
 	onTabOpen(e) {
 		this.activeIndx = e.index;
