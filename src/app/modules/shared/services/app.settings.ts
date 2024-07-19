@@ -15,4 +15,5 @@ export class AppSettings {
 	];
 
 	public static BASE_URL = 'http://localhost:8080/thinClient/servlet/MainServlet';
+	public static Base_Image_URL = 'assets/layout/images/tree/';
 }

@@ -10,6 +10,7 @@ import { LayoutService } from '../../services/app.layout.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { CommonService } from 'src/app/modules/shared/services/common.service';
 import { BuTree } from '../../models/butree';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
 	selector: 'app-menu',
@@ -435,6 +436,7 @@ export class AppMenuComponent implements OnInit {
 			// Prepare sub-children object with respective BuTree
 			for (let j = 0; j < nodeChildren.length; j++) {
 				if (parentChildren[k] == nodeChildren[j].feild_name[9]._) {
+					childArray[j].imagePath = this.getImage(nodeChildren[j].feild_name[7]._, nodeChildren[j].feild_name[3]._, nodeChildren[j].feild_name[8]._);
 					// Compare first level and their respective buNode
 					if (nodeChildren[j].buNode) {
 						if (nodeChildren[j].buNode.GroupBuNode.length) {
@@ -445,7 +447,7 @@ export class AppMenuComponent implements OnInit {
 									label: nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[9]._,
 									data: nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[9]._,
 									// icon: 'pi pi-fw pi-calendar',
-									imagePath: '',
+									imagePath: this.getImage(nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[7]._, nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[3]._, nodeChildren[j].buNode.GroupBuNode[g].FIELD_NM[8]._),
 									children: subChildArrayFor4thLevel
 								}); // Collect buNode groups for first level
 								let u;
@@ -457,7 +459,7 @@ export class AppMenuComponent implements OnInit {
 												key: '2-' + k + '-' + g + '-' + h,
 												label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode[h].FIELD_NM[9]._,
 												data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode[h].FIELD_NM[9]._,
-												imagePath: '',
+												imagePath: this.getImage(nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode[h].FIELD_NM[7]._, nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode[h].FIELD_NM[3]._, nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode[h].FIELD_NM[8]._),
 												children: subChildArrayFor5thLevel
 											});
 										}
@@ -466,7 +468,8 @@ export class AppMenuComponent implements OnInit {
 											key: '2-' + k + '-' + g + '-0',
 											label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.FIELD_NM[9]._,
 											data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.FIELD_NM[9]._,
-											imagePath: '',
+											imagePath: this.getImage(nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.FIELD_NM[7]._, nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.FIELD_NM[3]._, nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.FIELD_NM[8]._),
+
 											children: subChildArrayFor5thLevel
 										});
 
@@ -475,9 +478,14 @@ export class AppMenuComponent implements OnInit {
 												for (let l = 0; l < nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.length; l++) {
 													subChildArrayFor5thLevel.push({
 														key: '2-' + k + '-' + g + '-' + u + '-' + l,
-														label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[9]._,
-														data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[9]._,
-														imagePath: '',
+														label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode[l].FIELD_NM[9]._,
+														data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode[l].FIELD_NM[9]._,
+														imagePath: this.getImage(
+															nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode[l].FIELD_NM[7]._,
+															nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode[l].FIELD_NM[3]._,
+															nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode[l].FIELD_NM[8]._
+														),
+
 														children: []
 													});
 												}
@@ -486,7 +494,12 @@ export class AppMenuComponent implements OnInit {
 													key: '2-' + k + '-' + g + '-0' + '-0',
 													label: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[9]._,
 													data: nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[9]._,
-													imagePath: '',
+													imagePath: this.getImage(
+														nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[7]._,
+														nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[3]._,
+														nodeChildren[j].buNode.GroupBuNode[g].BuNode.GroupBuNode.BuNode.GroupBuNode.FIELD_NM[8]._
+													),
+
 													children: []
 												});
 											}
@@ -506,14 +519,13 @@ export class AppMenuComponent implements OnInit {
 								label: nodeChildren[j].buNode.GroupBuNode.FIELD_NM[9]._,
 								data: nodeChildren[j].buNode.GroupBuNode.FIELD_NM[9]._,
 								// icon: 'pi pi-fw pi-calendar',
-								imagePath: '',
+								imagePath: this.getImage(nodeChildren[j].feild_name[7]._, nodeChildren[j].feild_name[3]._, nodeChildren[j].feild_name[8]._),
 								children: subChildArrayFor4thLevel
 							});
 						}
 					} else {
 						subChildArray = []; // Collect buNode groups for first level
 					}
-
 					subChildArray = [];
 				}
 			}
@@ -527,7 +539,7 @@ export class AppMenuComponent implements OnInit {
 				data: 'Events Folder',
 				// icon: 'pi pi-fw pi-calendar',
 				// imagePath: 'assets/layout/images/tree/System_OPEN.gif',
-				imagePath: this.getImage(),
+				imagePath: this.getImage(treeData[0].FIELD_NM[2]._, '', ''),
 
 				children: []
 			},
@@ -535,7 +547,7 @@ export class AppMenuComponent implements OnInit {
 				key: '1',
 				label: treeData[0].FIELD_NM[4]._,
 				data: 'Events Folder',
-				imagePath: this.getImage(),
+				imagePath: this.getImage(treeData[0].FIELD_NM[4]._, '', ''),
 
 				children: []
 			},
@@ -543,15 +555,46 @@ export class AppMenuComponent implements OnInit {
 				key: '2',
 				label: treeData[1].FIELD_NM[9]._,
 				data: 'Events Folder',
-				imagePath: '',
+				imagePath: this.getImage(treeData[1].FIELD_NM[7]._, '', ''),
 				children: childArray
 			}
 		];
 	}
 	/** End of Tree Draw */
 
-	getImage() {
-		return 'assets/layout/images/tree/System_OPEN.gif';
+	getImage(buTp?, scIn?, custIn?) {
+		let imgUrl: string;
+		if (buTp == 'SYSTEM') {
+			imgUrl = AppSettings.Base_Image_URL + 'System_OPEN.gif';
+		} else if (buTp == 'CBR') {
+			imgUrl = AppSettings.Base_Image_URL + 'ControlBranch_CLOSED.gif';
+		} else if (buTp == 'TREASURY SECURITY') {
+			imgUrl = AppSettings.Base_Image_URL + 'TreasurySecurity_CLOSED.gif';
+		} else if ('BRN' == buTp) {
+			if ('Y' == scIn) {
+				imgUrl = AppSettings.Base_Image_URL + 'SettlementBranch_CLOSED.gif';
+			} else if ('Y' == custIn) {
+				imgUrl = AppSettings.Base_Image_URL + 'CustodianBusinessUnitBranch_CLOSED.gif';
+			} else {
+				imgUrl = AppSettings.Base_Image_URL + 'Branch_CLOSED.gif';
+			}
+		} else if ('THP' == buTp) {
+			if ('Y' == scIn) {
+				imgUrl = AppSettings.Base_Image_URL + 'SettlementThirdParty_CLOSED.gif';
+			} else if ('Y' == custIn) {
+				imgUrl = AppSettings.Base_Image_URL + 'CustodianBusinessUnitTP_CLOSED.gif';
+			} else {
+				imgUrl = AppSettings.Base_Image_URL + 'ThirdParty_CLOSED.gif';
+			}
+		} else if ('USM' == buTp) {
+			imgUrl = AppSettings.Base_Image_URL + 'UserMember_CLOSED.gif';
+		} else if ('NG' == buTp) {
+			imgUrl = AppSettings.Base_Image_URL + 'NettingGroup_CLOSED.gif';
+		} else {
+			alert('unknown bu type : ' + buTp);
+		}
+
+		return imgUrl;
 	}
 
 	onTabOpen(e) {
@@ -886,6 +929,21 @@ export class AppMenuComponent implements OnInit {
 					this.matchString = node.label;
 				}
 			});
+
+			for (let k = 0; k < this.treeObject[2].children[r].children.length; k++) {
+				this.treeObject[2].children[r].children[k].children.forEach((node) => {
+					if (node.label.trim() == g) {
+						this.matchString = node.label;
+					}
+				});
+				for (let l = 0; l < this.treeObject[2].children[r].children[k].children.length; l++) {
+					this.treeObject[2].children[r].children[k].children[l].children.forEach((node) => {
+						if (node.label.trim() == g) {
+							this.matchString = node.label;
+						}
+					});
+				}
+			}
 		}
 	}
 	getVersionDetailCall() {

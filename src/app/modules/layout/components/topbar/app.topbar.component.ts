@@ -79,7 +79,6 @@ export class AppTopBarComponent implements OnInit {
 
 	// Method to set a new loader class dynamically
 	setTranslateLoader(loaderClass: any) {
-		debugger;
 		TranslateModule.forRoot({
 			loader: {
 				provide: TranslateLoader,
