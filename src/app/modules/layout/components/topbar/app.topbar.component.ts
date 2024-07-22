@@ -108,8 +108,8 @@ export class AppTopBarComponent implements OnInit {
 				label: localStorage.getItem('username'),
 				items: [
 					{
-						label: 'Refresh',
-						icon: 'pi pi-refresh',
+						label: 'Change Password',
+						icon: 'pi pi-lock',
 						command: () => {
 							this.refresh();
 						}

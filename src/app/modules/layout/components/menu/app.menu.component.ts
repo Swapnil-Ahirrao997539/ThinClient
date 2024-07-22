@@ -84,23 +84,23 @@ export class AppMenuComponent implements OnInit {
 				label: 'Menu',
 				isCollapse: true,
 				items: [
-					{
-						label: 'Systems',
-						icon: 'pi pi-fw pi-bookmark',
-						items: [
-							{
-								label: 'Change Password',
-								icon: 'pi pi-fw pi-bookmark'
-							},
-							{
-								label: 'Exit',
-								icon: 'pi pi-fw pi-bookmark'
-								// items: [
-								//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
-								// ]
-							}
-						]
-					},
+					// {
+					// 	label: 'Systems',
+					// 	icon: 'pi pi-fw pi-bookmark',
+					// 	items: [
+					// 		{
+					// 			label: 'Change Password',
+					// 			icon: 'pi pi-fw pi-bookmark'
+					// 		},
+					// 		{
+					// 			label: 'Exit',
+					// 			icon: 'pi pi-fw pi-bookmark'
+					// 			// items: [
+					// 			//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
+					// 			// ]
+					// 		}
+					// 	]
+					// },
 					{
 						label: 'SMC',
 						icon: 'pi pi-fw pi-bookmark',
@@ -694,23 +694,23 @@ export class AppMenuComponent implements OnInit {
 
 				if (this.model[i].label == 'Menu') {
 					this.model[i].items.push(
-						{
-							label: 'Systems',
-							icon: 'pi pi-fw pi-bookmark',
-							items: [
-								{
-									label: 'Change Password',
-									icon: 'pi pi-fw pi-bookmark'
-								},
-								{
-									label: 'Exit',
-									icon: 'pi pi-fw pi-bookmark'
-									// items: [
-									//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
-									// ]
-								}
-							]
-						},
+						// {
+						// 	label: 'Systems',
+						// 	icon: 'pi pi-fw pi-bookmark',
+						// 	items: [
+						// 		{
+						// 			label: 'Change Password',
+						// 			icon: 'pi pi-fw pi-bookmark'
+						// 		},
+						// 		{
+						// 			label: 'Exit',
+						// 			icon: 'pi pi-fw pi-bookmark'
+						// 			// items: [
+						// 			//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
+						// 			// ]
+						// 		}
+						// 	]
+						// },
 						{
 							label: 'SMC',
 							icon: 'pi pi-fw pi-bookmark',
@@ -806,23 +806,23 @@ export class AppMenuComponent implements OnInit {
 				}
 				if (this.model[i].label == 'Menu') {
 					this.model[i].items.push(
-						{
-							label: 'Systems',
-							icon: 'pi pi-fw pi-bookmark',
-							items: [
-								{
-									label: 'Change Password',
-									icon: 'pi pi-fw pi-bookmark'
-								},
-								{
-									label: 'Exit',
-									icon: 'pi pi-fw pi-bookmark'
-									// items: [
-									//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
-									// ]
-								}
-							]
-						},
+						// {
+						// 	label: 'Systems',
+						// 	icon: 'pi pi-fw pi-bookmark',
+						// 	items: [
+						// 		{
+						// 			label: 'Change Password',
+						// 			icon: 'pi pi-fw pi-bookmark'
+						// 		},
+						// 		{
+						// 			label: 'Exit',
+						// 			icon: 'pi pi-fw pi-bookmark'
+						// 			// items: [
+						// 			//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
+						// 			// ]
+						// 		}
+						// 	]
+						// },
 						{
 							label: 'Trades',
 							icon: 'pi pi-fw pi-bookmark',

@@ -96,7 +96,7 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
 			this.overriteTabArray();
 		});
 	}
-	/** Function for logic overrite tab array */
+	/** Function for logic overrite tab array and Tab chips Logic*/
 	overriteTabArray() {
 		if (this.gridHeader) {
 			let g = this.gridHeader.split('(');
@@ -104,6 +104,7 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
 			// Write logic for overite Tab array
 
 			if (this.gridHeader.includes('(')) {
+				// gridHeader contains bracket that means it comes from basket
 				if (this.dt.includes(g[0] + 'Grid')) {
 					return;
 				} else {
@@ -123,9 +124,11 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
 				}
 			} else {
 				if (this.dt.includes(g[0]) || g[0] == 'Configuration & Setup' || g[0] == 'Systems' || g[0] == 'SMC' || g[0] == 'Table Maintenance' || g[0] == 'Dashboard View' || g[0] == 'Create' || g[0] == 'Pending' || g[0] == 'Active' || g[0] == 'Rejected' || g[0] == 'Treasury Security') {
+					// Make this Static strings with dynamic after json response received.
 					return;
 				}
 				this.dt.push(g[0]);
+
 				this.selectedChip = g[0];
 			}
 		}
