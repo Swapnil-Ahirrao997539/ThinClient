@@ -123,8 +123,8 @@ export class AppMenuComponent implements OnInit {
 								label: 'Create',
 								icon: 'pi pi-fw pi-bookmark',
 								items: [
-									{ label: 'Location', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/location'] },
-									{ label: 'Legal Entity', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/legal-entity'] },
+									{ label: 'Location', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] },
+									{ label: 'Legal Entity', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/legal-entity'] },
 									{ label: 'Bank Relationship', icon: 'pi pi-fw pi-bookmark' },
 									{ label: 'Bank Location', icon: 'pi pi-fw pi-bookmark' },
 									{ label: 'Fund Group', icon: 'pi pi-fw pi-bookmark' },
@@ -199,21 +199,21 @@ export class AppMenuComponent implements OnInit {
 					//       }
 					//     ]
 					// },
-					// { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/uikit/formlayout'] },
-					// { label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/uikit/input'] },
-					// { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/floatlabel'] },
-					// { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', routerLink: ['/uikit/invalidstate'] },
-					// { label: 'Button', icon: 'pi pi-fw pi-box', routerLink: ['/uikit/button'] },
-					// { label: 'List', icon: 'pi pi-fw pi-list', routerLink: ['/uikit/list'] },
-					// { label: 'Tree', icon: 'pi pi-fw pi-share-alt', routerLink: ['/uikit/tree'] },
-					// { label: 'Panel', icon: 'pi pi-fw pi-tablet', routerLink: ['/uikit/panel'] },
-					// { label: 'Overlay', icon: 'pi pi-fw pi-clone', routerLink: ['/uikit/overlay'] },
-					// { label: 'Media', icon: 'pi pi-fw pi-image', routerLink: ['/uikit/media'] },
-					// { label: 'Menu', icon: 'pi pi-fw pi-bars', routerLink: ['/uikit/menu'], routerLinkActiveOptions: { paths: 'subset', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' } },
-					// { label: 'Message', icon: 'pi pi-fw pi-comment', routerLink: ['/uikit/message'] },
-					// { label: 'File', icon: 'pi pi-fw pi-file', routerLink: ['/uikit/file'] },
-					// { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/uikit/charts'] },
-					// { label: 'Misc', icon: 'pi pi-fw pi-circle', routerLink: ['/uikit/misc'] }
+					// { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/configuration-and-setup/formlayout'] },
+					// { label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/configuration-and-setup/input'] },
+					// { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/floatlabel'] },
+					// { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', routerLink: ['/configuration-and-setup/invalidstate'] },
+					// { label: 'Button', icon: 'pi pi-fw pi-box', routerLink: ['/configuration-and-setup/button'] },
+					// { label: 'List', icon: 'pi pi-fw pi-list', routerLink: ['/configuration-and-setup/list'] },
+					// { label: 'Tree', icon: 'pi pi-fw pi-share-alt', routerLink: ['/configuration-and-setup/tree'] },
+					// { label: 'Panel', icon: 'pi pi-fw pi-tablet', routerLink: ['/configuration-and-setup/panel'] },
+					// { label: 'Overlay', icon: 'pi pi-fw pi-clone', routerLink: ['/configuration-and-setup/overlay'] },
+					// { label: 'Media', icon: 'pi pi-fw pi-image', routerLink: ['/configuration-and-setup/media'] },
+					// { label: 'Menu', icon: 'pi pi-fw pi-bars', routerLink: ['/configuration-and-setup/menu'], routerLinkActiveOptions: { paths: 'subset', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' } },
+					// { label: 'Message', icon: 'pi pi-fw pi-comment', routerLink: ['/configuration-and-setup/message'] },
+					// { label: 'File', icon: 'pi pi-fw pi-file', routerLink: ['/configuration-and-setup/file'] },
+					// { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/configuration-and-setup/charts'] },
+					// { label: 'Misc', icon: 'pi pi-fw pi-circle', routerLink: ['/configuration-and-setup/misc'] }
 				]
 			},
 			{
@@ -227,8 +227,8 @@ export class AppMenuComponent implements OnInit {
 								label: 'Pending',
 								icon: 'pi pi-fw pi-bookmark',
 								items: [
-									{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/grid-list/location-list'] },
-									{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/grid-list/legal-entity-list'] },
+									{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/location-list'] },
+									{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/legal-entity-list'] },
 									{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
 									{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
 									{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
@@ -282,8 +282,8 @@ export class AppMenuComponent implements OnInit {
 									label: 'Pending',
 									icon: 'pi pi-fw pi-bookmark',
 									items: [
-										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/grid-list/location-list'] },
-										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/grid-list/legal-entity-list'] },
+										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/location-list'] },
+										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/legal-entity-list'] },
 										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
 										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
 										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
@@ -638,7 +638,7 @@ export class AppMenuComponent implements OnInit {
 		if (g == 'System') {
 			this.model[2].items = [];
 			this.model[0].items = [];
-			// this.router.navigate(['/uikit/blank']);
+			// this.router.navigate(['/configuration-and-setup/blank']);
 			// this.layoutService.gridHeader.next('System');
 
 			this.layoutService.gridHeader.next('System');
@@ -654,8 +654,8 @@ export class AppMenuComponent implements OnInit {
 								label: 'Pending',
 								icon: 'pi pi-fw pi-bookmark',
 								items: [
-									{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/grid-list/location-list'] },
-									{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/grid-list/legal-entity-list'] },
+									{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/location-list'] },
+									{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/legal-entity-list'] },
 									{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
 									{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
 									{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
@@ -733,8 +733,8 @@ export class AppMenuComponent implements OnInit {
 									label: 'Create',
 									icon: 'pi pi-fw pi-bookmark',
 									items: [
-										{ label: 'Location', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/location'] },
-										{ label: 'Legal Entity', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/legal-entity'] },
+										{ label: 'Location', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] },
+										{ label: 'Legal Entity', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/legal-entity'] },
 										{ label: 'Bank Relationship', icon: 'pi pi-fw pi-bookmark' },
 										{ label: 'Bank Location', icon: 'pi pi-fw pi-bookmark' },
 										{ label: 'Fund Group', icon: 'pi pi-fw pi-bookmark' },
@@ -782,7 +782,7 @@ export class AppMenuComponent implements OnInit {
 		if (g == 'Control Branch') {
 			this.model[2].items = [];
 			this.model[0].items = [];
-			// this.router.navigate(['/uikit/blank']);
+			// this.router.navigate(['/configuration-and-setup/blank']);
 
 			this.layoutService.gridHeader.next('Control Branch');
 			this.layoutService.isSelection = true;
@@ -849,8 +849,8 @@ export class AppMenuComponent implements OnInit {
 									label: 'UDQ',
 									icon: 'pi pi-fw pi-bookmark',
 									items: [
-										{ label: 'Create UDQ', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/location'] },
-										{ label: 'Delete UDQ', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/legal-entity'] }
+										{ label: 'Create UDQ', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] },
+										{ label: 'Delete UDQ', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/legal-entity'] }
 									]
 								}
 							]
@@ -867,8 +867,8 @@ export class AppMenuComponent implements OnInit {
 									label: 'UDQ',
 									icon: 'pi pi-fw pi-bookmark',
 									items: [
-										{ label: 'Create UDQ', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/location'] },
-										{ label: 'Delete UDQ', icon: 'pi pi-fw pi-bookmark', routerLink: ['/uikit/legal-entity'] }
+										{ label: 'Create UDQ', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] },
+										{ label: 'Delete UDQ', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/legal-entity'] }
 									]
 								}
 							]

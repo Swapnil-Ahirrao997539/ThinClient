@@ -131,10 +131,11 @@ export class LocationComponent {
 		];
 
 		this.driledData = JSON.parse(localStorage.getItem('drillData'));
-		let g = this.driledData.length;
+		let g = this.driledData?.length;
 		this.disablePrev = true;
-
-		this.bindData(this.driledData[0]);
+		if (this.driledData) {
+			this.bindData(this.driledData[0]);
+		}
 	}
 
 	next() {

@@ -13,7 +13,7 @@ import { AuthGuard } from './auth/auth.guard';
 					children: [
 						{ path: '', loadChildren: () => import('./auth/login/login.module').then((m) => m.LoginModule) },
 						{ path: 'dashboard', loadChildren: () => import('./modules/dashboard/dashboard.module').then((m) => m.DashboardModule), canActivate: [AuthGuard] },
-						{ path: 'uikit', loadChildren: () => import('./modules/configuration-and-setup/configuration&setup.module').then((m) => m.UIkitModule), canActivate: [AuthGuard] }
+						{ path: 'configuration-and-setup', loadChildren: () => import('./modules/configuration-and-setup/configuration&setup.module').then((m) => m.UIkitModule), canActivate: [AuthGuard] }
 					]
 				},
 				{ path: 'auth', loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule) },

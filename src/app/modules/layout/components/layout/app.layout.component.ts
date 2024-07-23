@@ -90,7 +90,7 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
 
 			if (data == 'Dashboard View') {
 				this.dt = [];
-				this.router.navigate(['/uikit/blank']);
+				this.router.navigate(['/configuration-and-setup/blank']);
 			}
 
 			this.overriteTabArray();
@@ -205,16 +205,16 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
 		this.selectedChip = e;
 
 		if (e.includes('Legal Entity')) {
-			this.router.navigate(['/uikit/legal-entity']);
+			this.router.navigate(['/configuration-and-setup/legal-entity']);
 		}
 		if (e.includes('Location')) {
-			this.router.navigate(['/uikit/location']);
+			this.router.navigate(['/configuration-and-setup/location']);
 		}
 		if (e.includes('Legal Entity Grid')) {
-			this.router.navigate(['/uikit/grid-list/legal-entity-list']);
+			this.router.navigate(['/configuration-and-setup/grid-list/legal-entity-list']);
 		}
 		if (e.includes('Location Grid')) {
-			this.router.navigate(['/uikit/grid-list/location-list']);
+			this.router.navigate(['/configuration-and-setup/grid-list/location-list']);
 		}
 	}
 

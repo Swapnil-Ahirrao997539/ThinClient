@@ -33,4 +33,12 @@ p-autocomplete {
 		border-bottom-right-radius: 6px;
 		border-bottom-left-radius: 6px;
 	}
+	@media screen and (min-width: 768px) {
+		.md\:col-12 {
+			flex: 0 0 auto;
+			padding: 0 0.6rem 0 0.6rem !important;
+			width: 100%;
+			/* border-radius: 70px; */
+		}
+	}
 }

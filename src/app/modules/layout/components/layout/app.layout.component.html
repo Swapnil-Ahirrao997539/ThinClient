@@ -8,14 +8,13 @@
 	</div>
 	<div class="layout-main-container" *ngIf="layoutService.isDisplay">
 		<div class="layout-main">
-			<!-- <app-chips  [data]="dt" (click)="chipClicked($event)" ></app-chips><br> -->
 			<!-- Parent Clicked Buttons -->
 			<div class="card flex align-items-center gap-2 flex-wrap" *ngIf="dt.length > 0" style="margin-bottom: 0">
 				<span *ngFor="let item of dt; let i = index">
 					<p-button label="{{ item }}" [rounded]="false" [ngClass]="item == selectedChip ? 'tabButton' : 'tabButtonUnselected'" severity="secondary" (click)="chipClicked(item)"></p-button>
 				</span>
 			</div>
-			{{ dt }}
+
 			<span class="popChip" *ngIf="dt.length > 0">
 				<p-button icon="pi pi-times" severity="danger" [rounded]="false" [text]="false" [outlined]="false" (click)="popChip()"></p-button>
 			</span>
