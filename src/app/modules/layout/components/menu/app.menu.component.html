@@ -24,7 +24,11 @@
 						[item]="item"
 						[index]="i"
 						[root]="true"
-						[ngStyle]="(item.label == 'Menu' ? { 'background-color': 'rgb(255 237 213)' } : null) || (item.label == 'Tree' ? { 'background-color': 'rgb(218 253 224)', padding: '0' } : null) || (item.label == 'Queue Explorer' ? { 'background-color': 'rgb(205 254 247)', padding: '0' } : null)"
+						[ngStyle]="
+							(item.label == 'Menu' ? { 'background-image': 'repeating-linear-gradient(180deg, #fffabd, #f4f6b800 )' } : null) ||
+							(item.label == 'Tree' ? { 'background-color': 'rgb(218 253 224)', padding: '0' } : null) ||
+							(item.label == 'Queue Explorer' ? { 'background-image': 'linear-gradient(180deg, #c6fafd, transparent)' } : null)
+						"
 					></li>
 					<!-- <p-tree *ngIf="item.label == 'Tree'" [value]="files1" [(selection)]="selectedFiles1"></p-tree> -->
 

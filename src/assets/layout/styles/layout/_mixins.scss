@@ -31,7 +31,8 @@
 	.p-buttonset.p-button-secondary > .p-button,
 	.p-splitbutton.p-button-secondary > .p-button {
 		color: #ffffff;
-		background: var(--primary-color);
+		// background: var(--primary-color);
+		background-image: linear-gradient(86deg, #8647c5, #ae3bac);
 		border: 1px solid #64748b;
 	}
 }
