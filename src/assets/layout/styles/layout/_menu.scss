@@ -12,7 +12,8 @@
 		transform $transitionDuration,
 		left $transitionDuration;
 	// background-color: var(--surface-overlay);
-	background-color: #d9c0f5;
+	// background-color: #d9c0f5;
+	background-image: linear-gradient(68deg, #8348c7, #dfbbff, #b23aaa57);
 
 	// border-radius: $borderRadius;
 	// padding: 0.5rem 1.5rem;
@@ -220,7 +221,8 @@
 		}
 		.p-tree {
 			border: 1px solid #e5e7eb;
-			background: #dafde0;
+			// background: #dafde0;
+			background-image: linear-gradient(86deg, #bffc98, transparent);
 			color: #4b5563;
 			padding: 0.5rem 0rem;
 			border-radius: 6px;

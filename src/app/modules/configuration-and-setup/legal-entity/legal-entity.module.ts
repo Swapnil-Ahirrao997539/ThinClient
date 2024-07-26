@@ -16,11 +16,12 @@ import { InputTextModule } from 'primeng/inputtext';
 import { DividerModule } from 'primeng/divider';
 import { SplitterModule } from 'primeng/splitter';
 import { PanelModule } from 'primeng/panel';
-import { LegalEntityComponent } from './components/legal-entity-form/legal-entity.component';
 import { TableModule } from 'primeng/table';
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { DropdownModule } from 'primeng/dropdown';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { LegalEntityComponent } from './components/legal-entity/legal-entity.component';
+import { SharedModule } from '../../shared/shared.module';
 
 @NgModule({
 	imports: [
@@ -43,7 +44,8 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
 		AutoCompleteModule,
 		ReactiveFormsModule,
 		DropdownModule,
-		BreadcrumbModule
+		BreadcrumbModule,
+		SharedModule.forRoot()
 	],
 	declarations: [LegalEntityComponent]
 })

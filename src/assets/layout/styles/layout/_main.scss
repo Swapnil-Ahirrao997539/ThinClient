@@ -57,6 +57,25 @@ p-accordiontab {
 		font-size: small;
 	}
 }
+.shared {
+	p-toolbar {
+		.p-toolbar {
+			// background: var(--primary-color);
+			background-image: linear-gradient(to right, #694ed6, #c137a2);
+			height: 4 1px;
+			border-radius: 5px;
+			padding: 0.3rem 0.6rem;
+		}
+	}
+	.p-toolbar-group-right {
+		.p-dropdown-label {
+			padding: 4px;
+			margin-left: 12px;
+			color: #6366f1;
+			font-weight: 600;
+		}
+	}
+}
 
 .p-toolbar-group-right {
 	.p-dropdown-label {

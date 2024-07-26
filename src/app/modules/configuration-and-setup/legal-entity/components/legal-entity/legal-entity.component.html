@@ -2,19 +2,12 @@
 	<div class="card legal-entity">
 		<h5>Legal Entity</h5>
 		<p-tabView orientation="left" (onChange)="onTabChange($event)">
-			<span>
-				<p-toolbar>
-					<h5 style="color: white">System Create Legal Entity</h5>
-					<div class="p-toolbar-group-right">
-						<p-dropdown [options]="items" [(ngModel)]="selectedCity" optionLabel="label" [showClear]="false" placeholder="Actions" #dropdownPanel (mouseenter)="openDropdown()" (mouseleave)="closeDropdown()"><i class="pi pi-check"></i></p-dropdown>
-					</div>
-				</p-toolbar> </span
-			><br />
-			<!-- <p-tabPanel [header]="tab.title" class="line-height-3 m-0" *ngFor="let tab of tabs" (click)="tabClicked(tab.title)"> -->
+			<app-subheader-toolbar [headerName]="headerName" [actionItems]="items"></app-subheader-toolbar>
+			<br />
 
 			<ng-container *ngFor="let tabItem of tabItems">
 				<p-tabPanel header="{{ tabItem.header }}">
-					{{ tabItem.content }}
+					<router-outlet></router-outlet>
 				</p-tabPanel>
 			</ng-container>
 			<!-- <p-accordion [activeIndex]="0">

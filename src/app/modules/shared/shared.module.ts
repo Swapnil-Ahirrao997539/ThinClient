@@ -26,8 +26,9 @@ import { LayoutService } from '../layout/services/app.layout.service';
 import { CommonService } from './services/common.service';
 import { PayplusMissingTranslationHandlerService } from './services/payplus-missing-translation-handler.service';
 import { PayplusTranslateFrLoaderService } from './services/payplus-translate-fr-loader.service';
+import { SubheaderToolbarComponent } from './components/subheader-toolbar/subheader-toolbar.component';
 @NgModule({
-	declarations: [PayplusGridComponent, ChipsComponent],
+	declarations: [PayplusGridComponent, ChipsComponent, SubheaderToolbarComponent],
 	imports: [
 		CommonModule,
 		TableModule,
@@ -42,7 +43,7 @@ import { PayplusTranslateFrLoaderService } from './services/payplus-translate-fr
 		DropdownModule,
 		RadioButtonModule,
 		InputNumberModule,
-		DialogModule, 
+		DialogModule,
 		ChipModule,
 		MultiSelectModule,
 		ToolbarModule,
@@ -53,10 +54,8 @@ import { PayplusTranslateFrLoaderService } from './services/payplus-translate-fr
 				useClass: PayplusMissingTranslationHandlerService
 			}
 		})
-		
-	
 	],
-	exports: [PayplusGridComponent, ChipsComponent, TranslateModule]
+	exports: [PayplusGridComponent, ChipsComponent, TranslateModule, SubheaderToolbarComponent]
 })
 export class SharedModule {
 	[x: string]: any;

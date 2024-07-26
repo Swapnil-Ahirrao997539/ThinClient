@@ -33,6 +33,7 @@ export class LegalEntityComponent implements OnInit {
 	selectedCountryAdvanced: any[] = [];
 	filteredCountries: any[] = [];
 	countries: any[] = [];
+	headerName = 'Create Legal Entity';
 	// tabs: { title: string; content: any }[] = [];
 	tabItems: TabItem[] = [];
 
@@ -70,17 +71,10 @@ export class LegalEntityComponent implements OnInit {
 		this.loadLegalEntityTabXML();
 		this.items = [
 			{
-				label: 'Approve',
-				icon: 'pi pi-external-link',
+				label: 'Create',
+				icon: 'pi pi-fw pi-check',
 				url: 'http://angular.io'
-			},
-			{
-				label: 'Reject',
-				icon: 'pi pi-bookmark',
-				routerLink: ['/theming']
-			},
-			{ label: 'Next', icon: 'pi pi-bookmark', routerLink: ['/theming'] },
-			{ label: 'Prev', icon: 'pi pi-bookmark', routerLink: ['/theming'] }
+			}
 		];
 		this.productService.getProductsSmall().then((data) => (this.products = data));
 		this.countryService.getCountries().then((countries) => {
@@ -170,6 +164,7 @@ export class LegalEntityComponent implements OnInit {
 							route: ''
 						});
 					}
+					this.router.navigate(['/configuration-and-setup/legal-entity/legal-entity-main']);
 				});
 			},
 			(error) => {
@@ -179,7 +174,19 @@ export class LegalEntityComponent implements OnInit {
 	}
 
 	onTabChange(event: any, tabItem?: TabItem) {
-		// this.router.navigate([tabItem.route], { relativeTo: this.activatedRoute });
+		let tabName: any = event.originalEvent.currentTarget.innerText;
+		switch (tabName) {
+			case 'Main':
+				this.router.navigate(['/configuration-and-setup/legal-entity/legal-entity-main']);
+				break;
+			case 'Error':
+				this.router.navigate(['/configuration-and-setup/legal-entity/error']);
+				break;
+			default:
+				this.router.navigate(['/configuration-and-setup/legal-entity/legal-entity-main']);
+
+				break;
+		}
 	}
 
 	filterCountry(event: any) {

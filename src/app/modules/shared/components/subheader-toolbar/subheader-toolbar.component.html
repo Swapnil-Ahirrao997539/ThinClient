@@ -1,0 +1,10 @@
+<span class="shared">
+	<p-toolbar>
+		<!-- Modules Header Name -->
+		<h5 style="color: white">System {{ headerName }}</h5>
+		<!-- Action Dropdowns -->
+		<div class="p-toolbar-group-right">
+			<p-dropdown [options]="actionItems" [(ngModel)]="selectedCity" optionLabel="label" [showClear]="false" placeholder="Actions" #dropdownPanel (mouseenter)="openDropdown()" (mouseleave)="closeDropdown()"><i class="pi pi-check"></i></p-dropdown>
+		</div>
+	</p-toolbar>
+</span>

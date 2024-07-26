@@ -6,17 +6,10 @@ import { SharedModule } from '../../shared/shared.module';
 import { LocationListComponent } from './location-list/location-list.component';
 import { ChipModule } from 'primeng/chip';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
-import { LegalEntityComponent } from './legal-entity/legal-entity.component';
-
+import { LegalEntityComponent } from './legal-entity-grid/legal-entity.component';
 
 @NgModule({
-  declarations: [LocationListComponent,LegalEntityComponent],
-  imports: [
-    CommonModule,
-    GridListRoutingModule,
-    SharedModule,
-    BreadcrumbModule
-    
-  ]
+	declarations: [LocationListComponent, LegalEntityComponent],
+	imports: [CommonModule, GridListRoutingModule, SharedModule, BreadcrumbModule]
 })
-export class GridListModule { }
+export class GridListModule {}
