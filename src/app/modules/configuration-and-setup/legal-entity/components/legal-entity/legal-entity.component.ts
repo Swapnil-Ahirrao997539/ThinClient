@@ -28,18 +28,15 @@ interface TabItem {
 })
 export class LegalEntityComponent implements OnInit {
 	items: MenuItem[] = [];
-	representatives: Representative[] = [];
 	products!: Product[];
 	selectedCountryAdvanced: any[] = [];
 	filteredCountries: any[] = [];
 	countries: any[] = [];
 	headerName = 'Create Legal Entity';
-	// tabs: { title: string; content: any }[] = [];
 	tabItems: TabItem[] = [];
 
 	selectedCity: any = '### ###';
 	breadList: any = [];
-	breaditems: MenuItem[] | undefined;
 
 	home: MenuItem | undefined;
 	cardMenu: MenuItem[] = [];
@@ -80,39 +77,6 @@ export class LegalEntityComponent implements OnInit {
 		this.countryService.getCountries().then((countries) => {
 			this.countries = countries;
 		});
-		this.cardMenu = [
-			{
-				label: 'Create',
-				icon: 'pi pi-fw pi-check'
-			},
-			{
-				label: 'Update',
-				icon: 'pi pi-fw pi-refresh'
-			},
-			{
-				label: 'Delete',
-				icon: 'pi pi-fw pi-trash'
-			}
-		];
-		this.activatedRoute.data.subscribe((d) => {
-			console.log(d['breadcrumb']); // ['home']
-			this.breadList = d['breadcrumb'];
-		});
-		this.breaditems = [{ label: this.breadList[0] }, { label: this.breadList[1] }];
-
-		this.home = { icon: 'pi pi-home', routerLink: '/dashboard' };
-		this.representatives = [
-			{ name: 'Amy Elsner', image: 'amyelsner.png' },
-			{ name: 'Anna Fali', image: 'annafali.png' },
-			{ name: 'Asiya Javayant', image: 'asiyajavayant.png' },
-			{ name: 'Bernardo Dominic', image: 'bernardodominic.png' },
-			{ name: 'Elwin Sharvill', image: 'elwinsharvill.png' },
-			{ name: 'Ioni Bowcher', image: 'ionibowcher.png' },
-			{ name: 'Ivan Magalhaes', image: 'ivanmagalhaes.png' },
-			{ name: 'Onyama Limba', image: 'onyamalimba.png' },
-			{ name: 'Stephen Shaw', image: 'stephenshaw.png' },
-			{ name: 'XuXue Feng', image: 'xuxuefeng.png' }
-		];
 	}
 
 	getTabInfo() {

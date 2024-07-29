@@ -22,6 +22,8 @@ import { DropdownModule } from 'primeng/dropdown';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { LegalEntityComponent } from './components/legal-entity/legal-entity.component';
 import { SharedModule } from '../../shared/shared.module';
+import { LegalEntityMainComponent } from './components/legal-entity-main/legal-entity-main.component';
+import { MessagesModule } from 'primeng/messages';
 
 @NgModule({
 	imports: [
@@ -45,8 +47,10 @@ import { SharedModule } from '../../shared/shared.module';
 		ReactiveFormsModule,
 		DropdownModule,
 		BreadcrumbModule,
-		SharedModule.forRoot()
+		SharedModule.forRoot(),
+		MessagesModule,
+		MessagesModule
 	],
-	declarations: [LegalEntityComponent]
+	declarations: [LegalEntityComponent, LegalEntityMainComponent]
 })
 export class LegalEntityModule {}

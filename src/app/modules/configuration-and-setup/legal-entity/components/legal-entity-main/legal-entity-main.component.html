@@ -1,1 +1,45 @@
-<p>legal-entity-main wok in-progress!!!!!</p>
+<p-accordion [activeIndex]="0">
+	<p-accordionTab header="Legal Entity">
+		<form [formGroup]="legalEntity">
+			<div class="card p-fluid">
+				<div class="field grid">
+					<div class="form-label col-12 mb-4 md:col-2 md:mb-0">
+						<label htmlFor="entityName" class="">Legal Entity Name :</label>
+						<label class="asterisk">*</label>
+					</div>
+					<div class="form-control col-12 md:col-10">
+						<input pInputText id="entityName" type="text" formControlName="entityName" class="form-control" />
+						<div class="form-errors alert alert-danger" *ngIf="legalEntity.controls['entityName'].errors && (legalEntity.controls['entityName'].dirty || legalEntity.controls['entityName'].touched)">
+							<div [hidden]="!legalEntity.controls['legalEntity'].errors.required">Legal Entity Name is required.</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="field grid">
+					<div class="form-label col-12 mb-2 md:col-2 md:mb-0">
+						<label htmlFor="address" class="">Address :</label>
+						<label class="asterisk">*</label>
+					</div>
+					<div class="col-12 md:col-10">
+						<input pInputText id="entityAddress1" type="text" formControlName="entityAddress1" />
+						<div class="form-errors alert alert-danger" *ngIf="legalEntity.controls['entityAddress1'].errors && (legalEntity.controls['entityAddress1'].dirty || legalEntity.controls['entityAddress1'].touched)">
+							<p-message [hidder]="!legalEntity.controls['entityAddress1'].errors.required">Legal Entity Address 1 is required.</p-message>
+						</div>
+					</div>
+				</div>
+				<div class="field grid">
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0"></label>
+					<div class="col-12 md:col-10">
+						<input pInputText id="entityAddress2" type="text" formControlName="entityAddress2" />
+					</div>
+				</div>
+				<div class="field grid">
+					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0"></label>
+					<div class="col-12 md:col-10">
+						<input pInputText id="entityAddress3" type="text" formControlName="entityAddress3" />
+					</div>
+				</div>
+			</div>
+		</form>
+	</p-accordionTab>
+</p-accordion>

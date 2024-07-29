@@ -30,6 +30,15 @@ p-accordiontab {
 		}
 	}
 }
+.field {
+	.asterisk {
+		color: red;
+	}
+	.form-errors {
+		padding-top: 5px;
+		color: red;
+	}
+}
 
 .popChip {
 	float: right;
