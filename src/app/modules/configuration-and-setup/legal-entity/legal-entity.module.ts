@@ -24,6 +24,7 @@ import { LegalEntityComponent } from './components/legal-entity/legal-entity.com
 import { SharedModule } from '../../shared/shared.module';
 import { LegalEntityMainComponent } from './components/legal-entity-main/legal-entity-main.component';
 import { MessagesModule } from 'primeng/messages';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
 	imports: [
@@ -49,7 +50,8 @@ import { MessagesModule } from 'primeng/messages';
 		BreadcrumbModule,
 		SharedModule.forRoot(),
 		MessagesModule,
-		MessagesModule
+		MessagesModule,
+		ToastModule
 	],
 	declarations: [LegalEntityComponent, LegalEntityMainComponent]
 })

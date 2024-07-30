@@ -8,8 +8,14 @@ import * as xml2js from 'xml2js';
 })
 export class CommonService {
 	public langVar = new Subject<any>();
+	public formObject = new Subject<any>();
+	public returnValidation = new Subject<any>();
 
 	langVar$ = this.langVar.asObservable();
+
+	formObject$ = this.formObject.asObservable();
+
+	returnValidation$ = this.returnValidation.asObservable();
 
 	constructor() {}
 
@@ -22,6 +28,8 @@ export class CommonService {
 			}
 		});
 	}
+
+	formDataCapture(data: any) {}
 
 	/**
 	 * Methode to convert received xml String into JSON object format

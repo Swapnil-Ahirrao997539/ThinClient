@@ -8,8 +8,8 @@
 						<label class="asterisk">*</label>
 					</div>
 					<div class="form-control col-12 md:col-10">
-						<input pInputText id="entityName" type="text" formControlName="entityName" class="form-control" />
-						<div class="form-errors alert alert-danger" *ngIf="legalEntity.controls['entityName'].errors && (legalEntity.controls['entityName'].dirty || legalEntity.controls['entityName'].touched)">
+						<input pInputText id="entityName" type="text" formControlName="entityName" class="form-control" (keypress)="onKeyData($event)" />
+						<div class="form-errors alert alert-danger" *ngIf="(submitted && legalEntity.controls['entityName'].errors) || (legalEntity.controls['entityName'].errors && (legalEntity.controls['entityName'].dirty || legalEntity.controls['entityName'].touched))">
 							<div [hidden]="!legalEntity.controls['legalEntity'].errors.required">Legal Entity Name is required.</div>
 						</div>
 					</div>
@@ -21,8 +21,9 @@
 						<label class="asterisk">*</label>
 					</div>
 					<div class="col-12 md:col-10">
-						<input pInputText id="entityAddress1" type="text" formControlName="entityAddress1" />
-						<div class="form-errors alert alert-danger" *ngIf="legalEntity.controls['entityAddress1'].errors && (legalEntity.controls['entityAddress1'].dirty || legalEntity.controls['entityAddress1'].touched)">
+						<input pInputText id="entityAddress1" type="text" formControlName="entityAddress1" (keypress)="onKeyData($event)" />
+						<!-- <div class="form-errors alert alert-danger" *ngIf="legalEntity.controls['entityAddress1'].errors && (legalEntity.controls['entityAddress1'].dirty || legalEntity.controls['entityAddress1'].touched)"> -->
+						<div class="form-errors alert alert-danger" *ngIf="(submitted && legalEntity.controls['entityAddress1'].errors) || (legalEntity.controls['entityAddress1'].errors && (legalEntity.controls['entityAddress1'].dirty || legalEntity.controls['entityAddress1'].touched))">
 							<p-message [hidder]="!legalEntity.controls['entityAddress1'].errors.required">Legal Entity Address 1 is required.</p-message>
 						</div>
 					</div>
@@ -30,16 +31,18 @@
 				<div class="field grid">
 					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0"></label>
 					<div class="col-12 md:col-10">
-						<input pInputText id="entityAddress2" type="text" formControlName="entityAddress2" />
+						<input pInputText id="entityAddress2" type="text" formControlName="entityAddress2" (keypress)="onKeyData($event)" />
 					</div>
 				</div>
 				<div class="field grid">
 					<label htmlFor="email3" class="col-12 mb-2 md:col-2 md:mb-0"></label>
 					<div class="col-12 md:col-10">
-						<input pInputText id="entityAddress3" type="text" formControlName="entityAddress3" />
+						<input pInputText id="entityAddress3" type="text" formControlName="entityAddress3" (keypress)="onKeyData($event)" />
 					</div>
 				</div>
 			</div>
+			<!-- <button type="submit">Submit</button> -->
 		</form>
 	</p-accordionTab>
 </p-accordion>
+<p-toast />

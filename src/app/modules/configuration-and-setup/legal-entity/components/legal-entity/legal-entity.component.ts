@@ -58,7 +58,7 @@ export class LegalEntityComponent implements OnInit {
 		private activatedRoute: ActivatedRoute,
 		private restApiService: RestApiService,
 		private messageService: MessageService,
-		private commonService: CommonService,
+		public commonService: CommonService,
 		private legalEntityService: LegalEntityService,
 		private router: Router
 	) {}
