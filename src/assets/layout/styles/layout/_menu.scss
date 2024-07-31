@@ -72,14 +72,26 @@
 	#scrollbar1::-webkit-scrollbar-thumb:hover {
 		background: rgba(255, 255, 255, 0.1);
 	}
+
+	.p-accordion .p-accordion-header .p-accordion-header-link {
+		padding: 1.25rem;
+		border: 1px solid #e5e7eb;
+		// color: #6b7280;
+		background-image: linear-gradient(245deg, rgb(157 156 156 / 30%), white, transparent);
+		font-weight: 700;
+		border-radius: 6px;
+		transition: box-shadow 0.2s;
+	}
 }
 
 .p-accord {
 	.p-accordion {
+		margin-top: 3px;
 		.p-accordion-content {
 			padding: 0rem;
 			border: 1px solid #e5e7eb;
 			background: #ffffff;
+
 			color: #4b5563;
 			border-top: 0;
 			border-top-right-radius: 0;

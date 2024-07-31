@@ -12,7 +12,7 @@ import { CommonService } from '../../services/common.service';
 })
 export class SubheaderToolbarComponent implements OnInit {
 	items: MenuItem[] = [];
-	selectedCity: any = '### ###';
+	selectedCity: any;
 	@Input() headerName: any;
 	@Input() actionItems: MenuItem[];
 	incomingFormData: any;
@@ -24,7 +24,9 @@ export class SubheaderToolbarComponent implements OnInit {
 
 	ngOnInit() {
 		this.commonService.formObject.subscribe((data) => {
-			this.incomingFormData = data;
+			if (data) {
+				this.incomingFormData = data;
+			}
 		});
 	}
 
@@ -40,7 +42,7 @@ export class SubheaderToolbarComponent implements OnInit {
 				// }
 				this.commonService.returnValidation.next(this.incomingFormData.status);
 			} else {
-				alert('Form Validations invalid...something went wrong!!!');
+				// alert('Form Validations invalid...something went wrong!!!');
 				this.commonService.returnValidation.next(null);
 			}
 		}
