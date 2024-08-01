@@ -10,7 +10,7 @@ import { Product } from 'src/app/modules/shared/models/product';
 import { RestApiService } from 'src/app/modules/shared/services/rest-api.service';
 import { CommonService } from 'src/app/modules/shared/services/common.service';
 import { LegalEntityService } from '../../services/legal-entity.service';
-interface City {
+interface items {
 	label: string;
 	icon: string;
 	url: any;
@@ -66,13 +66,13 @@ export class LegalEntityComponent implements OnInit {
 	ngOnInit() {
 		this.getTabInfo();
 		this.loadLegalEntityTabXML();
-		this.items = [
-			{
-				label: 'Create',
-				icon: 'pi pi-fw pi-check',
-				url: 'http://angular.io'
-			}
-		];
+		// this.items = [
+		// 	{
+		// 		label: 'Create',
+		// 		icon: 'pi pi-fw pi-check',
+		// 		url: 'http://angular.io'
+		// 	}
+		// ];
 		this.productService.getProductsSmall().then((data) => (this.products = data));
 		this.countryService.getCountries().then((countries) => {
 			this.countries = countries;
@@ -119,8 +119,23 @@ export class LegalEntityComponent implements OnInit {
 			(response: any) => {
 				const data = this.commonService.xmlToJson(response.body); // Capture JSON data of xml response
 				/* Prepare Tab Structure for Legal entity */
-
 				data.then((res) => {
+					if (res.CONFIG.BUTTONS.B.length) {
+						for (let tab = 1; tab < res.CONFIG.BUTTONS.B.length; tab++) {
+							this.items.push({
+								label: res.CONFIG.BUTTONS.TAB[tab].$.CAPTION,
+								icon: res.CONFIG.BUTTONS.TAB[tab].$.CAPTION,
+								url: ''
+							});
+						}
+					} else {
+						this.items.push({
+							label: res.CONFIG.BUTTONS.B.$.CAPTION,
+							icon: res.CONFIG.BUTTONS.B.$.CAPTION,
+							url: ''
+						});
+					}
+
 					for (let tab = 1; tab < res.CONFIG.TABS.TAB.length; tab++) {
 						this.tabItems.push({
 							header: res.CONFIG.TABS.TAB[tab].$.CAPTION,
