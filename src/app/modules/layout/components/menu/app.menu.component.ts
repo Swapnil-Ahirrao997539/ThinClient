@@ -168,53 +168,7 @@ export class AppMenuComponent implements OnInit {
 			},
 			{
 				label: 'Tree',
-				items: [
-					// {
-					//     label: 'System', icon: 'pi pi-fw pi-bookmark'
-					// },
-					// {
-					//     label: 'Treasury Security', icon: 'pi pi-fw pi-bookmark'
-					// },
-					// {
-					//     label: 'Control Branch', icon: 'pi pi-fw pi-bookmark',
-					//     items: [
-					//         { label: 'London Branch', icon: 'pi pi-fw pi-bookmark',
-					//           items:[
-					//           {label:'Atlanta-2',icon: 'pi pi-fw pi-bookmark'},
-					//           {label:'Bahamas Beach Bank',icon: 'pi pi-fw pi-bookmark'},
-					//           {label:'New Branch SC',icon: 'pi pi-fw pi-bookmark'},
-					//           {label:'SEB TP',icon: 'pi pi-fw pi-bookmark'}
-					//         ]},
-					//     ]
-					// },
-					// {
-					//     label: 'Queue Explorer', icon: 'pi pi-fw pi-bookmark',
-					//     items : [{
-					//         label : 'Configuration & Setup', icon: 'pi pi-fw pi-bookmark',
-					//         items: [
-					//             { label: 'Pending', icon: 'pi pi-fw pi-bookmark',},
-					//             { label: 'Active', icon: 'pi pi-fw pi-bookmark', },
-					//             { label: 'Rejected', icon: 'pi pi-fw pi-bookmark', },
-					//         ]
-					//       }
-					//     ]
-					// },
-					// { label: 'Form Layout', icon: 'pi pi-fw pi-id-card', routerLink: ['/configuration-and-setup/formlayout'] },
-					// { label: 'Input', icon: 'pi pi-fw pi-check-square', routerLink: ['/configuration-and-setup/input'] },
-					// { label: 'Float Label', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/floatlabel'] },
-					// { label: 'Invalid State', icon: 'pi pi-fw pi-exclamation-circle', routerLink: ['/configuration-and-setup/invalidstate'] },
-					// { label: 'Button', icon: 'pi pi-fw pi-box', routerLink: ['/configuration-and-setup/button'] },
-					// { label: 'List', icon: 'pi pi-fw pi-list', routerLink: ['/configuration-and-setup/list'] },
-					// { label: 'Tree', icon: 'pi pi-fw pi-share-alt', routerLink: ['/configuration-and-setup/tree'] },
-					// { label: 'Panel', icon: 'pi pi-fw pi-tablet', routerLink: ['/configuration-and-setup/panel'] },
-					// { label: 'Overlay', icon: 'pi pi-fw pi-clone', routerLink: ['/configuration-and-setup/overlay'] },
-					// { label: 'Media', icon: 'pi pi-fw pi-image', routerLink: ['/configuration-and-setup/media'] },
-					// { label: 'Menu', icon: 'pi pi-fw pi-bars', routerLink: ['/configuration-and-setup/menu'], routerLinkActiveOptions: { paths: 'subset', queryParams: 'ignored', matrixParams: 'ignored', fragment: 'ignored' } },
-					// { label: 'Message', icon: 'pi pi-fw pi-comment', routerLink: ['/configuration-and-setup/message'] },
-					// { label: 'File', icon: 'pi pi-fw pi-file', routerLink: ['/configuration-and-setup/file'] },
-					// { label: 'Chart', icon: 'pi pi-fw pi-chart-bar', routerLink: ['/configuration-and-setup/charts'] },
-					// { label: 'Misc', icon: 'pi pi-fw pi-circle', routerLink: ['/configuration-and-setup/misc'] }
-				]
+				items: []
 			},
 			{
 				label: 'Queue Explorer',
@@ -627,19 +581,17 @@ export class AppMenuComponent implements OnInit {
 	CBFlag = 0;
 
 	onButreeClick(event) {
-		let g = event.target.innerText;
-		this.queueName = g;
-		if (g) {
+		let treeNode = event.target.innerText;
+		this.queueName = treeNode;
+		if (treeNode) {
 			this.activeIndx = 2;
 		} else {
 			return;
 		}
 
-		if (g == 'System') {
+		if (treeNode == 'SYSTEM') {
 			this.model[2].items = [];
 			this.model[0].items = [];
-			// this.router.navigate(['/configuration-and-setup/blank']);
-			// this.layoutService.gridHeader.next('System');
 
 			this.layoutService.gridHeader.next('System');
 
@@ -690,27 +642,10 @@ export class AppMenuComponent implements OnInit {
 					});
 				}
 
-				//   Menu Appending
+				/** Menu items appending on the basis of tree item selection */
 
 				if (this.model[i].label == 'Menu') {
 					this.model[i].items.push(
-						// {
-						// 	label: 'Systems',
-						// 	icon: 'pi pi-fw pi-bookmark',
-						// 	items: [
-						// 		{
-						// 			label: 'Change Password',
-						// 			icon: 'pi pi-fw pi-bookmark'
-						// 		},
-						// 		{
-						// 			label: 'Exit',
-						// 			icon: 'pi pi-fw pi-bookmark'
-						// 			// items: [
-						// 			//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
-						// 			// ]
-						// 		}
-						// 	]
-						// },
 						{
 							label: 'SMC',
 							icon: 'pi pi-fw pi-bookmark',
@@ -779,7 +714,7 @@ export class AppMenuComponent implements OnInit {
 				}
 			}
 		}
-		if (g == 'Control Branch') {
+		if (treeNode == 'Control Branch') {
 			this.model[2].items = [];
 			this.model[0].items = [];
 			// this.router.navigate(['/configuration-and-setup/blank']);
@@ -913,32 +848,32 @@ export class AppMenuComponent implements OnInit {
 		}
 		let found = false;
 		this.treeObject.forEach((node) => {
-			if (node.label == g) {
+			if (node.label == treeNode) {
 				this.changeFont = true;
 				this.matchString = node.label;
 			}
 		});
 		for (let r = 0; r < this.treeObject[2].children.length; r++) {
 			this.treeObject[2].children.forEach((node) => {
-				if (node.label.trim() == g) {
+				if (node.label.trim() == treeNode) {
 					this.matchString = node.label;
 				}
 			});
 			this.treeObject[2].children[r].children.forEach((node) => {
-				if (node.label.trim() == g) {
+				if (node.label.trim() == treeNode) {
 					this.matchString = node.label;
 				}
 			});
 
 			for (let k = 0; k < this.treeObject[2].children[r].children.length; k++) {
 				this.treeObject[2].children[r].children[k].children.forEach((node) => {
-					if (node.label.trim() == g) {
+					if (node.label.trim() == treeNode) {
 						this.matchString = node.label;
 					}
 				});
 				for (let l = 0; l < this.treeObject[2].children[r].children[k].children.length; l++) {
 					this.treeObject[2].children[r].children[k].children[l].children.forEach((node) => {
-						if (node.label.trim() == g) {
+						if (node.label.trim() == treeNode) {
 							this.matchString = node.label;
 						}
 					});

@@ -1,8 +1,10 @@
 :root {
-	font-family: 'Inter var', sans-serif;
+	font-family: 'SegoeUI-SemiBold-final,Segoe UI Semibold,SegoeUI-Regular-final,Segoe UI,"Segoe UI Web (West European)",Segoe,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,Tahoma,Helvetica,Arial,sans-serif';
 	font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 	font-variation-settings: normal;
-	--font-family: 'Inter var', sans-serif;
+	/* --font-family: 'Inter var', sans-serif; */
+	--font-family: 'Inter var', SegoeUI-SemiBold-final, Segoe UI Semibold, SegoeUI-Regular-final, Segoe UI, 'Segoe UI Web (West European)', Segoe, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Tahoma, Helvetica, Arial, sans-serif;
+
 	--font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 	--surface-a: #ffffff;
 	--surface-b: #f9fafb;

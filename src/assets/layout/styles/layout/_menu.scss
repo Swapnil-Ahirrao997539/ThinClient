@@ -169,11 +169,14 @@
 
 			&.active-route {
 				font-weight: 700;
-				color: #374151;
+				color: #5659f8;
+				font-size: 16px;
 			}
 
 			&:hover {
-				background-color: var(--surface-hover);
+				// background-color: var(--surface-hover);
+				background-image: linear-gradient(45deg, black, transparent);
+				color: white;
 			}
 
 			&:focus {
@@ -295,9 +298,15 @@
 		background: #f3f4f6;
 	}
 	.p-tree .p-tree-container .p-treenode .p-treenode-content :hover {
-		color: #374151;
+		// color: #374151;
+		// border-color: transparent;
+		// background: #f3f4f6;
+
+		color: white;
 		border-color: transparent;
-		background: #f3f4f6;
+		background: linear-gradient(45deg, black, transparent);
+		border-radius: 20px;
+		padding: 1px;
 	}
 
 	.layout-menu .buTree .p-tree .p-tree-container .p-treenode .p-treenode-content {
