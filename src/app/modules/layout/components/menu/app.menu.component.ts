@@ -79,28 +79,13 @@ export class AppMenuComponent implements OnInit {
 		this.MenuService.sessionType.next(this.value12);
 		this.MenuService.moduleValue.next(this.value);
 
+		/** Bydefault (i.e."SMC") Menu and their child menu items without any check */
+
 		this.model = [
 			{
 				label: 'Menu',
 				isCollapse: true,
 				items: [
-					// {
-					// 	label: 'Systems',
-					// 	icon: 'pi pi-fw pi-bookmark',
-					// 	items: [
-					// 		{
-					// 			label: 'Change Password',
-					// 			icon: 'pi pi-fw pi-bookmark'
-					// 		},
-					// 		{
-					// 			label: 'Exit',
-					// 			icon: 'pi pi-fw pi-bookmark'
-					// 			// items: [
-					// 			//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
-					// 			// ]
-					// 		}
-					// 	]
-					// },
 					{
 						label: 'SMC',
 						icon: 'pi pi-fw pi-bookmark',
@@ -124,7 +109,7 @@ export class AppMenuComponent implements OnInit {
 								icon: 'pi pi-fw pi-bookmark',
 								items: [
 									{ label: 'Location', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] },
-									{ label: 'Legal Entity', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/legal-entity'] },
+									{ label: 'Legal Entity', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/legal-entity/legal-entity-main'] },
 									{ label: 'Bank Relationship', icon: 'pi pi-fw pi-bookmark' },
 									{ label: 'Bank Location', icon: 'pi pi-fw pi-bookmark' },
 									{ label: 'Fund Group', icon: 'pi pi-fw pi-bookmark' },
@@ -147,10 +132,7 @@ export class AppMenuComponent implements OnInit {
 							{ label: 'Processing ICA Rules', icon: 'pi pi-fw pi-bookmark' },
 							{ label: 'Fund Manager', icon: 'pi pi-fw pi-bookmark' },
 							{ label: 'Process Uploaded Funds', icon: 'pi pi-fw pi-bookmark' },
-							{
-								label: 'Counterparty ALGD List',
-								icon: 'pi pi-fw pi-bookmark'
-							},
+							{ label: 'Counterparty ALGD List', icon: 'pi pi-fw pi-bookmark' },
 							{ label: 'Static Data Request', icon: 'pi pi-fw pi-bookmark' },
 							{ label: 'Static Data Bulk Create', icon: 'pi pi-fw pi-bookmark' },
 							{ label: 'MI Auto Replay', icon: 'pi pi-fw pi-bookmark' },
@@ -218,102 +200,9 @@ export class AppMenuComponent implements OnInit {
 				]
 			}
 		];
+
 		this.layoutService.accordianOpen.subscribe((data) => {
 			this.activeIndx = data;
-		});
-
-		this.layoutService.queueExplorerString.subscribe((data) => {
-			this.queueName = data;
-			if (this.queueName == 'System') {
-				this.model[2].items = [];
-				for (let i = 0; i < this.model.length; i++) {
-					if (this.model[i].label == 'Queue Explorer') {
-						this.model[i].items.push({
-							label: 'Configuration & Setup',
-							icon: 'pi pi-fw pi-bookmark',
-							items: [
-								{
-									label: 'Pending',
-									icon: 'pi pi-fw pi-bookmark',
-									items: [
-										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/location-list'] },
-										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/legal-entity-list'] },
-										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
-									]
-								},
-								{
-									label: 'Active',
-									icon: 'pi pi-fw pi-bookmark',
-									items: [
-										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
-									]
-								},
-								{
-									label: 'Rejected',
-									icon: 'pi pi-fw pi-bookmark',
-									items: [
-										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
-									]
-								}
-							]
-						});
-					}
-				}
-			}
-			if (this.queueName == 'Control Branch') {
-				this.model[2].items = [];
-				this.model[0].items = [];
-
-				for (let i = 0; i < this.model.length; i++) {
-					if (this.model[i].label == 'Queue Explorer') {
-						this.model[i].items.push(
-							{
-								label: 'Trades',
-								icon: 'pi pi-fw pi-bookmark',
-								items: [
-									{ label: 'In-CLS', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Final', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'UDQ', icon: 'pi pi-fw pi-bookmark' }
-								]
-							},
-							{ label: 'Pay-In', icon: 'pi pi-fw pi-bookmark' },
-							{ label: 'Pay-Out', icon: 'pi pi-fw pi-bookmark' },
-							{ label: 'SMC', icon: 'pi pi-fw pi-bookmark' }
-						);
-					}
-
-					if (this.model[i].label == 'Menu') {
-						this.model[i].items.push(
-							{
-								label: 'Trades',
-								icon: 'pi pi-fw pi-bookmark',
-								items: [
-									{ label: 'In-CLS', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Final', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'UDQ', icon: 'pi pi-fw pi-bookmark' }
-								]
-							},
-							{ label: 'Pay-In', icon: 'pi pi-fw pi-bookmark' },
-							{ label: 'Pay-Out', icon: 'pi pi-fw pi-bookmark' },
-							{ label: 'Pay-In', icon: 'pi pi-fw pi-bookmark' },
-							{ label: 'SMC', icon: 'pi pi-fw pi-bookmark' }
-						);
-					}
-				}
-			}
 		});
 	}
 
@@ -341,10 +230,9 @@ export class AppMenuComponent implements OnInit {
 		);
 	}
 
-	/**
-	 * @function for draw tree with received object, make parent , child, subchild object to treeData
-	 * @param treeData
-	 */
+	/***********************************************************************************************************/
+	/* @function for draw tree with received object, make parent , child, subchild object to treeData       ****/
+	/***********************************************************************************************************/
 
 	drawTree(treeData) {
 		let parentChildren: any = [];
@@ -514,8 +402,9 @@ export class AppMenuComponent implements OnInit {
 			}
 		];
 	}
-	/** End of Tree Draw */
-
+	/*********************************************************/
+	/* @function for draw tree image with received object ****/
+	/*********************************************************/
 	getImage(buTp?, scIn?, custIn?) {
 		let imgUrl: string;
 		if (buTp == 'SYSTEM') {
@@ -580,6 +469,9 @@ export class AppMenuComponent implements OnInit {
 
 	CBFlag = 0;
 
+	/***********************************************************************************************************/
+	/* @function On BuTree Clicked item of Model objects i.e. "Menu" & "Queue Explorer" changed and append  ****/
+	/***********************************************************************************************************/
 	onButreeClick(event) {
 		let treeNode = event.target.innerText;
 		this.queueName = treeNode;
@@ -590,6 +482,7 @@ export class AppMenuComponent implements OnInit {
 		}
 
 		if (treeNode == 'SYSTEM') {
+			// Flush the "Menu" and "Queue Explorer array and append with respective selections."
 			this.model[2].items = [];
 			this.model[0].items = [];
 
@@ -714,10 +607,63 @@ export class AppMenuComponent implements OnInit {
 				}
 			}
 		}
-		if (treeNode == 'Control Branch') {
+
+		if (treeNode == 'TREASURY SECURITY') {
+			// Flush the "Menu" and "Queue Explorer array and append with respective selections."
+
 			this.model[2].items = [];
 			this.model[0].items = [];
-			// this.router.navigate(['/configuration-and-setup/blank']);
+
+			this.layoutService.gridHeader.next('TREASURY SECURITY');
+			this.layoutService.isSelection = true;
+
+			for (let i = 0; i < this.model.length; i++) {
+				if (this.model[i].label == 'Queue Explorer') {
+					this.model[i].items.push({
+						label: 'Configuration & Setup',
+						icon: 'pi pi-fw pi-bookmark',
+						items: [
+							{
+								label: 'Pending',
+								icon: 'pi pi-fw pi-bookmark',
+								items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+							},
+							{
+								label: 'Active',
+								icon: 'pi pi-fw pi-bookmark',
+								items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+							},
+							{
+								label: 'Rejected',
+								icon: 'pi pi-fw pi-bookmark',
+								items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+							}
+						]
+					});
+				}
+
+				if (this.model[i].label == 'Menu') {
+					this.model[i].items.push(
+						{
+							label: 'Configuration & Setup',
+							icon: 'pi pi-fw pi-bookmark',
+							items: [{ label: 'Create', icon: 'pi pi-fw pi-bookmark', items: [{ label: 'Department', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] }] }]
+						},
+						{
+							label: 'Dashboard View',
+							icon: 'pi pi-fw pi-bookmark',
+							routerLink: ['/dashboard']
+						}
+					);
+					this.layoutService.gridHeader.next('Dashboard View');
+				}
+			}
+		}
+		if (treeNode == 'Control Branch') {
+			// Flush the "Menu" and "Queue Explorer array and append with respective selections."
+
+			this.model[2].items = [];
+			this.model[0].items = [];
 
 			this.layoutService.gridHeader.next('Control Branch');
 			this.layoutService.isSelection = true;
@@ -739,25 +685,9 @@ export class AppMenuComponent implements OnInit {
 						{ label: 'SMC', icon: 'pi pi-fw pi-bookmark' }
 					);
 				}
+
 				if (this.model[i].label == 'Menu') {
 					this.model[i].items.push(
-						// {
-						// 	label: 'Systems',
-						// 	icon: 'pi pi-fw pi-bookmark',
-						// 	items: [
-						// 		{
-						// 			label: 'Change Password',
-						// 			icon: 'pi pi-fw pi-bookmark'
-						// 		},
-						// 		{
-						// 			label: 'Exit',
-						// 			icon: 'pi pi-fw pi-bookmark'
-						// 			// items: [
-						// 			//     { label: 'Submenu 1.2.1', icon: 'pi pi-fw pi-bookmark' }
-						// 			// ]
-						// 		}
-						// 	]
-						// },
 						{
 							label: 'Trades',
 							icon: 'pi pi-fw pi-bookmark',
@@ -840,7 +770,8 @@ export class AppMenuComponent implements OnInit {
 							label: 'Dashboard View',
 							icon: 'pi pi-fw pi-bookmark',
 							routerLink: ['/dashboard']
-						}
+						},
+						{ label: 'Reports', icon: 'pi pi-fw pi-bookmark' }
 					);
 					this.layoutService.gridHeader.next('Dashboard View');
 				}
@@ -881,6 +812,9 @@ export class AppMenuComponent implements OnInit {
 			}
 		}
 	}
+	/*****************************************************************/
+	/* @function get version call to display respective version   ****/
+	/******************************************************* *********/
 	getVersionDetailCall() {
 		let AdditionalParameters = '@FORM_NAME@=frmVersion&@COMMAND_EVENT@=eventGetVersion';
 		let data1: any = `
@@ -898,6 +832,7 @@ export class AppMenuComponent implements OnInit {
 			}
 		);
 	}
+
 	activeIndexChange(index: number) {
 		this.activeIndex = index;
 		this.isCollapse = false;

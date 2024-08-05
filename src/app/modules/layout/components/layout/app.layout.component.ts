@@ -205,7 +205,7 @@ export class AppLayoutComponent implements OnInit, OnDestroy {
 		this.selectedChip = e;
 
 		if (e.includes('Legal Entity')) {
-			this.router.navigate(['/configuration-and-setup/legal-entity']);
+			this.router.navigate(['/configuration-and-setup/legal-entity/legal-entity-main']);
 		}
 		if (e.includes('Location')) {
 			this.router.navigate(['/configuration-and-setup/location']);

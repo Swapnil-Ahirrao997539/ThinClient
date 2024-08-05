@@ -64,15 +64,9 @@ export class LegalEntityComponent implements OnInit {
 	) {}
 
 	ngOnInit() {
-		this.getTabInfo();
+		//this.getTabInfo();
 		this.loadLegalEntityTabXML();
-		// this.items = [
-		// 	{
-		// 		label: 'Create',
-		// 		icon: 'pi pi-fw pi-check',
-		// 		url: 'http://angular.io'
-		// 	}
-		// ];
+
 		this.productService.getProductsSmall().then((data) => (this.products = data));
 		this.countryService.getCountries().then((countries) => {
 			this.countries = countries;
