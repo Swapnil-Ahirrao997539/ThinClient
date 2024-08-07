@@ -11,16 +11,17 @@
 		<i class="pi pi-ellipsis-v"></i>
 	</button>
 	<div #topbarmenu class="layout-topbar-menu" [ngClass]="{ 'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible }">
-		<div [ngStyle]="selectedSelections == 'Processing' ? { 'margin-right': '78px' } : { 'margin-right': '550px' }">
+		<div [ngStyle]="selectedSelections == 'Processing' ? { left: '20%', position: 'fixed' } : { left: '20%', position: 'fixed' }">
 			<div style="font-family: var(--font-family); margin-top: 12px" *ngIf="moduleValue == 'Processing'">
-				<span *ngIf="layoutService.isSelection"
+				<span *ngIf="!showDashboardEntity"
 					><Span style="font-weight: 700" translate>label_current_selections </Span>
 					<!-- &nbsp;&nbsp;<span style="color: var(--primary-color);">{{moduleValue | titlecase}}</span> &nbsp; -->
-					<p-dropdown [options]="selections" [(ngModel)]="selectedSelections" optionLabel="name" [showClear]="false" placeholder="Select" optionValue="code"></p-dropdown> &nbsp;&nbsp;</span
+					<p-dropdown [options]="selections" [(ngModel)]="selectedSelections" optionLabel="name" [showClear]="false" (onChange)="changeSelection(selectedSelections)" placeholder="Select" optionValue="code"></p-dropdown> &nbsp;&nbsp;</span
 				>
-				<span *ngIf="layoutService.isSelection">
-					<span *ngIf="selectedSelections == 'Processing'" translate>label_view_type </span>&nbsp;&nbsp; &nbsp;<p-dropdown
-						*ngIf="selectedSelections == 'Processing'"
+				<span *ngIf="!showDashboardEntity">
+					<span *ngIf="selectedSelections == 'Processing' && selectedSessionType == 'cls1'" translate>label_view_type </span>&nbsp;&nbsp; &nbsp;<p-dropdown
+						(onChange)="changeSelection(selectedViewType)"
+						*ngIf="selectedSelections == 'Processing' && selectedSessionType == 'cls1'"
 						[options]="viewTypes"
 						[(ngModel)]="selectedViewType"
 						optionLabel="name"
@@ -30,8 +31,9 @@
 					></p-dropdown>
 					&nbsp;
 				</span>
-				<span [ngStyle]="!layoutService.isSelection ? { 'margin-right': '438px' } : null">
+				<span *ngIf="!showDashboardEntity">
 					<span *ngIf="selectedSelections == 'Processing'" translate>label_session_type</span> &nbsp;&nbsp;<p-dropdown
+						(onChange)="changeSelection(selectedSessionType)"
 						*ngIf="selectedSelections == 'Processing'"
 						[options]="sessionTypes"
 						[(ngModel)]="selectedSessionType"
@@ -42,10 +44,20 @@
 					></p-dropdown>
 				</span>
 			</div>
-			<div style="font-family: var(--font-family); margin-top: 14px" *ngIf="moduleValue == 'User Admin'">
-				<Span style="font-weight: 700">Current Selections :</Span>
-				&nbsp;&nbsp;<span style="color: var(--primary-color); margin-right: 303px">{{ moduleValue | titlecase }}</span> &nbsp;
-			</div>
+		</div>
+
+		<div class="dashboardEntity" *ngIf="showDashboardEntity">
+			<span>
+				<p-button label="Main Application View" [raised]="true" rounded="true" (click)="backToMainApplicationView()" /> &nbsp;&nbsp;&nbsp;&nbsp; <span translate>label_session_type</span> &nbsp;&nbsp;<p-dropdown
+					(onChange)="changeDashboard(selectedSessionTypeForDashboard)"
+					[options]="sessionTypes"
+					[(ngModel)]="selectedSessionTypeForDashboard"
+					optionLabel="name"
+					[showClear]="false"
+					placeholder="Select"
+					optionValue="code"
+				></p-dropdown>
+			</span>
 		</div>
 		<div style="">
 			<div style="font-family: var(--font-family); margin-top: 3px; text-align: end">

@@ -57,7 +57,18 @@
 			}
 		}
 	}
+	.dashboardEntity {
+		font-family: var(--font-family);
+		margin-top: 6px;
+		left: 11%;
+		position: fixed;
 
+		.p-button {
+			padding: 0.3rem 0.5rem;
+			font-size: x-small;
+			background: linear-gradient(86deg, #8647c5, #ae3bac);
+		}
+	}
 	.layout-topbar-logo {
 		display: flex;
 		align-items: center;

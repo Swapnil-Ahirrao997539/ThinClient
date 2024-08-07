@@ -26,6 +26,7 @@ export class AppTopBarComponent implements OnInit {
 	viewType: any;
 	sessionType;
 	moduleValue = 'Processing';
+	selectedSessionTypeForDashboard: any = 'cls1';
 
 	currentLang = 'fr';
 	selectedLang: any;
@@ -49,6 +50,8 @@ export class AppTopBarComponent implements OnInit {
 
 	selectedSessionType: any = 'cls1';
 
+	showDashboardEntity: boolean = false;
+
 	@ViewChild('menubutton') menuButton!: ElementRef;
 
 	@ViewChild('topbarmenubutton') topbarMenuButton!: ElementRef;
@@ -65,44 +68,31 @@ export class AppTopBarComponent implements OnInit {
 		public commonService: CommonService,
 		private authService: AuthService
 	) {}
-	onLangChange(currentLang: string) {
-		if (currentLang == 'fr') {
-			// this.setTranslateLoader(PayplusTranslateFrLoaderService);
-			this.translate.getTranslation('fr');
-		}
-		if (currentLang == 'en') {
-			this.commonService.langVar.next(currentLang);
-		}
-
-		this.translate.use(currentLang);
-	}
-
-	// Method to set a new loader class dynamically
-	setTranslateLoader(loaderClass: any) {
-		TranslateModule.forRoot({
-			loader: {
-				provide: TranslateLoader,
-				useClass: loaderClass
-			}
-		});
-	}
 
 	ngOnInit(): void {
-		// if(this.router.url == '/dashboard') {
-		//    this.layoutService.isSelection = false;
-		// } else {
-		//     this.layoutService.isSelection = true;
-		// }
-		// this.layoutService.gridHeader.subscribe(data => {
-		//     if(data.subStrHeader == 'Dashboard View') {
-		//          debugger
-		//         this.layoutService.isDisplayDashboard = false;
-		//     } else {
-		//         debugger
-		//         this.layoutService.isDisplayDashboard = true;
+		if (this.router.url == '/dashboard') {
+			this.showDashboardEntity = true;
+			this.layoutService.onMenuToggle();
 
-		//     }
-		//  })
+			//this.layoutService.isSelection = false;
+		} else {
+			this.showDashboardEntity = false;
+
+			//this.layoutService.isSelection = true;
+		}
+		this.layoutService.gridHeader.subscribe((data) => {
+			if (data.subStrHeader == 'Dashboard View') {
+				this.showDashboardEntity = true;
+				this.layoutService.onMenuToggle();
+				//this.layoutService.isDisplayDashboard = false;
+			} else {
+				this.showDashboardEntity = false;
+
+				//this.layoutService.isDisplayDashboard = true;
+			}
+		});
+		// Pass default selections to menu service
+
 		this.profileItems = [
 			{
 				label: localStorage.getItem('username'),
@@ -124,21 +114,7 @@ export class AppTopBarComponent implements OnInit {
 				]
 			}
 		];
-		this.menuService.selectedViewType.subscribe((data) => {
-			if (data) {
-				this.viewType = data.name;
-			}
-		});
-		this.menuService.sessionType.subscribe((data) => {
-			if (data) {
-				this.sessionType = data.name;
-			}
-		});
-		this.menuService.moduleValue.subscribe((data) => {
-			if (data) {
-				this.moduleValue = data;
-			}
-		});
+
 		this.selections = [
 			{ name: 'Processing', code: 'Processing' },
 			{ name: 'User Admin', code: 'User Admin' }
@@ -149,7 +125,6 @@ export class AppTopBarComponent implements OnInit {
 		];
 		this.sessionTypes = [
 			{ name: 'CLS1', code: 'cls1' },
-			{ name: 'SDS', code: 'sds' },
 			{ name: 'CLSNET', code: 'clsnet' },
 			{ name: 'LCH', code: 'lch' },
 			{ name: 'CLSNOW', code: 'clsnow' }
@@ -159,6 +134,25 @@ export class AppTopBarComponent implements OnInit {
 	showDialog(position: string) {
 		this.position = position;
 		this.visible = true;
+	}
+
+	changeSelection(selectedValue) {
+		this.menuService.moduleValue.next(selectedValue);
+		if (selectedValue == 'Processing') {
+			this.selectedSessionType = 'cls1';
+		}
+		this.selectedSessionTypeForDashboard = this.selectedSessionType;
+		// this.menuService.selectedViewType.next(this.selectedViewType);
+		// this.menuService.sessionType.next(this.selectedSessionType);
+	}
+
+	changeDashboard(selectedValue) {}
+
+	backToMainApplicationView() {
+		this.showDashboardEntity = false;
+		this.layoutService.onMenuToggle();
+		// this.selectedSelections = 'Processing';
+		this.router.navigate(['/configuration-and-setup/blank']);
 	}
 
 	refresh() {

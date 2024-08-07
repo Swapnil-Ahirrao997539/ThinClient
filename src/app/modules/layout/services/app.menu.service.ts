@@ -8,9 +8,10 @@ import { MenuChangeEvent } from '../models/menuchangeevent';
 export class MenuService {
 	private menuSource = new Subject<MenuChangeEvent>();
 	private resetSource = new Subject();
-	public selectedViewType = new Subject<any>();
-	public sessionType = new Subject<any>();
-	public moduleValue = new Subject<any>();
+
+	public sessionType = new Subject<any>(); // session type
+	public moduleValue = new Subject<any>(); // Current Selection
+	public selectedViewType = new Subject<any>(); // View Type
 
 	menuSource$ = this.menuSource.asObservable();
 	resetSource$ = this.resetSource.asObservable();
