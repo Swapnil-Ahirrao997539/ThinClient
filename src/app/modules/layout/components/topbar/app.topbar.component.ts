@@ -26,7 +26,9 @@ export class AppTopBarComponent implements OnInit {
 	viewType: any;
 	sessionType;
 	moduleValue = 'Processing';
+	dashboardButtonName: any = 'Main Application View';
 	selectedSessionTypeForDashboard: any = 'cls1';
+	checked: boolean = false;
 
 	currentLang = 'fr';
 	selectedLang: any;
@@ -71,26 +73,28 @@ export class AppTopBarComponent implements OnInit {
 
 	ngOnInit(): void {
 		if (this.router.url == '/dashboard') {
-			this.showDashboardEntity = true;
+			// this.showDashboardEntity = true;
 			this.layoutService.onMenuToggle();
+			this.dashboardButtonName = 'Main Application View';
+			this.showDashboardEntity = !this.showDashboardEntity;
 
 			//this.layoutService.isSelection = false;
 		} else {
-			this.showDashboardEntity = false;
-
+			this.dashboardButtonName = 'Dashboard View';
+			// this.showDashboardEntity = false;
 			//this.layoutService.isSelection = true;
 		}
-		this.layoutService.gridHeader.subscribe((data) => {
-			if (data.subStrHeader == 'Dashboard View') {
-				this.showDashboardEntity = true;
-				this.layoutService.onMenuToggle();
-				//this.layoutService.isDisplayDashboard = false;
-			} else {
-				this.showDashboardEntity = false;
+		// this.layoutService.gridHeader.subscribe((data) => {
+		// 	if (data.subStrHeader == 'Dashboard View') {
+		// 		this.showDashboardEntity = true;
+		// 		this.layoutService.onMenuToggle();
+		// 		//this.layoutService.isDisplayDashboard = false;
+		// 	} else {
+		// 		this.showDashboardEntity = false;
 
-				//this.layoutService.isDisplayDashboard = true;
-			}
-		});
+		// 		//this.layoutService.isDisplayDashboard = true;
+		// 	}
+		// });
 		// Pass default selections to menu service
 
 		this.profileItems = [
@@ -148,11 +152,18 @@ export class AppTopBarComponent implements OnInit {
 
 	changeDashboard(selectedValue) {}
 
-	backToMainApplicationView() {
-		this.showDashboardEntity = false;
-		this.layoutService.onMenuToggle();
+	backToMainApplicationView(checkValue) {
+		debugger;
+		this.showDashboardEntity = !this.showDashboardEntity;
+		if (this.showDashboardEntity) {
+			this.dashboardButtonName = 'Main Application View';
+			this.router.navigate(['/dashboard']);
+		} else {
+			this.dashboardButtonName = 'Dashboard View';
+			this.router.navigate(['/configuration-and-setup/blank']);
+		}
 		// this.selectedSelections = 'Processing';
-		this.router.navigate(['/configuration-and-setup/blank']);
+		this.layoutService.onMenuToggle();
 	}
 
 	refresh() {

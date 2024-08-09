@@ -33,6 +33,7 @@ import { AppMenuComponent } from './components/menu/app.menu.component';
 import { AppMenuitemComponent } from './components/menu/app.menuitem.component';
 import { AppSidebarComponent } from './components/sidebar/app.sidebar.component';
 import { MenuModule } from 'primeng/menu';
+import { ToggleButtonModule } from 'primeng/togglebutton';
 
 @NgModule({
 	declarations: [AppMenuitemComponent, AppTopBarComponent, AppFooterComponent, AppMenuComponent, AppSidebarComponent, AppLayoutComponent],
@@ -57,6 +58,7 @@ import { MenuModule } from 'primeng/menu';
 		SelectButtonModule,
 		ChipModule,
 		SharedModule.forRoot(),
+		ToggleButtonModule,
 
 		ButtonModule,
 		AvatarGroupModule,

@@ -30,6 +30,7 @@ export class AppMenuComponent implements OnInit {
 	custIn: any;
 	scIn: any;
 	buTp: any;
+	treeExploreeBackup: any;
 
 	selectedItem: any;
 	changeFont: boolean = false;
@@ -136,12 +137,12 @@ export class AppMenuComponent implements OnInit {
 							{ label: 'Netting Groups', icon: 'pi pi-fw pi-bookmark' },
 							{ label: 'Static Data Delete', icon: 'pi pi-fw pi-bookmark' }
 						]
-					},
-					{
-						label: 'Dashboard View',
-						icon: 'pi pi-fw pi-bookmark',
-						routerLink: ['/dashboard']
 					}
+					// {
+					// 	label: 'Dashboard View',
+					// 	icon: 'pi pi-fw pi-bookmark',
+					// 	routerLink: ['/dashboard']
+					// }
 				]
 			},
 			{
@@ -202,6 +203,7 @@ export class AppMenuComponent implements OnInit {
 		});
 
 		this.menuService.moduleValue.subscribe((data) => {
+			this.currentSelection = data;
 			this.menuAppendOnSelection(data);
 		});
 		// this.menuService.selectedViewType.subscribe((data) => {
@@ -216,9 +218,12 @@ export class AppMenuComponent implements OnInit {
 		switch (selectedValue) {
 			case 'User Admin':
 				this.drawMenuItem(selectedValue);
+				this.loadParentXML(selectedValue);
 				break;
 			case 'Processing':
 				this.drawMenuItem(selectedValue);
+				this.loadParentXML(selectedValue);
+
 				break;
 			case 'aggregate':
 				this.drawMenuItem(selectedValue);
@@ -228,15 +233,23 @@ export class AppMenuComponent implements OnInit {
 				break;
 			case 'cls1':
 				this.drawMenuItem(selectedValue);
+				this.loadParentXML(selectedValue);
+
 				break;
 			case 'clsnet':
 				this.drawMenuItem(selectedValue);
+				this.loadParentXML(selectedValue);
+
 				break;
 			case 'lch':
 				this.drawMenuItem(selectedValue);
+				this.loadParentXML(selectedValue);
+
 				break;
 			case 'clsnow':
 				this.drawMenuItem(selectedValue);
+				this.loadParentXML(selectedValue);
+
 				break;
 		}
 	}
@@ -357,12 +370,12 @@ export class AppMenuComponent implements OnInit {
 								{ label: 'Netting Groups', icon: 'pi pi-fw pi-bookmark' },
 								{ label: 'Static Data Delete', icon: 'pi pi-fw pi-bookmark' }
 							]
-						},
-						{
-							label: 'Dashboard View',
-							icon: 'pi pi-fw pi-bookmark',
-							routerLink: ['/dashboard']
 						}
+						// {
+						// 	label: 'Dashboard View',
+						// 	icon: 'pi pi-fw pi-bookmark',
+						// 	routerLink: ['/dashboard']
+						// }
 					);
 					// this.layoutService.gridHeader.next('System');
 				}
@@ -399,33 +412,89 @@ export class AppMenuComponent implements OnInit {
 				}
 
 				if (this.model[i].label == 'Menu') {
-					this.model[i].items.push({
-						label: 'Dashboard View',
-						icon: 'pi pi-fw pi-bookmark',
-						routerLink: ['/dashboard']
-					});
+					// this.model[i].items.push({
+					// 	label: 'Dashboard View',
+					// 	icon: 'pi pi-fw pi-bookmark',
+					// 	routerLink: ['/dashboard']
+					// });
 					this.layoutService.gridHeader.next('Dashboard View');
 				}
 			}
 		}
 	}
 
-	loadParentXML() {
-		let url = '/assets/demo/data/users.xml';
+	loadParentXML(selectedValue?) {
+		let url;
+		if (selectedValue && selectedValue == 'User Admin') {
+			url = '/assets/demo/data/browserConRep.xml';
+		} else {
+			url = '/assets/demo/data/users.xml';
+		}
+
+		if (selectedValue && selectedValue == 'FLTBUS30X') {
+			url = '/assets/demo/data/NetGroupingDetail.xml';
+		}
+		if (selectedValue && selectedValue == 'VENDGB32') {
+			url = '/assets/demo/data/NetGroupingDetailVGB32.xml';
+		}
+
 		this.layoutService.GetUseConRep(url).subscribe(
 			(response: any) => {
 				const data = this.commonService.xmlToJson(response.body); // Capture JSON data of xml response
 				/* Prepare Tree format object */
 				data.then((res) => {
-					const treeData: any = res.USER_CONFIG.GetUseConRep.BuTree.GroupBuTree.BuNode.GroupBuNode;
-					/** Prepare & Map tree object to Draw Tree */
-					this.drawTree(treeData);
-					/** Capure global variables*/
-					this.scIn = treeData[0].FIELD_NM[0].$.id;
-					this.custIn = treeData[0].FIELD_NM[1].$.id;
-					this.buTp = treeData[0].FIELD_NM[2].$.id;
-					this.buId = treeData[0].FIELD_NM[3].$.id;
-					this.buName = treeData[0].FIELD_NM[4].$.id;
+					if (res.PARAMETERS) {
+						console.log('Browser Con' + res);
+						const treeDataforUserAdmin: any = res.PARAMETERS.BrowserConRep.Organization.GroupOrganization;
+						this.drawTreeforUserAdmin(treeDataforUserAdmin);
+						//this.drawTree(treeDataforUserAdmin);
+					} else {
+						if (!res.NETTING_GROUP_DETAILS) {
+							/** Prepare & Map tree object to SYSTEM -> Processing */
+							if (res.USER_CONFIG.GetUseConRep.BuTree) {
+								const treeData: any = res.USER_CONFIG.GetUseConRep.BuTree.GroupBuTree.BuNode.GroupBuNode;
+								this.drawTree(treeData);
+								/** Capure global variables*/
+								this.scIn = treeData[0].FIELD_NM[0].$.id;
+								this.custIn = treeData[0].FIELD_NM[1].$.id;
+								this.buTp = treeData[0].FIELD_NM[2].$.id;
+								this.buId = treeData[0].FIELD_NM[3].$.id;
+								this.buName = treeData[0].FIELD_NM[4].$.id;
+							}
+							if (selectedValue && (selectedValue == 'Processing' || selectedValue == 'ClS1' || selectedValue == 'clsnow')) {
+								if (res.USER_CONFIG.GetUseConRep.BuTree) {
+									const treeData: any = res.USER_CONFIG.GetUseConRep.BuTree.GroupBuTree.BuNode.GroupBuNode;
+									this.drawTree(treeData);
+									/** Capure global variables*/
+									this.scIn = treeData[0].FIELD_NM[0].$.id;
+									this.custIn = treeData[0].FIELD_NM[1].$.id;
+									this.buTp = treeData[0].FIELD_NM[2].$.id;
+									this.buId = treeData[0].FIELD_NM[3].$.id;
+									this.buName = treeData[0].FIELD_NM[4].$.id;
+								}
+							}
+							/** Prepare & Map tree object to SYSTEM -> Processing -> Session Type -> CLSNET */
+							if (selectedValue && selectedValue == 'clsnet') {
+								if (res.USER_CONFIG.GetUseConRep.NettingGroupTree) {
+									const treeData: any = res.USER_CONFIG.GetUseConRep.NettingGroupTree.GroupNettingGroupTree.NettingGroupList.GroupNettingGroupList;
+									// this.treeExploreeBackup = treeData;
+									this.drawTreeforCLSNET(treeData);
+								}
+							}
+
+							/** Prepare & Map tree object to SYSTEM -> Processing -> Session Type -> LCH */
+							if (selectedValue && selectedValue == 'lch') {
+								// if (res.USER_CONFIG.GetUseConRep.NettingGroupTree) {
+								const treeData: any = res.USER_CONFIG.GetUseConRep.BuTree.GroupBuTree.BuNode.GroupBuNode;
+								this.drawTreeforLCH(treeData);
+								//}
+							}
+						} else {
+							if (res.NETTING_GROUP_DETAILS) {
+								this.drawTreeforCLSNETforNGDetails(res.NETTING_GROUP_DETAILS.DATA.DETAILS_DATA);
+							}
+						}
+					}
 				});
 			},
 			(error) => {
@@ -435,7 +504,194 @@ export class AppMenuComponent implements OnInit {
 	}
 
 	/***********************************************************************************************************/
-	/* @function for draw tree with received object, make parent , child, subchild object to treeData       ****/
+	/* @function for draw tree with received object, make parent , child, subchild object to treeData for User Admin     ****/
+	/***********************************************************************************************************/
+	drawTreeforUserAdmin(treeData) {
+		let parentChildren: any = [];
+		let nodeChildren: any = [{ buNode: '', feild_name: '' }]; // For 1st level Node
+		let childArray: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 2nd Level
+
+		for (let i = 0; i < treeData.length; i++) {
+			if (treeData[i].FIELD_NM[1]._ == 'ORGLEVEL001') {
+				parentChildren.push(treeData[i].FIELD_NM[3]._);
+			}
+		}
+
+		for (let k = 0; k < parentChildren.length; k++) {
+			// 2nd Level
+			childArray.push({
+				key: '2-' + k,
+				data: parentChildren[k],
+				label: parentChildren[k],
+				imagePath: AppSettings.Base_Image_URL + 'Department_CLOSED.gif',
+				children: []
+			});
+		}
+		childArray.splice(0, 1);
+
+		/**Final Tree Draw */
+		this.treeObject = [
+			{
+				key: '0',
+				label: 'SYSTEM',
+				data: 'Events Folder',
+				// icon: 'pi pi-fw pi-calendar',
+				// imagePath: 'assets/layout/images/tree/System_OPEN.gif',
+				imagePath: this.getImage('SYSTEM', '', ''),
+
+				children: []
+			},
+			{
+				key: '1',
+				label: 'TREASURY SECURITY',
+				data: 'Events Folder',
+				imagePath: this.getImage('TREASURY SECURITY', '', ''),
+
+				children: childArray
+			}
+		];
+	}
+	/***********************************************************************************************************/
+	/* @function for draw tree with received object, make parent , child, subchild object to treeData for CLSNET     ****/
+	/***********************************************************************************************************/
+	drawTreeforCLSNET(treeData) {
+		let parentChildren: any = [];
+		let nodeChildren: any = [{ buNode: '', feild_name: '' }]; // For 1st level Node
+		let childArray: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 2nd Level
+		let subChildArray: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 3rd Level
+
+		for (let i = 0; i < treeData.length; i++) {
+			parentChildren.push(treeData[i].FIELD_NM[1]._);
+		}
+		for (let k = 0; k < parentChildren.length; k++) {
+			// 2nd Level
+			childArray.push({
+				key: '2-' + k,
+				data: parentChildren[k],
+				label: parentChildren[k],
+				imagePath: AppSettings.Base_Image_URL + 'NettingGroup_CLOSED.gif',
+				children: subChildArray
+			});
+		}
+		childArray.splice(0, 1);
+
+		/**Final Tree Draw */
+		this.treeObject = [
+			{
+				key: '1',
+				label: 'Tree Explorer',
+				data: 'Events Folder',
+				imagePath: this.getImage('SYSTEM', '', ''),
+
+				children: childArray
+			}
+		];
+	}
+	/***********************************************************************************************************/
+	/* @function for draw tree with received object, make parent , child, subchild object to treeData for CLSNET for Netting Group Details   ****/
+	/***********************************************************************************************************/
+	drawTreeforCLSNETforNGDetails(NGSubNM) {
+		let parentChildren: any = [];
+		let nodeChildren: any = [{ buNode: '', feild_name: '' }]; // For 1st level Node
+		let childArray: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 2nd Level
+		let subChildArray: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 3rd Level
+		let t = this.treeObject;
+		subChildArray.splice(0, 1);
+
+		let tt = NGSubNM.NETTING_GROUP_ROW_DATA[0]['TMS_NG_BU_FUND_MAPPER.NETTING_GROUP_NM'];
+		if (NGSubNM.NETTING_GROUP_ROW_DATA.length) {
+			for (let i = 0; i < this.treeObject[0].children.length; i++) {
+				for (let k = 0; k < NGSubNM.NETTING_GROUP_ROW_DATA.length; k++) {
+					if (this.treeObject[0].children[i].label == NGSubNM.NETTING_GROUP_ROW_DATA[k]['TMS_NG_BU_FUND_MAPPER.NETTING_GROUP_NM']) {
+						subChildArray.push({
+							key: '2-' + i + '-' + k,
+							data: NGSubNM.NETTING_GROUP_ROW_DATA[k]['TMS_NG_BU_FUND_MAPPER.NETTING_GROUP_NM'],
+							label: NGSubNM.NETTING_GROUP_ROW_DATA[k]['TMS_NG_BU_FUND_MAPPER.NETTING_GROUP_NM'],
+							imagePath: AppSettings.Base_Image_URL + 'Branch_CLOSED.gif',
+							children: []
+						});
+					}
+				}
+				// this.treeObject[0].children[i].children.push(subChildArray);
+			}
+		} else {
+		}
+		for (let i = 0; i < this.treeObject[0].children.length; i++) {
+			for (let l = 0; l < subChildArray.length; l++) {
+				if (this.treeObject[0].children[i].label == subChildArray[l].label) {
+					this.treeObject[0].children[i].children.push(subChildArray[l]);
+				}
+			}
+		}
+
+		this.treeObject[0];
+		// for (let i = 0; i < treeData.length; i++) {
+		// 	parentChildren.push(treeData[i].FIELD_NM[1]._);
+		// }
+		// debugger;
+		// for (let k = 0; k < parentChildren.length; k++) {
+		// 	// 2nd Level
+		// 	childArray.push({
+		// 		key: '2-' + k,
+		// 		data: parentChildren[k],
+		// 		label: parentChildren[k],
+		// 		imagePath: AppSettings.Base_Image_URL + 'NettingGroup_CLOSED.gif',
+		// 		children: subChildArray
+		// 	});
+		// }
+		// childArray.splice(0, 1);
+
+		/**Final Tree Draw */
+		// this.treeObject = [
+		// 	{
+		// 		key: '1',
+		// 		label: 'Tree Explorer',
+		// 		data: 'Events Folder',
+		// 		imagePath: this.getImage('SYSTEM', '', ''),
+
+		// 		children: childArray
+		// 	}
+		// ];
+	}
+
+	/***********************************************************************************************************/
+	/* @function for draw tree with received object, make parent , child, subchild object to treeData for LCH     ****/
+	/***********************************************************************************************************/
+	drawTreeforLCH(treeData) {
+		// let parentChildren: any = [];
+		// let nodeChildren: any = [{ buNode: '', feild_name: '' }]; // For 1st level Node
+		// let childArray: any = [{ key: '', label: '', data: '', icon: '', imagePath: '', children: [] }]; // For 2nd Level
+		// debugger;
+		// for (let i = 0; i < treeData.length; i++) {
+		// 	parentChildren.push(treeData[i].FIELD_NM[1]._);
+		// }
+		// debugger;
+		// for (let k = 0; k < parentChildren.length; k++) {
+		// 	// 2nd Level
+		// 	childArray.push({
+		// 		key: '2-' + k,
+		// 		data: parentChildren[k],
+		// 		label: parentChildren[k],
+		// 		imagePath: AppSettings.Base_Image_URL + 'NettingGroup_CLOSED.gif',
+		// 		children: []
+		// 	});
+		// }
+		// childArray.splice(0, 1);
+
+		/**Final Tree Draw */
+		this.treeObject = [
+			{
+				key: '2',
+				label: treeData[1].FIELD_NM[9]._,
+				data: 'Events Folder',
+				imagePath: this.getImage(treeData[1].FIELD_NM[7]._, '', ''),
+				children: []
+			}
+		];
+	}
+
+	/***********************************************************************************************************/
+	/* @function for draw tree with received object, make parent , child, subchild object to treeData for Processing     ****/
 	/***********************************************************************************************************/
 
 	drawTree(treeData) {
@@ -665,6 +921,11 @@ export class AppMenuComponent implements OnInit {
 
 	CBFlag = 0;
 
+	expandTree(event: any) {
+		if (event.node.parent.label == 'Tree Explorer') {
+			this.loadParentXML(event.node.label);
+		}
+	}
 	/***********************************************************************************************************/
 	/* @function On BuTree Clicked item of Model objects i.e. "Menu" & "Queue Explorer" changed and append  ****/
 	/***********************************************************************************************************/
@@ -685,121 +946,185 @@ export class AppMenuComponent implements OnInit {
 			this.layoutService.gridHeader.next('System');
 
 			this.layoutService.isSelection = true;
-			for (let i = 0; i < this.model.length; i++) {
-				if (this.model[i].label == 'Queue Explorer') {
-					this.model[i].items.push({
-						label: 'Configuration & Setup',
-						icon: 'pi pi-fw pi-bookmark',
-						items: [
-							{
-								label: 'Pending',
-								icon: 'pi pi-fw pi-bookmark',
-								items: [
-									{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/location-list'] },
-									{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/legal-entity-list'] },
-									{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
-								]
-							},
-							{
-								label: 'Active',
-								icon: 'pi pi-fw pi-bookmark',
-								items: [
-									{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
-								]
-							},
-							{
-								label: 'Rejected',
-								icon: 'pi pi-fw pi-bookmark',
-								items: [
-									{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
-									{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
-								]
-							}
-						]
-					});
-				}
-
-				/** Menu items appending on the basis of tree item selection */
-
-				if (this.model[i].label == 'Menu') {
-					this.model[i].items.push(
-						{
-							label: 'SMC',
-							icon: 'pi pi-fw pi-bookmark',
-							items: [
-								{
-									label: 'Session Control',
-									icon: 'pi pi-fw pi-bookmark'
-								},
-								{
-									label: 'Tuxedo Queue Monitor',
-									icon: 'pi pi-fw pi-bookmark'
-								}
-							]
-						},
-						{
+			if (this.currentSelection == 'Processing') {
+				for (let i = 0; i < this.model.length; i++) {
+					if (this.model[i].label == 'Queue Explorer') {
+						this.model[i].items.push({
 							label: 'Configuration & Setup',
 							icon: 'pi pi-fw pi-bookmark',
 							items: [
 								{
-									label: 'Create',
+									label: 'Pending',
 									icon: 'pi pi-fw pi-bookmark',
 									items: [
-										{ label: 'Location', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] },
-										{ label: 'Legal Entity', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/legal-entity'] },
-										{ label: 'Bank Relationship', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Bank Location', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Fund Group', icon: 'pi pi-fw pi-bookmark' },
-										{ label: 'Financial Pool', icon: 'pi pi-fw pi-bookmark' }
+										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/location-list'] },
+										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/legal-entity-list'] },
+										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
+									]
+								},
+								{
+									label: 'Active',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [
+										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
+									]
+								},
+								{
+									label: 'Rejected',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [
+										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
 									]
 								}
 							]
-						},
-						{
-							label: 'Table Maintenance',
+						});
+					}
+
+					/** Menu items appending on the basis of tree item selection */
+
+					if (this.model[i].label == 'Menu') {
+						this.model[i].items.push(
+							{
+								label: 'SMC',
+								icon: 'pi pi-fw pi-bookmark',
+								items: [
+									{
+										label: 'Session Control',
+										icon: 'pi pi-fw pi-bookmark'
+									},
+									{
+										label: 'Tuxedo Queue Monitor',
+										icon: 'pi pi-fw pi-bookmark'
+									}
+								]
+							},
+							{
+								label: 'Configuration & Setup',
+								icon: 'pi pi-fw pi-bookmark',
+								items: [
+									{
+										label: 'Create',
+										icon: 'pi pi-fw pi-bookmark',
+										items: [
+											{ label: 'Location', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] },
+											{ label: 'Legal Entity', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/legal-entity'] },
+											{ label: 'Bank Relationship', icon: 'pi pi-fw pi-bookmark' },
+											{ label: 'Bank Location', icon: 'pi pi-fw pi-bookmark' },
+											{ label: 'Fund Group', icon: 'pi pi-fw pi-bookmark' },
+											{ label: 'Financial Pool', icon: 'pi pi-fw pi-bookmark' }
+										]
+									}
+								]
+							},
+							{
+								label: 'Table Maintenance',
+								icon: 'pi pi-fw pi-bookmark',
+								items: [
+									{ label: 'Bank Identifier', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Currency Holiday', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Payment Method cuttoff', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'External Interface', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Currency Maintenance', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Interdiction', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Exchange Rate ', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Processing ICA Rules', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Fund Manager', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Process Uploaded Funds', icon: 'pi pi-fw pi-bookmark' },
+									{
+										label: 'Counterparty ALGD List',
+										icon: 'pi pi-fw pi-bookmark'
+									},
+									{ label: 'Static Data Request', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Static Data Bulk Create', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'MI Auto Replay', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Static Data Bulk Amend', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Netting Groups', icon: 'pi pi-fw pi-bookmark' },
+									{ label: 'Static Data Delete', icon: 'pi pi-fw pi-bookmark' }
+								]
+							}
+							// {
+							// 	label: 'Dashboard View',
+							// 	icon: 'pi pi-fw pi-bookmark',
+							// 	routerLink: ['/dashboard']
+							// }
+						);
+						// this.layoutService.gridHeader.next('System');
+					}
+				}
+			} else {
+				for (let i = 0; i < this.model.length; i++) {
+					if (this.model[i].label == 'Queue Explorer') {
+						this.model[i].items.push({
+							label: 'Configuration & Setup',
 							icon: 'pi pi-fw pi-bookmark',
 							items: [
-								{ label: 'Bank Identifier', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Currency Holiday', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Payment Method cuttoff', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'External Interface', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Currency Maintenance', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Interdiction', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Exchange Rate ', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Processing ICA Rules', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Fund Manager', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Process Uploaded Funds', icon: 'pi pi-fw pi-bookmark' },
 								{
-									label: 'Counterparty ALGD List',
-									icon: 'pi pi-fw pi-bookmark'
+									label: 'Pending',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [
+										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/location-list'] },
+										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/grid-list/legal-entity-list'] },
+										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
+									]
 								},
-								{ label: 'Static Data Request', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Static Data Bulk Create', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'MI Auto Replay', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Static Data Bulk Amend', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Netting Groups', icon: 'pi pi-fw pi-bookmark' },
-								{ label: 'Static Data Delete', icon: 'pi pi-fw pi-bookmark' }
+								{
+									label: 'Active',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [
+										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
+									]
+								},
+								{
+									label: 'Rejected',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [
+										{ label: 'Location (80)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Legal Entity (57)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Relationship (21)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Bank Location (45)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Business Unit (50)', icon: 'pi pi-fw pi-bookmark' },
+										{ label: 'Financial Pool (56)', icon: 'pi pi-fw pi-bookmark' }
+									]
+								}
 							]
-						},
-						{
-							label: 'Dashboard View',
-							icon: 'pi pi-fw pi-bookmark',
-							routerLink: ['/dashboard']
-						}
-					);
-					// this.layoutService.gridHeader.next('System');
+						});
+					}
+
+					/** Menu items appending on the basis of tree item selection */
+
+					if (this.model[i].label == 'Menu') {
+						this.model[i].items
+							.push
+
+							// {
+							// 	label: 'Dashboard View',
+							// 	icon: 'pi pi-fw pi-bookmark',
+							// 	routerLink: ['/dashboard']
+							// }
+							();
+						// this.layoutService.gridHeader.next('System');
+					}
 				}
 			}
 		}
@@ -812,46 +1137,106 @@ export class AppMenuComponent implements OnInit {
 
 			this.layoutService.gridHeader.next('TREASURY SECURITY');
 			this.layoutService.isSelection = true;
-
-			for (let i = 0; i < this.model.length; i++) {
-				if (this.model[i].label == 'Queue Explorer') {
-					this.model[i].items.push({
-						label: 'Configuration & Setup',
-						icon: 'pi pi-fw pi-bookmark',
-						items: [
-							{
-								label: 'Pending',
-								icon: 'pi pi-fw pi-bookmark',
-								items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
-							},
-							{
-								label: 'Active',
-								icon: 'pi pi-fw pi-bookmark',
-								items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
-							},
-							{
-								label: 'Rejected',
-								icon: 'pi pi-fw pi-bookmark',
-								items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
-							}
-						]
-					});
-				}
-
-				if (this.model[i].label == 'Menu') {
-					this.model[i].items.push(
-						{
+			if (this.currentSelection == 'Processing') {
+				for (let i = 0; i < this.model.length; i++) {
+					if (this.model[i].label == 'Queue Explorer') {
+						this.model[i].items.push({
 							label: 'Configuration & Setup',
 							icon: 'pi pi-fw pi-bookmark',
-							items: [{ label: 'Create', icon: 'pi pi-fw pi-bookmark', items: [{ label: 'Department', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] }] }]
-						},
-						{
-							label: 'Dashboard View',
+							items: [
+								{
+									label: 'Pending',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+								},
+								{
+									label: 'Active',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+								},
+								{
+									label: 'Rejected',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+								}
+							]
+						});
+					}
+
+					if (this.model[i].label == 'Menu') {
+						this.model[i].items.push(
+							{
+								label: 'Configuration & Setup',
+								icon: 'pi pi-fw pi-bookmark',
+								items: [{ label: 'Create', icon: 'pi pi-fw pi-bookmark', items: [{ label: 'Department', icon: 'pi pi-fw pi-bookmark', routerLink: ['/configuration-and-setup/location'] }] }]
+							}
+							// {
+							// 	label: 'Dashboard View',
+							// 	icon: 'pi pi-fw pi-bookmark',
+							// 	routerLink: ['/dashboard']
+							// }
+						);
+						this.layoutService.gridHeader.next('Dashboard View');
+					}
+				}
+			} else {
+				for (let i = 0; i < this.model.length; i++) {
+					if (this.model[i].label == 'Queue Explorer') {
+						this.model[i].items.push({
+							label: 'Configuration & Setup',
 							icon: 'pi pi-fw pi-bookmark',
-							routerLink: ['/dashboard']
-						}
-					);
-					this.layoutService.gridHeader.next('Dashboard View');
+							items: [
+								{
+									label: 'Pending',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+								},
+								{
+									label: 'Active',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+								},
+								{
+									label: 'Rejected',
+									icon: 'pi pi-fw pi-bookmark',
+									items: [{ label: 'Department (21)', icon: 'pi pi-fw pi-bookmark' }]
+								}
+							]
+						});
+					}
+
+					if (this.model[i].label == 'Menu') {
+						this.model[i].items.push(
+							{
+								label: 'User Administration',
+								icon: 'pi pi-fw pi-bookmark',
+								items: [
+									{
+										label: 'Create',
+										icon: 'pi pi-fw pi-bookmark',
+										items: [
+											{ label: 'Role Class', icon: 'pi pi-fw pi-bookmark' },
+											{ label: 'Role ', icon: 'pi pi-fw pi-bookmark' }
+										]
+									},
+									{
+										label: 'Reports',
+										icon: 'pi pi-fw pi-bookmark'
+									},
+									{
+										label: 'Static Data Delete',
+										icon: 'pi pi-fw pi-bookmark'
+									}
+								]
+							},
+							{
+								label: 'Reports',
+								icon: 'pi pi-fw pi-bookmark',
+								routerLink: []
+							}
+						);
+						this.layoutService.gridHeader.next('Dashboard View');
+					}
 				}
 			}
 		}
@@ -962,11 +1347,11 @@ export class AppMenuComponent implements OnInit {
 								{ label: 'Accounting Entries', icon: 'pi pi-fw pi-bookmark' }
 							]
 						},
-						{
-							label: 'Dashboard View',
-							icon: 'pi pi-fw pi-bookmark',
-							routerLink: ['/dashboard']
-						},
+						// {
+						// 	label: 'Dashboard View',
+						// 	icon: 'pi pi-fw pi-bookmark',
+						// 	routerLink: ['/dashboard']
+						// },
 						{ label: 'Reports', icon: 'pi pi-fw pi-bookmark' }
 					);
 					this.layoutService.gridHeader.next('Dashboard View');

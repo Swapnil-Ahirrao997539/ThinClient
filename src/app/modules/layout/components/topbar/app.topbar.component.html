@@ -12,11 +12,11 @@
 	</button>
 	<div #topbarmenu class="layout-topbar-menu" [ngClass]="{ 'layout-topbar-menu-mobile-active': layoutService.state.profileSidebarVisible }">
 		<div [ngStyle]="selectedSelections == 'Processing' ? { left: '20%', position: 'fixed' } : { left: '20%', position: 'fixed' }">
-			<div style="font-family: var(--font-family); margin-top: 12px" *ngIf="moduleValue == 'Processing'">
+			<div style="font-family: var(--font-family); margin-top: 6px" *ngIf="moduleValue == 'Processing'">
 				<span *ngIf="!showDashboardEntity"
 					><Span style="font-weight: 700" translate>label_current_selections </Span>
 					<!-- &nbsp;&nbsp;<span style="color: var(--primary-color);">{{moduleValue | titlecase}}</span> &nbsp; -->
-					<p-dropdown [options]="selections" [(ngModel)]="selectedSelections" optionLabel="name" [showClear]="false" (onChange)="changeSelection(selectedSelections)" placeholder="Select" optionValue="code"></p-dropdown> &nbsp;&nbsp;</span
+					<p-dropdown [options]="selections" [(ngModel)]="selectedSelections" name="selectedSelections" optionLabel="name" [showClear]="false" (onChange)="changeSelection(selectedSelections)" placeholder="Select" optionValue="code"></p-dropdown> &nbsp;&nbsp;</span
 				>
 				<span *ngIf="!showDashboardEntity">
 					<span *ngIf="selectedSelections == 'Processing' && selectedSessionType == 'cls1'" translate>label_view_type </span>&nbsp;&nbsp; &nbsp;<p-dropdown
@@ -25,9 +25,11 @@
 						[options]="viewTypes"
 						[(ngModel)]="selectedViewType"
 						optionLabel="name"
+						name="selectedViewType"
 						[showClear]="false"
 						placeholder="Select"
 						optionValue="code"
+						ngDefaultControl
 					></p-dropdown>
 					&nbsp;
 				</span>
@@ -39,23 +41,30 @@
 						[(ngModel)]="selectedSessionType"
 						optionLabel="name"
 						[showClear]="false"
+						name="selectedSessionType"
 						placeholder="Select"
 						optionValue="code"
+						ngDefaultControl
 					></p-dropdown>
 				</span>
 			</div>
 		</div>
 
-		<div class="dashboardEntity" *ngIf="showDashboardEntity">
-			<span>
-				<p-button label="Main Application View" [raised]="true" rounded="true" (click)="backToMainApplicationView()" /> &nbsp;&nbsp;&nbsp;&nbsp; <span translate>label_session_type</span> &nbsp;&nbsp;<p-dropdown
+		<div class="dashboardEntity">
+			<!-- <p-toggleButton [(ngModel)]="checked" onLabel="{{ dashboardButtonNameTrue }}" offLabel="{{ dashboardButtonNameFalse }}" (click)="backToMainApplicationView(checked)">{{ dashboardButtonNameFalse }}</p-toggleButton> -->
+			<p-button label="{{ dashboardButtonName }}" [(ngModel)]="checked" [raised]="true" rounded="true" (click)="backToMainApplicationView(showDashboardEntity)" />
+
+			<span *ngIf="showDashboardEntity">
+				&nbsp;&nbsp;&nbsp;&nbsp; <span translate>label_session_type</span> &nbsp;&nbsp;<p-dropdown
 					(onChange)="changeDashboard(selectedSessionTypeForDashboard)"
 					[options]="sessionTypes"
 					[(ngModel)]="selectedSessionTypeForDashboard"
 					optionLabel="name"
 					[showClear]="false"
 					placeholder="Select"
+					name="selectedSessionTypeForDashboard"
 					optionValue="code"
+					ngDefaultControl
 				></p-dropdown>
 			</span>
 		</div>
